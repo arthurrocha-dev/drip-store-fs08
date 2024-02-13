@@ -1,13 +1,16 @@
 # Drip Store FS08
 
+## Sobre
+
 A Drip Store, é um projeto de estudos, disponibilizado pela instituição de ensino **Digital College**, visando proporcionar aos discentes, uma experiência realista, no desenvolvimento de uma  plataforma de vendas online (e-commerce).
 
-> Este projeto foi/é realizado por um grupo de estudantes da turma FS08, unidade Sul.
->
->  Professor: [Luiz Miguel](https://www.linkedin.com/in/devluismiguel/)
-> 
->  Monitora: [Poliana Borges](https://www.linkedin.com/in/borges-poliana/)
 ---
+Este projeto foi/é realizado por um grupo de estudantes da turma FS08, unidade Sul
+
+**Professor:** [Luiz Miguel](https://www.linkedin.com/in/devluismiguel/) 
+
+**Monitora:** [Poliana Borges](https://www.linkedin.com/in/borges-poliana/)
+
 **Desenvolvido por:**
 * [Arthur Rocha](https://www.linkedin.com/in/arthur-rocha-5a052221b/)
 * [Gabriel Porto](https://www.linkedin.com/in/devgarb-fs/)
