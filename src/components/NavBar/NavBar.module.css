@@ -1,0 +1,24 @@
+.NavBar {
+    display: flex;
+    gap: var(--spacing-medium);
+    margin: var(--spacing-medium) 0 ;
+}
+
+.NavBarTitle {
+    margin: 0;
+    font-weight: bold;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .NavBar {
+        flex-direction: column;
+        max-width: auto;
+        height: 70%;
+    }
+
+    .NavBarTitle {
+        display: block;
+
+    }
+}

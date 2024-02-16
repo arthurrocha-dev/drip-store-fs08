@@ -1,0 +1,11 @@
+.SandwichMenuIcon {
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.SandwichMenuNavBar {
+    position: fixed;
+    width: 90%;
+    height:100vw;
+    background-color: blue;
+}
