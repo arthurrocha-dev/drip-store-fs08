@@ -10,20 +10,24 @@ import { TextLink } from '../TextLink/TextLink'
 import styles from './Header.module.css'
 import { ROUTES } from '../../routes'
 
+const MOBILE_BREAKPOINT = 768
+
 export const Header = () => {
     const [isMobile, setIsMobile] = useState<boolean>(false)
     
     const handleResize = () => {
-        setIsMobile(window.innerWidth <= 768)
+        setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT)
     }
 
     useEffect(() => {
         handleResize()
 
-        window.addEventListener('resize', handleResize)
+        const resizeListener = () => handleResize()
+
+        window.addEventListener('resize', resizeListener)
 
         return () => {
-            window.removeEventListener('resize', handleResize)
+            window.removeEventListener('resize', resizeListener)
         }
     }, [])
 
@@ -54,25 +58,21 @@ const MobileHeader = () => {
     }
 
     const [isVisible, setIsVisible ] = useState(false)
-    const [menuState, setMenuState] = useState(MobileMenuState.CLOSED);
+    const [menuState, setMenuState] = useState(MobileMenuState.CLOSED)
      
     const toggleMenuState = () => {  
-        if (menuState === MobileMenuState.CLOSED) {
-            setMenuState(MobileMenuState.OPENING);
-            setTimeout(() => {
-                setMenuState(MobileMenuState.OPENED);
-            }, 900);
-        } 
-        else {
-            setMenuState(MobileMenuState.CLOSING);
-            setTimeout(() => {
-                setMenuState(MobileMenuState.CLOSED);
-            }, 900);
-          }
+        setMenuState((prevMenuState) => 
+            prevMenuState === MobileMenuState.CLOSED ? MobileMenuState.OPENING : MobileMenuState.CLOSING
+        )
+        setTimeout(() => {
+            setMenuState((prevMenuState) => 
+                prevMenuState === MobileMenuState.OPENING ? MobileMenuState.OPENED : MobileMenuState.CLOSED
+            )
+        }, 900)
     }
 
-    const tobbleVisibility = () => {
-        setIsVisible(!isVisible)
+    const toggleVisibility = () => {
+        setIsVisible((prevVisibility) => !prevVisibility)
     }
 
     return(
@@ -83,11 +83,11 @@ const MobileHeader = () => {
                 <div className={styles.HeaderIconsContainer}>
                     <IoSearchOutline  className={`${styles.SearchIcon} 
                         ${isVisible 
-                        ? styles.SearchActive : ''}`} onClick={tobbleVisibility}/>
+                        ? styles.SearchActive : ''}`} onClick={toggleVisibility}/>
                     <ShoppingCarIcon />
                 </div>
             </header>
-            {menuState !== (MobileMenuState.CLOSED || MobileMenuState.CLOSING) && (
+            {menuState !== MobileMenuState.CLOSED && (
                 <>
                     <div className={styles.MobileNavBar} onClick={toggleMenuState}></div>
 
