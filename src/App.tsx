@@ -1,9 +1,11 @@
-import { Header } from "./components"
-
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import routes from './routes';
 function App() {
   
+  const router = createBrowserRouter(routes);
+
   return (
-    <Header />
+    <RouterProvider router={router} />
   )
 }
 

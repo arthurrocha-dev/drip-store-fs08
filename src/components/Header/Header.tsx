@@ -8,6 +8,7 @@ import { ShoppingCarIcon } from './components/ShoppingCarIcon/ShoppingCartIcon'
 import { IoSearchOutline } from 'react-icons/io5'
 import { TextLink } from '../TextLink/TextLink'
 import styles from './Header.module.css'
+import { ROUTES } from '../../routes'
 
 export const Header = () => {
     const [isMobile, setIsMobile] = useState<boolean>(false)
@@ -35,7 +36,7 @@ const DesktopHeader = () => {
             <div className={styles.HeaderContainerTop}>
                 <Logo />
                 <SearchInput />
-                <TextLink secondary text='Cadastre-se' />
+                <TextLink secondary to={ROUTES.Home}>Cadastre-se</TextLink>
                 <Button text='Entrar' />
                 <ShoppingCarIcon />
             </div>
@@ -101,7 +102,7 @@ const MobileHeader = () => {
                         <NavBar />
                         <div className={styles.MobileNavBarFooter}>
                         <Button text="Entrar" />
-                        <TextLink secondary text="Cadastre-se" />
+                        <TextLink secondary to={ROUTES.Home}>Cadastre-se</TextLink>
                         </div>
                     </div>
                 </> 
