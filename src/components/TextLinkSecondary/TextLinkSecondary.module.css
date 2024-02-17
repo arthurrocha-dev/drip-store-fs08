@@ -1,8 +1,0 @@
-.TextLinkSecondary {
-    color: var(--color-dark-gray-2);
-    border-bottom: 2px solid ;
-    cursor: pointer;
-    width: fit-content;
-    text-align: center;
-    margin: var(--spacing-small) auto;
-}

@@ -1,6 +1,6 @@
 import { FiShoppingCart } from 'react-icons/fi'
-import { ShoppingCarProps } from './ShoppingCarIcon.props'
-import styles from './ShoppingCarIcons.module.css'
+import { ShoppingCarProps } from './ShoppingCartIcon.props'
+import styles from './ShoppingCartIcons.module.css'
 
 export const ShoppingCarIcon: React.FC<ShoppingCarProps> = ({ quantityOfItems }) => {
 

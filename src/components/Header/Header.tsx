@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react'
 import { Logo } from '../Logo/Logo'
-import { NavBar } from '../NavBar/NavBar'
-import { PrimaryButton } from '../PrimaryButton/PrimaryButton'
-import { SandwichMenu } from '../SandwichMenu/SandwichMenu'
+import { NavBar } from './components/NavBar/NavBar'
+import { Button } from '../Button/Button'
+import { SandwichMenu } from './components/SandwichMenu/SandwichMenu'
 import { SearchInput } from '../SearchInput/SearchInput'
-import { ShoppingCarIcon } from '../ShoppingCarIcon/ShoppingCarIcon'
-import { TextLinkSecondary } from '../TextLinkSecondary/TextLinkSecondary'
-import styles from './Header.module.css'
+import { ShoppingCarIcon } from './components/ShoppingCarIcon/ShoppingCartIcon'
 import { IoSearchOutline } from 'react-icons/io5'
+import { TextLink } from '../TextLink/TextLink'
+import styles from './Header.module.css'
 
 export const Header = () => {
-
     const [isMobile, setIsMobile] = useState<boolean>(false)
     
     const handleResize = () => {
@@ -18,7 +17,6 @@ export const Header = () => {
     }
 
     useEffect(() => {
-        
         handleResize()
 
         window.addEventListener('resize', handleResize)
@@ -26,14 +24,9 @@ export const Header = () => {
         return () => {
             window.removeEventListener('resize', handleResize)
         }
-
     }, [])
 
-    return(
-        <>
-            {isMobile ? <MobileHeader /> : <DesktopHeader />}
-        </>
-    )
+    return isMobile ? <MobileHeader /> : <DesktopHeader />
 }
 
 const DesktopHeader = () => {
@@ -42,8 +35,8 @@ const DesktopHeader = () => {
             <div className={styles.HeaderContainerTop}>
                 <Logo />
                 <SearchInput />
-                <TextLinkSecondary text='Cadastre-se' />
-                <PrimaryButton text='Entrar' />
+                <TextLink secondary text='Cadastre-se' />
+                <Button text='Entrar' />
                 <ShoppingCarIcon />
             </div>
             <NavBar />
@@ -52,32 +45,35 @@ const DesktopHeader = () => {
 }
 
 const MobileHeader = () => {
+    const MobileMenuState = {
+        CLOSED: 'CLOSED',
+        CLOSING: 'CLOSING',
+        OPENED: 'OPENED',
+        OPENING: 'OPENING',
+    }
 
-    const [isOpenMenu, setIsOpenMenu] = useState(false)
-    const [isVisible, setisVisible] = useState(false)
-    const [isSearchable, setIsSearchable ] = useState(false)
-    
+    const [isVisible, setIsVisible ] = useState(false)
+    const [menuState, setMenuState] = useState(MobileMenuState.CLOSED);
+     
     const toggleMenuState = () => {  
-
-        if(isOpenMenu) {
-            setisVisible(true)
-            
+        if (menuState === MobileMenuState.CLOSED) {
+            setMenuState(MobileMenuState.OPENING);
             setTimeout(() => {
-                setisVisible(false)
-                
-                setIsOpenMenu(!isOpenMenu)
-            },1000)
-
+                setMenuState(MobileMenuState.OPENED);
+            }, 900);
         } 
-        else{
-            setIsOpenMenu(!isOpenMenu)
-        }
+        else {
+            setMenuState(MobileMenuState.CLOSING);
+            setTimeout(() => {
+                setMenuState(MobileMenuState.CLOSED);
+                console.log(menuState);
+            }, 900);
+          }
     }
 
-    const toggleSearchable = () => {
-        setIsSearchable(!isSearchable)
+    const tobbleVisibility = () => {
+        setIsVisible(!isVisible)
     }
-
 
     return(
         <>
@@ -85,25 +81,33 @@ const MobileHeader = () => {
                 <SandwichMenu onClick={toggleMenuState}/>
                 <Logo />
                 <div className={styles.HeaderIconsContainer}>
-                    <IoSearchOutline  className={`${styles.SearchIcon} ${ isSearchable ? styles.SearchActive : ''}`} onClick={toggleSearchable}/>
+                    <IoSearchOutline  className={`${styles.SearchIcon} 
+                        ${isVisible 
+                        ? styles.SearchActive : ''}`} onClick={tobbleVisibility}/>
                     <ShoppingCarIcon />
                 </div>
             </header>
-            { isOpenMenu && (
-                <div className={styles.MobileNavBar}>
-                    <div className={`${styles.MobileNavBarContainer} ${ isVisible ? styles.MenuClosed : ''}`}>
+            {menuState !== (MobileMenuState.CLOSED || MobileMenuState.CLOSING) && (
+                <>
+                    <div className={styles.MobileNavBar} onClick={toggleMenuState}></div>
+
+                    <div
+                        className={`${styles.MobileNavBarContainer} ${
+                            menuState === MobileMenuState.CLOSING
+                            ? styles.MenuClosed
+                            : ''
+                        }`}
+                    >
                         <NavBar />
                         <div className={styles.MobileNavBarFooter}>
-                            <PrimaryButton text='Entrar' />
-                            <TextLinkSecondary text='Cadastre-se' />
+                        <Button text="Entrar" />
+                        <TextLink secondary text="Cadastre-se" />
                         </div>
                     </div>
-                </div>
+                </> 
             )}
 
-            { !isOpenMenu && isSearchable && ( 
-                <SearchInput />
-            )}
+             {menuState === MobileMenuState.CLOSED && isVisible && <SearchInput />}
         </>
     )
 }
