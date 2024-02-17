@@ -4,7 +4,7 @@ import { NavBar } from './components/NavBar/NavBar'
 import { Button } from '../Button/Button'
 import { SandwichMenu } from './components/SandwichMenu/SandwichMenu'
 import { SearchInput } from '../SearchInput/SearchInput'
-import { ShoppingCarIcon } from './components/ShoppingCarIcon/ShoppingCartIcon'
+import { ShoppingCarIcon } from './components/ShoppingCartIcon/ShoppingCartIcon'
 import { IoSearchOutline } from 'react-icons/io5'
 import { TextLink } from '../TextLink/TextLink'
 import styles from './Header.module.css'
@@ -67,7 +67,6 @@ const MobileHeader = () => {
             setMenuState(MobileMenuState.CLOSING);
             setTimeout(() => {
                 setMenuState(MobileMenuState.CLOSED);
-                console.log(menuState);
             }, 900);
           }
     }
@@ -99,10 +98,10 @@ const MobileHeader = () => {
                             : ''
                         }`}
                     >
-                        <NavBar />
+                        <NavBar onClick={toggleMenuState}/>
                         <div className={styles.MobileNavBarFooter}>
                         <Button text="Entrar" />
-                        <TextLink secondary to={ROUTES.Home}>Cadastre-se</TextLink>
+                        <TextLink secondary to={ROUTES.Home} onClick={toggleMenuState}>Cadastre-se</TextLink>
                         </div>
                     </div>
                 </> 
