@@ -82,6 +82,9 @@
     .MobileNavBarFooter {
         border-top: 2px solid var(--color-light-gray-2);
         padding: var(--spacing-large) 0 ;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-large);
+        align-items: center;
     }
 }
