@@ -10,8 +10,8 @@ export const NavBar:React.FC<NavBarProps> = ({onClick}) => {
             <div className={styles.NavBar}>
                 <TextLink to={ROUTES.Home} onClick={onClick}>Home</TextLink>
                 <TextLink to={ROUTES.Products} onClick={onClick}>Produtos</TextLink>
-                <TextLink to={ROUTES.Categorys} onClick={onClick}>Categirias</TextLink>
-                <TextLink to={ROUTES.MyProducts} onClick={onClick}>Meus Porodutos</TextLink>
+                <TextLink to={ROUTES.Categorys} onClick={onClick}>Categorias</TextLink>
+                <TextLink to={ROUTES.MyProducts} onClick={onClick}>Meus Produtos</TextLink>
             </div>
         </>
     )
