@@ -30,6 +30,7 @@
 body {
   width: 100%;
   font-family: var(--fonte-inter);
+  background-color: var(--color-light-gray-3);
 }
 
 * {

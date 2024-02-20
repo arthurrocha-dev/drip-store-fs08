@@ -1,0 +1,58 @@
+.CardProduct {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-smaller);
+    margin-right: var(--spacing-small);
+    position: relative;
+    width: calc(25% - var(--spacing-small));
+}
+
+.CardProductContainerBottom {
+    display: flex;
+    gap: var(--spacing-smaller);
+}
+
+.CardProductDepartament {
+    font-size: .8rem;
+}
+
+.CardProductDiscontValue {
+    font-weight: bold;
+}
+
+.CardProductImg {
+    margin: auto;
+    width: 80%;
+}
+
+.CardProductImgContainer {
+    background-color: var(--color-white);
+    border-radius: var(--spacing-tiny);
+    display: flex;
+    width: 100%;
+}
+
+.CardProductPrice {
+    text-decoration: line-through;
+}
+
+.DiscountPercentage {
+    background-color: #E7FF86;
+    border-radius: calc(var(--spacing-small) * 2);
+    font-size: .8rem;
+    padding: var(--spacing-smaller);
+    position: absolute;
+    top: var(--spacing-small);
+    left: var(--spacing-small);
+}
+
+@media (max-width: 768px) {
+    .CardProduct {
+        width: calc(50% - var(--spacing-small));
+    }
+
+    .DiscountPercentage {
+        font-size: .5rem;
+    }
+}
