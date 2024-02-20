@@ -1,0 +1,33 @@
+.FeaturedProducts {
+    padding: var(--spacing-massive);
+}
+
+.FeaturedProductsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-large) 0;
+}
+
+.FeaturedProductsHeder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.FeaturedProductsSeeAll {
+    align-items: center;
+    color: var(--color-primary);
+    cursor: pointer;
+    display: flex;
+    gap: var(--spacing-smaller);
+}
+
+.FeaturedProductsTitle {
+    font-weight: bold;
+    margin: var(--spacing-large) 0;
+}
+
+@media (max-width: 768px) {
+    .FeaturedProducts {
+        padding: var(--spacing-small);
+    }
+}

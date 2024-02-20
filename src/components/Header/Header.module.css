@@ -1,5 +1,6 @@
 .Header {
     padding: var(--spacing-medium) var(--spacing-massive);
+    background-color: var(--color-white);
 }
 
 .HeaderIconsContainer {
