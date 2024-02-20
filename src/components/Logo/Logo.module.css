@@ -1,0 +1,26 @@
+.Logo {
+    align-items: center;
+    display: flex;
+    gap: var(--spacing-tiny);
+    height: var(--spacing-medium);
+    text-decoration: none;
+}
+
+.LogoVetor {
+    height: 100%;
+}
+
+.LogoTitle {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .Logo {
+        flex: 1;
+        justify-content: center;
+        height: var(--spacing-normal);
+    }
+}

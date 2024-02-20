@@ -1,0 +1,18 @@
+.TextLink, .TextLinkSecondary {
+    color: var(--color-dark-gray-2);
+    border-bottom: 2px solid transparent;
+    max-width: fit-content;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.TextLink:hover {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    cursor: pointer;
+}
+
+.TextLinkSecondary {
+    border-bottom: 2px solid ;
+}

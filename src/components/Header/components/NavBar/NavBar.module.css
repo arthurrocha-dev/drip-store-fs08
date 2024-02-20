@@ -1,0 +1,34 @@
+.NavBar {
+    display: flex;
+    gap: var(--spacing-medium);
+    margin: var(--spacing-medium) 0 ;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+.NavBar::-webkit-scrollbar {
+    width: 100%;
+    height: 5px;}
+
+.NavBar::-webkit-scrollbar-thumb {
+    background-color: var(--color-light-gray-2);
+    border-radius: 5px;     
+}
+
+.NavBarTitle {
+    margin: 0;
+    font-weight: bold;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .NavBar {
+        flex-direction: column;
+        max-height: 45%;
+        overflow-y: scroll;
+    }
+
+    .NavBarTitle {
+        display: block;
+    }
+}
