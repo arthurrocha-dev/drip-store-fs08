@@ -6,6 +6,7 @@
     text-decoration: none;
 }
 
+
 .LogoVetor {
     height: 100%;
 }
@@ -16,6 +17,9 @@
     font-weight: bold;
 }
 
+.Secondary {
+    color: var(--color-white);
+}
 
 @media (max-width: 768px) {
     .Logo {

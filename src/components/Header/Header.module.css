@@ -55,7 +55,7 @@
 @media (max-width: 768px) {
 
     .Header {
-        padding: var(--spacing-large);
+        padding: var(--spacing-large) var(--spacing-smaller);
     }
 
 
@@ -63,7 +63,6 @@
         align-items: center;
         display: flex;
         justify-content: space-between;
-        padding: 0 var(--spacing-small);
         width: calc(100% - calc(2 * var(--spacing-small)));
     }
 
