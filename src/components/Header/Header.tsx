@@ -40,7 +40,7 @@ const DesktopHeader = () => {
             <div className={styles.HeaderContainerTop}>
                 <Logo />
                 <SearchInput />
-                <TextLink secondary to={ROUTES.Home}>Cadastre-se</TextLink>
+                <TextLink to={ROUTES.Home} type='secundary'>Cadastre-se</TextLink>
                 <Button text='Entrar' />
                 <ShoppingCarIcon />
             </div>
@@ -78,14 +78,18 @@ const MobileHeader = () => {
     return(
         <>
             <header className={styles.Header}>
-                <SandwichMenu onClick={toggleMenuState}/>
-                <Logo />
-                <div className={styles.HeaderIconsContainer}>
-                    <IoSearchOutline  className={`${styles.SearchIcon} 
-                        ${isVisible 
-                        ? styles.SearchActive : ''}`} onClick={toggleVisibility}/>
-                    <ShoppingCarIcon />
+                <div className={styles.HeaderTop}>
+                    <SandwichMenu onClick={toggleMenuState}/>
+                    <Logo />
+                    <div className={styles.HeaderIconsContainer}>
+                        <IoSearchOutline  className={`${styles.SearchIcon} 
+                            ${isVisible 
+                            ? styles.SearchActive : ''}`} onClick={toggleVisibility}/>
+                        <ShoppingCarIcon />
+                    </div>
                 </div>
+
+                {menuState === MobileMenuState.CLOSED && isVisible && <SearchInput />}
             </header>
             {menuState !== MobileMenuState.CLOSED && (
                 <>
@@ -101,13 +105,11 @@ const MobileHeader = () => {
                         <NavBar onClick={toggleMenuState}/>
                         <div className={styles.MobileNavBarFooter}>
                         <Button text="Entrar" />
-                        <TextLink secondary to={ROUTES.Home} onClick={toggleMenuState}>Cadastre-se</TextLink>
+                        <TextLink to={ROUTES.Home} type='secundary' onClick={toggleMenuState}>Cadastre-se</TextLink>
                         </div>
                     </div>
                 </> 
             )}
-
-             {menuState === MobileMenuState.CLOSED && isVisible && <SearchInput />}
         </>
     )
 }

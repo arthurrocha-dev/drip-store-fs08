@@ -1,5 +1,5 @@
 :root {
-  --color-dark-grey: #1F1F1F;
+  --color-dark-gray: #1F1F1F;
   --color-dark-gray-2: #474747;
   --color-dark-gray-3: #666666;
   --color-light-gray: #8F8F8F;
@@ -40,4 +40,6 @@ body {
   padding: 0;
   border: 0;
   vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
 }
