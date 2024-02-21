@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    transition: border-bottom  .5s;
 }
 
 .TextLink:hover {
@@ -15,4 +16,15 @@
 
 .TextLinkSecondary {
     border-bottom: 2px solid ;
+}
+
+.TextLinkTertiary {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 200;
+    transition: color .5s;
+}
+
+.TextLinkTertiary:hover {
+    color: var(--color-primary);
 }

@@ -40,7 +40,7 @@ const DesktopHeader = () => {
             <div className={styles.HeaderContainerTop}>
                 <Logo />
                 <SearchInput />
-                <TextLink secondary to={ROUTES.Home}>Cadastre-se</TextLink>
+                <TextLink to={ROUTES.Home} type='secundary'>Cadastre-se</TextLink>
                 <Button text='Entrar' />
                 <ShoppingCarIcon />
             </div>
@@ -105,7 +105,7 @@ const MobileHeader = () => {
                         <NavBar onClick={toggleMenuState}/>
                         <div className={styles.MobileNavBarFooter}>
                         <Button text="Entrar" />
-                        <TextLink secondary to={ROUTES.Home} onClick={toggleMenuState}>Cadastre-se</TextLink>
+                        <TextLink to={ROUTES.Home} type='secundary' onClick={toggleMenuState}>Cadastre-se</TextLink>
                         </div>
                     </div>
                 </> 
