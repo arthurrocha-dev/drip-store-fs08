@@ -1,9 +1,9 @@
-import { FeaturedProducts } from "../../components"
+import { TrendingProducts } from "../../components"
 
 export const HomePage = () => {
     return(
         <>
-            <FeaturedProducts />
+            <TrendingProducts />
         </>
     )
 }

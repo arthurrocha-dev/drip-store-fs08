@@ -78,14 +78,18 @@ const MobileHeader = () => {
     return(
         <>
             <header className={styles.Header}>
-                <SandwichMenu onClick={toggleMenuState}/>
-                <Logo />
-                <div className={styles.HeaderIconsContainer}>
-                    <IoSearchOutline  className={`${styles.SearchIcon} 
-                        ${isVisible 
-                        ? styles.SearchActive : ''}`} onClick={toggleVisibility}/>
-                    <ShoppingCarIcon />
+                <div className={styles.HeaderTop}>
+                    <SandwichMenu onClick={toggleMenuState}/>
+                    <Logo />
+                    <div className={styles.HeaderIconsContainer}>
+                        <IoSearchOutline  className={`${styles.SearchIcon} 
+                            ${isVisible 
+                            ? styles.SearchActive : ''}`} onClick={toggleVisibility}/>
+                        <ShoppingCarIcon />
+                    </div>
                 </div>
+
+                {menuState === MobileMenuState.CLOSED && isVisible && <SearchInput />}
             </header>
             {menuState !== MobileMenuState.CLOSED && (
                 <>
@@ -106,8 +110,6 @@ const MobileHeader = () => {
                     </div>
                 </> 
             )}
-
-             {menuState === MobileMenuState.CLOSED && isVisible && <SearchInput />}
         </>
     )
 }

@@ -40,6 +40,7 @@
     100% {
         transform: translateX(0%);
     }
+    
 }
 
 @keyframes HideMenu{
@@ -54,10 +55,16 @@
 @media (max-width: 768px) {
 
     .Header {
+        padding: var(--spacing-large);
+    }
+
+
+    .HeaderTop {
         align-items: center;
         display: flex;
         justify-content: space-between;
-        padding: var(--spacing-large) var(--spacing-small);
+        padding: 0 var(--spacing-small);
+        width: calc(100% - calc(2 * var(--spacing-small)));
     }
 
     .MobileNavBar {
@@ -67,6 +74,7 @@
         background-color: var(--color-dark-grey);
         opacity: .7;
         cursor: not-allowed;
+        z-index: 1;
     }
     
     .MobileNavBarContainer {
@@ -78,6 +86,7 @@
         cursor: auto;
         padding: var(--spacing-large);
         position: fixed;
+        z-index: 1;
     }
 
     .MobileNavBarFooter {

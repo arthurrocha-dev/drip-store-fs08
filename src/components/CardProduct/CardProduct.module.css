@@ -3,9 +3,8 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-smaller);
-    margin-right: var(--spacing-small);
     position: relative;
-    width: calc(25% - var(--spacing-small));
+    z-index: 0;
 }
 
 .CardProductContainerBottom {
@@ -17,7 +16,7 @@
     font-size: .8rem;
 }
 
-.CardProductDiscontValue {
+.CardProductDiscontValue, .CardProductPrice {
     font-weight: bold;
 }
 
@@ -27,13 +26,14 @@
 }
 
 .CardProductImgContainer {
+    box-shadow: 5px 5px 10px var(--color-light-gray-2);
     background-color: var(--color-white);
     border-radius: var(--spacing-tiny);
     display: flex;
     width: 100%;
 }
 
-.CardProductPrice {
+.CardProductPriceOff {
     text-decoration: line-through;
 }
 
@@ -45,14 +45,6 @@
     position: absolute;
     top: var(--spacing-small);
     left: var(--spacing-small);
-}
-
-@media (max-width: 768px) {
-    .CardProduct {
-        width: calc(50% - var(--spacing-small));
-    }
-
-    .DiscountPercentage {
-        font-size: .5rem;
-    }
+    width: 20%;
+    text-align: center;
 }
