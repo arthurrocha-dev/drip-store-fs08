@@ -59,6 +59,10 @@ ou
 
 **yarn:** ```yarn``` ou ```yarn install```
 
+### Inicialização da API "Mokada":
+
+```npx json-server db.json```
+
 ## Pull Request:
 Por medidas de segurança, a banche **main** deste projeto, está **protegida de commits diretos**, de modo que toda e qualquer alteação, devem ser realizadas atravez de "**Pull Requests**".
 
