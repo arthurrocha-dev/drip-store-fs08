@@ -1,5 +1,5 @@
 :root {
-  --color-dark-grey: #1F1F1F;
+  --color-dark-gray: #1F1F1F;
   --color-dark-gray-2: #474747;
   --color-dark-gray-3: #666666;
   --color-light-gray: #8F8F8F;
@@ -13,7 +13,7 @@
   --color-success: #52CA76;
   --color-warning: #F6AA1C;
   --color-primary-gradient: linear-gradient(#C92071, #EDABCA);
-  --color-secondary-gradient: linear-gradient(#B5B6F2, #EFEFFF);
+  --color-secondary-gradient: linear-gradient(#F5F5F5, #FFFFFF 70%);
 
   --spacing-tiny: 4px;
   --spacing-smaller: 8px;
@@ -40,4 +40,6 @@ body {
   padding: 0;
   border: 0;
   vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
 }

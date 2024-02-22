@@ -1,0 +1,20 @@
+.LinskSection {
+    width: 25%;
+}
+
+.LinskSection_Container {
+    text-wrap: wrap;
+    width: 100%;
+}
+
+.LinksSection_Title {
+    color: var(--color-white);
+    margin: var(--spacing-small) 0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .LinskSection {
+        width: 50%;
+    }
+}

@@ -20,11 +20,11 @@
 .Secondary {
     color: var(--color-white);
 }
-
+/* 
 @media (max-width: 768px) {
     .Logo {
         flex: 1;
         justify-content: center;
         height: var(--spacing-normal);
     }
-}
+} */

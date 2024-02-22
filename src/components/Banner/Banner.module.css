@@ -1,0 +1,54 @@
+.BannerContainer {
+    display: flex;
+    align-content: center;
+    padding: var(--spacing-medium) var(--spacing-massive);
+    background-color: var(--color-white);
+}
+
+.ContainerImage {
+    flex: 1;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--color-secondary-gradient);
+    border-radius: 100%;
+}
+
+.Image {
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+}
+
+.Infos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-normal);
+}
+
+.SupTitle {
+    font-weight: bold;
+    letter-spacing: var(--spacing-tiny);
+    color: var(--color-primary);
+}
+
+.Title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-dark-gray-2);
+}
+
+.Description {
+    line-height: var(--spacing-medium);
+}
+
+@media (max-width: 768px) {
+    .BannerContainer {
+        flex-direction: column;
+        padding: var(--spacing-large) var(--spacing-small);
+    }
+}
