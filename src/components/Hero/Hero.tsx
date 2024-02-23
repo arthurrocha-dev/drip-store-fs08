@@ -1,7 +1,14 @@
-import { Slide } from './Slide/Slide';
+import { useEffect, useState } from "react";
+import { Slide } from "./Slide/Slide";
+import { getSales } from "../../api_mockada/api";
+import { SalesResult } from "../../api_mockada/api.props";
 
 export const Hero = () => {
-    return (
-        <Slide title='Melhores ofertas personalizadas' subtitle='Queima de estoque Nike 🔥' text='Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.' />
-    )
-}
+  const [sales, setSales] = useState<SalesResult[]>([]);
+
+  useEffect(() => {
+    getSales().then((result) => setSales(result));
+  }, []);
+
+  return <Slide sales={sales} />;
+};

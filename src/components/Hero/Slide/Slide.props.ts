@@ -1,5 +1,5 @@
+import { SalesResult } from "../../../api_mockada/api.props";
+
 export interface SlideProps {
-    title: string,
-    subtitle: string,
-    text: string,
+   sales: SalesResult[]
 }
