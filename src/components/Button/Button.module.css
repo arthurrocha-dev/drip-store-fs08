@@ -2,7 +2,7 @@
     border: none;
     border-radius: var(--spacing-smaller);
     cursor: pointer;
-    padding: var(--spacing-small) var(--spacing-large);
+    padding: var(--spacing-small);
     font-weight: bold;
     transition: background-color .5s ease;
     text-align: center;
