@@ -1,5 +1,6 @@
 import { CollectionIcon } from '../CollectonIcon/CollectionIcon'
 import styles from './CollectionsIconList.module.css'
+
 export const CollectionIconsList = () => {
 
     const iconstList = [
@@ -13,7 +14,7 @@ export const CollectionIconsList = () => {
         },
         {
             title: 'Bonés',
-            iconUrl: '/src/components/FeaturedCollections/components/ColletionsIconsList/img/Pants.png'
+            iconUrl: '/src/components/FeaturedCollections/components/ColletionsIconsList/img/cap.png'
         },
         {
             title: 'Headphone',
@@ -21,7 +22,7 @@ export const CollectionIconsList = () => {
         },
         {
             title: 'Tênis',
-            iconUrl: '/src/components/FeaturedCollections/components/ColletionsIconsList/img/Pants.png'
+            iconUrl: '/src/components/FeaturedCollections/components/ColletionsIconsList/img/Shoe.png'
         },
     ]
 
