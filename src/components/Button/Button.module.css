@@ -5,6 +5,7 @@
     padding: var(--spacing-small) var(--spacing-large);
     font-weight: bold;
     transition: background-color .5s ease;
+    text-align: center;
 
 }
 

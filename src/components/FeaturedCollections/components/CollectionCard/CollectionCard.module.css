@@ -1,0 +1,38 @@
+.CollectionCard {
+    display: flex;
+    flex: 1;
+    background-color: var(--color-secondary);
+    border-radius: var(--spacing-tiny);
+}
+
+.CollectionCardLeft {
+    width: calc(50% - calc(2 * var(--spacing-normal)));
+    height: calc(100% - calc(2 * var(--spacing-normal)));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: var(--spacing-normal);
+}
+
+.Discount {
+    max-width: 100px;
+    padding: var(--spacing-tiny) 15px;
+    border-radius: var(--spacing-normal);
+    background-color: #E7FF86;
+    color: var(--color-dary-gray-3);
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-dary-gray);
+}
+
+.CollectionImage {
+    width:50%;
+}
