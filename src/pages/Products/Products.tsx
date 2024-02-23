@@ -5,7 +5,7 @@ import { TrendingProductsCards } from "./CardProducts/TrendingProductsCards"
 export const Products = () => {
     return(
         <>
-            <TrendingProductsCards />
+            <TrendingProductsCards itemsPerPage={20} />
         </>
     )
 }
