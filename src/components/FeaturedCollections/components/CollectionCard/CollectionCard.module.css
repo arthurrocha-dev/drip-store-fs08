@@ -1,7 +1,7 @@
 .CollectionCard {
     display: flex;
     flex: 1;
-    background-color: var(--color-secondary);
+    background-color:#D8E3F2;
     border-radius: var(--spacing-tiny);
 }
 

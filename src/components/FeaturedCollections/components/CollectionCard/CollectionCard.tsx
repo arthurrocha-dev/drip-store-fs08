@@ -1,11 +1,10 @@
-
-import SVG from './img/index.svg';
 import styles from './CollectionCard.module.css'
 import { CollectionCardProps } from "./CollectionCard.props";
 import { Button } from '../../../Button/Button'
+import png from './img/tShirtCollection.png'
 
 
-export const CollectionCard:React.FC<CollectionCardProps> = ({discount = 0 ,title, urlImg = SVG}) => {
+export const CollectionCard:React.FC<CollectionCardProps> = ({discount = 30 ,title, urlImg = png}) => {
   return (
     <>
       <div className={styles.CollectionCard}>

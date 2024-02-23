@@ -12,12 +12,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: var(--color-secondary-gradient);
+    background-image: linear-gradient(to bottom, #E8DFFF 20%, #FFFFFF 50%);
     border-radius: 100%;
 }
 
+
 .Image {
-    width: 95%;
+    width: 50%;
     margin: 0 auto;
     position: relative;
     object-fit: contain;

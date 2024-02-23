@@ -1,5 +1,5 @@
 import { Button } from "../Button/Button";
-import BannerImg from "/src/components/Banner/img/banner-rodape.svg";
+import BannerImg from "./img/TenisJordan.png";
 import styles from './Banner.module.css'
 
 export const Banner = (): JSX.Element => {
@@ -15,8 +15,6 @@ export const Banner = (): JSX.Element => {
           <p className={styles.Description}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
           </p>
-
-
           <Button text="Ver Oferta"/>
         </div>
       </div>
