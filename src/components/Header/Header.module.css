@@ -57,7 +57,7 @@
 @media (max-width: 768px) {
 
     .Header {
-        padding: var(--spacing-large) var(--spacing-smaller);
+        padding: var(--spacing-large) var(--spacing-normal);
     }
 
 

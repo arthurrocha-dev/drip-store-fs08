@@ -17,14 +17,14 @@ export const TrendingProducts = () => { // Alterado para TrendingProducts
     }, []);
 
     return (
-        <div className={styles.TrendingProducts}> 
-            <div className={styles.TrendingProductsHeader}> 
-                <h2 className={styles.TrendingProductsTitle}>Produtos em alta</h2> 
-                <Link className={styles.TrendingProductsSeeAll} to={ROUTES.Products}> Ver todos <FaArrowRightLong /> </Link > 
+        <div className={styles.TrendingProducts}>
+            <div className={styles.TrendingProductsHeader}>
+                <h2 className={styles.TrendingProductsTitle}>Produtos em alta</h2>
+                <Link className={styles.TrendingProductsSeeAll} to={ROUTES.Products}> Ver todos <FaArrowRightLong /> </Link >
             </div>
-            <div className={styles.TrendingProductsContainer}> 
+            <div className={styles.TrendingProductsContainer}>
                 {trendingProductsList.map((product) => (
-                    <CardProduct 
+                    <CardProduct
                         key={product.id}
                         urlImg={product.urlImg}
                         name={product.name}
