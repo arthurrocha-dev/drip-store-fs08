@@ -1,7 +1,7 @@
-import { ROUTES } from '../../../../routes';
-import { TextLink } from '../../../TextLink/TextLink';
-import styles from './NavBar.module.css';
-import { NavBarProps } from './NavBar.props';
+import { ROUTES } from '../../../../routes'
+import { TextLink } from '../../../TextLink/TextLink'
+import styles from './NavBar.module.css'
+import { NavBarProps } from './NavBar.props'
 
 export const NavBar: React.FC<NavBarProps> = ({ onClick }) => {
   return (
@@ -22,5 +22,5 @@ export const NavBar: React.FC<NavBarProps> = ({ onClick }) => {
         </TextLink>
       </div>
     </>
-  );
-};
+  )
+}

@@ -1,5 +1,5 @@
-import { CardProductProps } from './CardProduct.props';
-import styles from './CardProduct.module.css';
+import { CardProductProps } from './CardProduct.props'
+import styles from './CardProduct.module.css'
 
 export const CardProduct: React.FC<CardProductProps> = ({
   urlImg,
@@ -35,5 +35,5 @@ export const CardProduct: React.FC<CardProductProps> = ({
         </div>
       )}
     </div>
-  );
-};
+  )
+}

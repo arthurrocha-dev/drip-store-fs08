@@ -1,5 +1,5 @@
-import { SalesResult } from "../../../api_mockada/api.props";
+import { SalesResult } from '../../../api/api.props'
 
 export interface SlideProps {
-   sales: SalesResult[]
+  sales: SalesResult[]
 }
