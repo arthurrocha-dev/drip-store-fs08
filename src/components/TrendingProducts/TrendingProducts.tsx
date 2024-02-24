@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { CardProduct } from '../CardProduct/CardProduct';
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useEffect, useState } from 'react';
-import { getProducts } from '../../api_mockada/api';
-import { TrendingProductsResult } from '../../api_mockada/api.props';
+import { getProducts } from '../../api/api';
+import { TrendingProductsResult } from '../../api/api.props';
 import styles from './TrendingProducts.module.css';
 import { ROUTES } from '../../routes';
 
