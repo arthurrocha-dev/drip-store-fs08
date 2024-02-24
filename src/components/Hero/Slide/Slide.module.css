@@ -3,11 +3,6 @@
   z-index: 0;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
 .bubles {
   position: absolute;
   right: var(--spacing-normal);
@@ -94,33 +89,6 @@
   transform: rotate(-5.343deg);
   user-select: none;
 }
-
-
-/* TODO: MEU CSS NÃO ESTÁ SOBREPONDO O CSS NATIVO DA BIBLIOTECA SWIPER E NÃO CONSIGO APLICAR OS MEUS ESTILOS */
-.swiperPagination {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  border-radius: 20px;
-}
-
-.swiperPaginationBullet {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--color-gray-light);
-  margin: 5px;
-  cursor: pointer;
-}
-
-.swiperPaginationBulletactive {
-  background-color: var(--color-primary);
-}
-
 
 @media (max-width: 600px) {
   .firstContent {

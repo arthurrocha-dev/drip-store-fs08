@@ -10,8 +10,6 @@ import { SlideProps } from "./Slide.props";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../../routes";
 
-//TODO: Melhorar responsividade do "Bubles" talvez transformando em .svg
-//TODO: Reduzir repetição do código, como se chamasse apenas o componente pronto repetidas vezes.
 
 export const Slide: React.FC<SlideProps> = ({ sales }) => {
   return (
