@@ -2,7 +2,7 @@
   padding: var(--spacing-medium) var(--spacing-massive);
   background-color: var(--color-white);
   position: fixed;
-  width: 100%;
+  width: calc(100% - calc(2 * var(--spacing-massive)));
 }
 
 .HeaderIconsContainer {
