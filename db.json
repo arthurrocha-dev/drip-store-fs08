@@ -1,4 +1,30 @@
 {
+  "sales": [
+    {
+      "title": "Melhores ofertas personalizadas",
+      "subtitle": "Queima de estoque Nike 🔥",
+      "description":
+        "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur."
+    },
+    {
+      "title": "Melhores ofertas 2",
+      "subtitle": "Queima de estoque Nike 2 🔥",
+      "description":
+        "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur."
+    },
+    {
+      "title": "Melhores ofertas 3",
+      "subtitle": "Queima de estoque Nike 3 🔥",
+      "description":
+        "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur."
+    },
+    {
+      "title": "Melhores ofertas 4",
+      "subtitle": "Queima de estoque Nike 4 🔥",
+      "description":
+        "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur."
+    }
+  ],
   "products": [
     {
       "id": 1,
@@ -177,6 +203,177 @@
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
       "price": 933.13,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 21,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 425.76,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 22,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 1867.45,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 23,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 1289.94,
+      "discountValue": 642.47,
+      "trending": true
+    },
+    {
+      "id": 24,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 542.35,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 25,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 917.12,
+      "discountValue": 274.14,
+      "trending": true
+    },
+    {
+      "id": 26,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 812.79,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 27,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 786.89,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 28,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 1210.61,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 29,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 1501.86,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 30,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 1838.11,
+      "discountValue": 920.82,
+      "trending": true
+    },
+    {
+      "id": 31,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 372.03,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 32,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 1137.28,
+      "discountValue": 568.64,
+      "trending": true
+    },
+    {
+      "id": 33,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 1244.19,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 34,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 1562.93,
+      "discountValue": 781.47,
+      "trending": true
+    },
+    {
+      "id": 35,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 583.32,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 36,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 896.42,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 37,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 1565.56,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 38,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 1975.22,
+      "discountValue": 0,
+      "trending": false
+    },
+    {
+      "id": 39,
+      "urlImg": "/src/img/Layer 1aa 2.png",
+      "name": "K-Swiss V8 - Masculino",
+      "department": "Tênis",
+      "price": 160.47,
       "discountValue": 0,
       "trending": false
     }

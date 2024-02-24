@@ -7,3 +7,9 @@ export interface TrendingProductsResult {
     discountValue: number;
     trending: boolean;
 }
+
+export interface SalesResult {
+    title: string;
+    subtitle: string;
+    description: string;
+}
