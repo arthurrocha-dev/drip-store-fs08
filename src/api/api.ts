@@ -1,7 +1,7 @@
-import { SalesResult, TrendingProductsResult } from './api.props'
+import { SalesResult, ProductsListResult } from './api.props'
 import { FEATURED_PRODUCTS_URL, SALES_URL } from './api.urls'
 
-export const getProducts = async (): Promise<TrendingProductsResult[]> => {
+export const getProducts = async (): Promise<ProductsListResult[]> => {
   return await fetch(FEATURED_PRODUCTS_URL).then(
     async (response) => await response.json()
   )

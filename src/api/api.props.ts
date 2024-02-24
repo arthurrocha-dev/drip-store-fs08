@@ -1,4 +1,4 @@
-export interface TrendingProductsResult {
+export interface ProductsListResult {
   id: number
   urlImg: string
   name: string

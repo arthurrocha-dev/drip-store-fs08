@@ -1,11 +1,9 @@
-import { TrendingProductsCards } from "./CardProducts/TrendingProductsCards"
-
-
+import { ProductsList } from '../../components'
 
 export const Products = () => {
-    return(
-        <>
-            <TrendingProductsCards itemsPerPage={20} />
-        </>
-    )
+  return (
+    <>
+      <ProductsList title="Produtos" />
+    </>
+  )
 }
