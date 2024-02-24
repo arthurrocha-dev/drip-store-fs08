@@ -3,8 +3,6 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-smaller);
-    position: relative;
-    z-index: 0;
 }
 
 .CardProductContainerBottom {
@@ -30,6 +28,7 @@
     background-color: var(--color-white);
     border-radius: var(--spacing-tiny);
     display: flex;
+    flex-direction: column  ;
     width: 100%;
 }
 
@@ -42,9 +41,7 @@
     border-radius: calc(var(--spacing-small) * 2);
     font-size: .8rem;
     padding: var(--spacing-smaller);
-    position: absolute;
-    top: var(--spacing-small);
-    left: var(--spacing-small);
-    width: 20%;
+    margin: var(--spacing-small) 0 0 var(--spacing-small);
+    width: 30%;
     text-align: center;
 }

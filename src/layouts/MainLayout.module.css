@@ -1,0 +1,3 @@
+.Main {
+    margin: calc(2 * var(--spacing-huge)) 0;
+}

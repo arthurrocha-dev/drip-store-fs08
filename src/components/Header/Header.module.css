@@ -1,13 +1,15 @@
 .Header {
     padding: var(--spacing-medium) var(--spacing-massive);
     background-color: var(--color-white);
+    position: fixed;
+    width: 100%;
 }
 
 .HeaderIconsContainer {
     display: flex;
     align-items: center;
     gap: var(--spacing-small);
-}
+}  
 
 .SearchIcon {
     width: 30px;
@@ -55,7 +57,7 @@
 @media (max-width: 768px) {
 
     .Header {
-        padding: var(--spacing-large) var(--spacing-smaller);
+        padding: var(--spacing-large) var(--spacing-normal);
     }
 
 
@@ -73,7 +75,6 @@
         background-color: var(--color-dark-grey);
         opacity: .7;
         cursor: not-allowed;
-        z-index: 1;
     }
     
     .MobileNavBarContainer {
@@ -85,7 +86,7 @@
         cursor: auto;
         padding: var(--spacing-large);
         position: fixed;
-        z-index: 1;
+
     }
 
     .MobileNavBarFooter {
