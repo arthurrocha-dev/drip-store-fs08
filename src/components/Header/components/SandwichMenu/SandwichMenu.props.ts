@@ -1,3 +1,3 @@
 export interface SandwichMenuProps {
-    onClick?: () => void
+  onClick?: () => void
 }

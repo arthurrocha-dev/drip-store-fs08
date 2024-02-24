@@ -1,37 +1,37 @@
 .TrendingProducts {
-    padding: var(--spacing-massive);
+  padding: var(--spacing-massive);
 }
 
 .TrendingProductsContainer {
-    display: grid;
-    gap: var(--spacing-large);
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  gap: var(--spacing-large);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .TrendingProductsHeader {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .TrendingProductsSeeAll {
-    align-items: center;
-    color: var(--color-primary);
-    cursor: pointer;
-    display: flex;
-    gap: var(--spacing-smaller);
+  align-items: center;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: flex;
+  gap: var(--spacing-smaller);
 }
 
 .TrendingProductsTitle {
-    font-weight: bold;
-    margin: var(--spacing-large) 0;
+  font-weight: bold;
+  margin: var(--spacing-large) 0;
 }
 
 @media (max-width: 768px) {
-    .TrendingProducts {
-        padding: var(--spacing-small);
-    }
+  .TrendingProducts {
+    padding: var(--spacing-normal);
+  }
 
-    .TrendingProductsContainer {
-        grid-template-columns: 1fr 1fr;
-    }
+  .TrendingProductsContainer {
+    grid-template-columns: 1fr 1fr;
+  }
 }

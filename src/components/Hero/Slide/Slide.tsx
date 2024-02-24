@@ -1,15 +1,14 @@
-import styles from "./Slide.module.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import Tenis from "../assets/whiteNike.png";
-import Bubles from "../assets/bubles.png";
-import { SlideProps } from "./Slide.props";
-import { Link } from "react-router-dom";
-import { ROUTES } from "../../../routes";
-
+import styles from './Slide.module.css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import Tenis from '../assets/whiteNike.png'
+import Bubles from '../assets/bubles.png'
+import { SlideProps } from './Slide.props'
+import { Link } from 'react-router-dom'
+import { ROUTES } from '../../../routes'
 
 export const Slide: React.FC<SlideProps> = ({ sales }) => {
   return (
@@ -39,5 +38,5 @@ export const Slide: React.FC<SlideProps> = ({ sales }) => {
         ))}
       </Swiper>
     </div>
-  );
-};
+  )
+}

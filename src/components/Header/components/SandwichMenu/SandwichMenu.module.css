@@ -1,11 +1,11 @@
 .SandwichMenuIcon {
-    cursor: pointer;
-    font-size: 2rem;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
 .SandwichMenuNavBar {
-    position: fixed;
-    width: 90%;
-    height:100vh;
-    background-color: blue;
+  position: fixed;
+  width: 90%;
+  height: 100vh;
+  background-color: blue;
 }
