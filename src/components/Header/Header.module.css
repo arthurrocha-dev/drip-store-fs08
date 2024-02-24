@@ -1,5 +1,5 @@
 .Header {
-  padding: var(--spacing-medium) var(--spacing-massive);
+  padding: var(--spacing-smaller) var(--spacing-massive) 0;
   background-color: var(--color-white);
   position: fixed;
   width: calc(100% - calc(2 * var(--spacing-massive)));
