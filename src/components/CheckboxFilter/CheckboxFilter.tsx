@@ -6,8 +6,8 @@ export const CheckBoxFilter: React.FC<CheckboxFilterProps> = ({
   textLabel
 }) => {
     return (
-        <div className={styles.DPinput} >
-            <input id={`${inputId}`} type="checkbox" />
+        <div className={styles.DPcheckboxContainer}>
+            <input className={styles.DPinput} id={`${inputId}`} type="checkbox" />
             <label htmlFor={`${inputId}`}>{textLabel}</label>
         </div>
     )
