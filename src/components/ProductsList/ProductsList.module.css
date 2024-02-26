@@ -24,15 +24,15 @@
 
 .SkeletonProductList {
   margin: var(--spacing-normal);
-  z-index: -1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px ){
   .ProductsList {
     padding: var(--spacing-normal);
   }
-
+  
   .ProductsListContainer {
     grid-template-columns: 1fr 1fr;
   }
+  
 }
