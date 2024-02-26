@@ -7,6 +7,7 @@ import { ProductsListResult } from '../../api/api.props'
 import styles from './ProductsList.module.css'
 import { ROUTES } from '../../routes'
 import { ProductsListCardsProps } from './ProductsList.props'
+import Skeleton from 'react-loading-skeleton'
 
 export const ProductsList: React.FC<ProductsListCardsProps> = ({
   isTrending,
@@ -19,7 +20,9 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
   let list = []
 
   useEffect(() => {
-    getProducts().then((result) => setProductsList(result))
+    setTimeout(() => {
+      getProducts().then((result) => setProductsList(result))
+    }, 3000)
   }, [])
 
   if (isTrending) {
@@ -51,19 +54,28 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
           </Link>
         </div>
       )}
-
-      <div className={styles.ProductsListContainer}>
-        {list.map((product) => (
-          <CardProduct
-            key={product.id}
-            urlImg={product.urlImg}
-            name={product.name}
-            department={product.department}
-            price={product.price}
-            discountValue={product.discountValue}
-          />
-        ))}
-      </div>
+      {productsList.length > 0 ? (
+        <div className={styles.ProductsListContainer}>
+          {list.map((product) => (
+            <CardProduct
+              key={product.id}
+              urlImg={product.urlImg}
+              name={product.name}
+              department={product.department}
+              price={product.price}
+              discountValue={product.discountValue}
+            />
+          ))}
+        </div>
+      ) : (
+        <Skeleton
+          width={'calc(25% - calc(2*var(--spacing-normal)))'}
+          height={'200px'}
+          count={4}
+          inline
+          className={styles.SkeletonProductList}
+        />
+      )}
     </div>
   )
 }

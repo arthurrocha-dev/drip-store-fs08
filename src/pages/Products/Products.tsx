@@ -5,7 +5,7 @@ export const Products = () => {
   return (
     <div className={styles.ProductsContainer}>
       <ProductsFilters />
-      <ProductsList title="Produtos" />
+      <ProductsList/>
     </div>
   )
 }

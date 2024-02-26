@@ -22,6 +22,11 @@
   margin: var(--spacing-large) 0;
 }
 
+.SkeletonProductList {
+  margin: var(--spacing-normal);
+  z-index: -1;
+}
+
 @media (max-width: 768px) {
   .ProductsList {
     padding: var(--spacing-normal);
