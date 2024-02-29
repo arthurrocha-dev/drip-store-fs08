@@ -1,5 +1,4 @@
 .CollectionIcon {
-    width: 25%;
     padding: var(--spacing-small);
     text-align: center;
 }
@@ -26,4 +25,13 @@
 
 .CollectionIconContainteImg:hover {
     filter: none;
+}
+
+@media (max-width: 768px) {
+    .CollectionIconContainteImg {
+        padding: var(--spacing-normal); 
+    }
+    .CollectionIconContainteImg {
+        padding: var(--spacing-normal); 
+    }
 }

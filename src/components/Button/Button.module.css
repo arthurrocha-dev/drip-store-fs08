@@ -2,11 +2,11 @@
     border: none;
     border-radius: var(--spacing-smaller);
     cursor: pointer;
-    padding: var(--spacing-small);
     font-weight: bold;
-    transition: background-color .5s ease;
+    transition: background-color .3s ease;
     text-align: center;
-
+    width: 200px;
+    padding: 12px;
 }
 
 .PrimaryButton {
@@ -55,6 +55,6 @@
 
 @media (max-width: 768px) {
     .PrimaryButton, .SecundaryButton, .ShopButton {
-        width: 100%;
+        width: 50%;
     }
 }

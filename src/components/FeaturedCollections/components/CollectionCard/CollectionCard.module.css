@@ -1,8 +1,12 @@
 .CollectionCard {
     display: flex;
-    flex: 1;
-    background-color:#D8E3F2;
-    border-radius: var(--spacing-tiny);
+    background-color: #d8e3f2;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .CollectionCardLeft {
@@ -10,8 +14,10 @@
     height: calc(100% - calc(2 * var(--spacing-normal)));
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: var(--spacing-normal);
+    flex-wrap: nowrap;
+    align-items: flex-start;
 }
 
 .Discount {
@@ -34,5 +40,7 @@
 }
 
 .CollectionImage {
-    width:50%;
+    width: 50%;
+    Height: 100%;
+    position: relative;
 }

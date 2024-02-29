@@ -82,8 +82,8 @@ export const Footer = () => {
             eiusmod tempor incididunt ut labore et dolore.
           </p>
           <div className={styles.SocialMedias}>
-            <FaFacebookF className={`${styles.icon} ${styles.Blue}`} />
-            <FaInstagram className={`${styles.icon} ${styles.Primary}`} />
+            <FaFacebookF className={styles.icon} />
+            <FaInstagram className={styles.icon} />
             <FaXTwitter className={styles.icon} />
           </div>
         </div>
@@ -125,9 +125,7 @@ export const Footer = () => {
           </LinksSection>
         </div>
       </div>
-
         <p className={styles.CopyrightMSG}>@ {yaer} Digital College</p>
-
     </footer>
   );
 };

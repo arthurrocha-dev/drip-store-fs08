@@ -1,5 +1,6 @@
 import styles from './Logo.module.css'
 import LogoVetor from '../../img/logo.png'
+import LogoFooter from '../../img/logofooter.png'
 import { Link } from 'react-router-dom'
 import { ROUTES } from '../../routes'
 import { LogoPros } from './Logo.props'

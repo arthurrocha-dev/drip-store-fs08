@@ -7,9 +7,14 @@
 }
 
 .Title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--color-dark-gray-2);
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: "clig" off,"liga" off;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: .75px;
 }
 
 .CardsList {
@@ -21,12 +26,17 @@
 }
 
 .SupTitle {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--color-dark-gray-2);
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: "clig" off,"liga" off;
+    font-family: Inter;
     text-align: center;
-    /* margin-top: 100px;
-    margin-bottom: 20px; */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: .75px;
+    padding: 54px;
+    padding-bottom: 2px;
 }
 
 .IconsList {  
@@ -47,5 +57,14 @@
 
     .CardsList {
         grid-template-columns: 1fr;
+
+    }
+
+    .SupTitle {
+        text-align: left;
+        padding-top: 55px;
+        padding-right: revert-layer;
+        padding-bottom: 1px;
+        padding-left: 2px;
     }
 }
