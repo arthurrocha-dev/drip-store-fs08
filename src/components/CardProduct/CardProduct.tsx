@@ -11,12 +11,13 @@ export const CardProduct: React.FC<CardProductProps> = ({
   return (
     <div className={styles.CardProduct}>
       <div className={styles.CardProductImgContainer}>
-        <div className={styles.DiscountPercentage}>
-          {discountValue && price
-            ? Math.round((discountValue / price) * 100)
-            : ''}
-          % OFF
-        </div>
+        {discountValue && price ? (
+          <div className={styles.DiscountPercentage}>
+            {Math.round((discountValue / price) * 100)}% OFF
+          </div>
+        ) : (
+          ''
+        )}
         <img className={styles.CardProductImg} src={urlImg} alt="" />
       </div>
       <p className={styles.CardProductDepartament}>{department}</p>

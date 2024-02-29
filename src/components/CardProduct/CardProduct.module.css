@@ -29,6 +29,7 @@
   background-color: var(--color-white);
   border-radius: var(--spacing-tiny);
   display: flex;
+  flex: 1;
   flex-direction: column;
   width: 100%;
 }

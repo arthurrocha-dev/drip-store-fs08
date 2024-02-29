@@ -1,8 +1,9 @@
 .Header {
-  padding: var(--spacing-medium) var(--spacing-massive);
+  padding: var(--spacing-smaller) var(--spacing-massive) 0;
   background-color: var(--color-white);
   position: fixed;
-  width: 100%;
+  z-index: 1000;
+  width: calc(100% - calc(2 * var(--spacing-massive)));
 }
 
 .HeaderIconsContainer {
@@ -56,13 +57,13 @@
 @media (max-width: 768px) {
   .Header {
     padding: var(--spacing-large) var(--spacing-normal);
+    width: calc(100% - calc(2 * var(--spacing-normal)));
   }
-
+  
   .HeaderTop {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    width: calc(100% - calc(2 * var(--spacing-small)));
   }
 
   .MobileNavBar {

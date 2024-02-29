@@ -1,19 +1,15 @@
-.TrendingProducts {
-  padding: var(--spacing-massive);
-}
-
-.TrendingProductsContainer {
+.ProductsListContainer {
   display: grid;
   gap: var(--spacing-large);
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.TrendingProductsHeader {
+.ProductsListHeader {
   display: flex;
   justify-content: space-between;
 }
 
-.TrendingProductsSeeAll {
+.ProductsListSeeAll {
   align-items: center;
   color: var(--color-primary);
   cursor: pointer;
@@ -21,17 +17,22 @@
   gap: var(--spacing-smaller);
 }
 
-.TrendingProductsTitle {
+.ProductsListTitle {
   font-weight: bold;
   margin: var(--spacing-large) 0;
 }
 
-@media (max-width: 768px) {
-  .TrendingProducts {
+.SkeletonProductList {
+  margin: var(--spacing-normal);
+}
+
+@media (max-width: 768px ){
+  .ProductsList {
     padding: var(--spacing-normal);
   }
-
-  .TrendingProductsContainer {
+  
+  .ProductsListContainer {
     grid-template-columns: 1fr 1fr;
   }
+  
 }

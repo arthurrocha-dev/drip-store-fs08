@@ -1,0 +1,4 @@
+.CheckBoxFilterGroupTitle {
+  font-weight: bold;
+  margin: var(--spacing-normal) 0 var(--spacing-tiny) ;
+}

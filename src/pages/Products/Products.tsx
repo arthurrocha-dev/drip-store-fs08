@@ -1,11 +1,11 @@
-import { TrendingProductsCards } from "./CardProducts/TrendingProductsCards"
-
-
+import { ProductsFilters, ProductsList } from '../../components'
+import styles from './Products.module.css'
 
 export const Products = () => {
-    return(
-        <>
-            <TrendingProductsCards itemsPerPage={20} />
-        </>
-    )
+  return (
+    <div className={styles.ProductsContainer}>
+      <ProductsFilters />
+      <ProductsList/>
+    </div>
+  )
 }
