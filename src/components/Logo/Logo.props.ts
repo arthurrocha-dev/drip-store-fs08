@@ -1,3 +1,3 @@
 export interface LogoPros {
-    secondary?: boolean;
+  secondary?: boolean
 }
