@@ -52,28 +52,33 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
           </Link>
         </div>
       )}
-      {productsList.length > 0 ? (
-        <div className={styles.ProductsListContainer}>
-          {list.map((product) => (
-            <CardProduct
-              key={product.id}
-              urlImg={product.urlImg}
-              name={product.name}
-              department={product.department}
-              price={product.price}
-              discountValue={product.discountValue}
-            />
-          ))}
-        </div>
-      ) : (
-        <Skeleton
-          width={'calc(25% - calc(2*var(--spacing-normal)))'}
-          height={'200px'}
-          count={4}
-          inline
-          className={styles.SkeletonProductList}
-        />
-      )}
+      <div className={styles.ProductsListContainer}>
+        {productsList.length > 0 ? (
+          <>
+            {list.map((product) => (
+              <CardProduct
+                key={product.id}
+                urlImg={product.urlImg}
+                name={product.name}
+                department={product.department}
+                price={product.price}
+                discountValue={product.discountValue}
+              />
+            ))}
+          </>
+        ) : (
+          <>
+            {[...new Array(4)].map(() => (
+              <Skeleton
+                height={'200px'}
+                count={1}
+                inline
+                className={styles.SkeletonProductList}
+              />
+            ))}
+          </>
+        )}
+      </div>
     </div>
   )
 }
