@@ -1,0 +1,17 @@
+.ContainerCollectionIconsList {
+    margin: auto;
+    width: auto;
+    display: flex;
+    gap: var(--spacing-small);
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+    .ContainerCollectionIconsList {
+        overflow-x: auto;
+        width: 100%;
+        display: flex;
+    }
+}
+

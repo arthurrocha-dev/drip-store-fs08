@@ -1,0 +1,70 @@
+.CollectionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-normal);
+    padding: var(--spacing-medium) var(--spacing-massive);
+    overflow: hidden;
+}
+
+.Title {
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: "clig" off,"liga" off;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: .75px;
+}
+
+.CardsList {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-normal);
+    align-items: stretch;
+}
+
+.SupTitle {
+    color: var(--dark-gray-2, #474747);
+    font-feature-settings: "clig" off,"liga" off;
+    font-family: Inter;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: .75px;
+    padding: 54px;
+    padding-bottom: 2px;
+}
+
+.IconsList {  
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto
+}
+
+@media (max-width: 768px) {
+
+    .CollectionsContainer{
+        padding: var(--spacing-normal) var(--spacing-small);
+    }
+
+    .CardsList {
+        grid-template-columns: 1fr;
+
+    }
+
+    .SupTitle {
+        text-align: left;
+        padding-top: 55px;
+        padding-right: revert-layer;
+        padding-bottom: 1px;
+        padding-left: 2px;
+    }
+}

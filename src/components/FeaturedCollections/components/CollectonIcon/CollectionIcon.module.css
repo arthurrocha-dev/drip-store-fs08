@@ -1,0 +1,37 @@
+.CollectionIcon {
+    padding: var(--spacing-small);
+    text-align: center;
+}
+
+.CollectionIconContainteImg{
+    background-color: var(--color-white);
+    border-radius: 100%;
+    padding: var(--spacing-normal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: grayscale();
+}
+
+.CollectionIconImg {
+    margin: var(--spacing-small);
+    width: var(--spacing-massive);
+    height: var(--spacing-massive);
+}
+
+.CollectionIconTitle {
+    margin: var(--spacing-small);
+}
+
+.CollectionIconContainteImg:hover {
+    filter: none;
+}
+
+@media (max-width: 768px) {
+    .CollectionIconContainteImg {
+        padding: var(--spacing-normal); 
+    }
+    .CollectionIconContainteImg {
+        padding: var(--spacing-normal); 
+    }
+}

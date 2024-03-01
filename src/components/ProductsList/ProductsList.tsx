@@ -20,9 +20,7 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
   let list = []
 
   useEffect(() => {
-    setTimeout(() => {
-      getProducts().then((result) => setProductsList(result))
-    }, 3000)
+    getProducts().then((result) => setProductsList(result))
   }, [])
 
   if (isTrending) {

@@ -1,3 +1,7 @@
 export { Header } from './Header/Header'
+export { Footer } from './Footer/Footer'
+export { FeaturesCollections } from './FeaturedCollections/FeaturedCollections'
 export { ProductsList } from './ProductsList/ProductsList'
 export { ProductsFilters } from './ProductsFilters/ProductsFilters'
+export { Hero } from './Hero/Hero'
+export { Banner } from './Banner/Banner'

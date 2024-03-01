@@ -1,0 +1,75 @@
+.BannerContainer {
+  display: flex;
+  background-color: var(--color-white);
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--spacing-large);
+}
+
+.ContainerImage {
+  display: flex;
+  border-radius: 50%;
+  width: 50%;
+  background: var(--color-tertiary-gradient);
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+}
+
+.Image {
+  display: flex;
+  position: relative;
+  width: 60%;
+}
+
+.Infos {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.SupTitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.Title {
+  color: var(--color-dark-gray-2);
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: var(--Large-spaced);
+}
+
+.Description {
+  color: var(--color-dark-gray-2);
+  font-family: Inter;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .BannerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-medium);
+  }
+  .SupTitle {
+    color: var(--color-warning);
+  }
+  .ContainerImage {
+    width: 50%;
+    border-radius: 50%;
+  }
+  .Infos {
+    width: 100%;
+  }
+  .Title {
+    font-size: 1.5rem;
+  }
+
+  .Description {
+    font-size: 1rem;
+  }
+}

@@ -1,19 +1,20 @@
 :root {
-  --color-dark-grey: #1f1f1f;
+  --color-dark-gray: #1F1F1F;
   --color-dark-gray-2: #474747;
   --color-dark-gray-3: #666666;
-  --color-light-gray: #8f8f8f;
-  --color-light-gray-2: #cccccc;
-  --color-light-gray-3: #f5f5f5;
-  --color-white: #ffffff;
-  --color-primary: #c92071;
-  --color-secondary: #b5b6f2;
+  --color-light-gray: #8F8F8F;
+  --color-light-gray-2: #CCCCCC;
+  --color-light-gray-3: #F5F5F5;
+  --color-white: #FFFFFF;
+  --color-primary: #C92071;
+  --color-secondary: #B5B6F2;
   --color-tertiary: #991956;
-  --color-error: #ee4266;
-  --color-success: #52ca76;
-  --color-warning: #f6aa1c;
-  --color-primary-gradient: linear-gradient(#c92071, #edabca);
-  --color-secondary-gradient: linear-gradient(#b5b6f2, #efefff);
+  --color-error: #EE4266;
+  --color-success: #52CA76;
+  --color-warning: #F6AA1C;
+  --color-primary-gradient: linear-gradient(#C92071, #EDABCA);
+  --color-secondary-gradient: linear-gradient(#F5F5F5, #FFFFFF 70%);
+  --color-tertiary-gradient: linear-gradient(#B5B6F2, #FFFFFF 50%);
 
   --spacing-tiny: 4px;
   --spacing-smaller: 8px;
@@ -24,13 +25,13 @@
   --spacing-huge: 48px;
   --spacing-massive: 64px;
 
-  --fonte-inter: 'Inter';
+  --fonte-inter: "Inter"
 }
 
 body {
   width: 100%;
   font-family: var(--fonte-inter);
-  background-color: var(--color-light-gray-3);
+  background-color: #f9f8fe;
   display: flex;
   flex-direction: column;
 }
@@ -40,4 +41,6 @@ body {
   padding: 0;
   border: 0;
   vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
 }

@@ -1,11 +1,17 @@
-import { ProductsList } from '../../components'
-import { Hero } from '../../components/Hero/Hero'
+import {
+  Banner,
+  FeaturesCollections,
+  Hero,
+  ProductsList,
+} from '../../components'
 import styles from './HomePage.module.css'
 export const HomePage = () => {
   return (
     <div className={styles.HomePage}>
       <Hero />
-      <ProductsList hasTitle isTrending title='Produtos em alta'/>
+      <FeaturesCollections />
+      <ProductsList hasTitle isTrending title="Produtos em alta" />
+      <Banner />
     </div>
   )
 }
