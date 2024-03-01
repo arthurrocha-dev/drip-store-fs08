@@ -1,82 +1,82 @@
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { Logo } from "../Logo/Logo";
-import { LinksSection } from "./components/LinksSection/LinksSection";
-import { TextLink } from "../TextLink/TextLink";
-import styles  from "./Footer.module.css"
+/* eslint-disable react/jsx-key */
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
+import { Logo } from '../Logo/Logo'
+import { LinksSection } from './components/LinksSection/LinksSection'
+import { TextLink } from '../TextLink/TextLink'
+import styles from './Footer.module.css'
 
 export const Footer = () => {
-
   const date = new Date()
   const yaer = date.getFullYear()
 
   const informatinoLinksList = [
     {
       title: 'Sobre Drip Store',
-      url: '#'
+      url: '#',
     },
     {
       title: 'Segurança',
-      url: '#'
+      url: '#',
     },
     {
       title: 'Wishlist',
-      url: '#'
+      url: '#',
     },
     {
       title: 'Blog',
-      url: '#'
+      url: '#',
     },
     {
       title: 'Trabalhe conosco',
-      url: '#'
+      url: '#',
     },
     {
       title: 'Meus Pedidos',
-      url: '#'
+      url: '#',
     },
   ]
 
   const categoryList = [
     {
       title: 'Camisa',
-      url: '#'
+      url: '#',
     },
     {
       title: 'Calça',
-      url: '#'
+      url: '#',
     },
     {
       title: 'Boné',
-      url: '#'
+      url: '#',
     },
     {
       title: 'Headphones',
-      url: '#'
+      url: '#',
     },
     {
       title: 'Tênis',
-      url: '#'
+      url: '#',
     },
   ]
 
   const contactList = [
-
     {
-      title: 'Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161',
-      url: '#'
+      title:
+        'Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161',
+      url: '#',
     },
     {
       title: '(85) 3051-3411',
-      url: '#'
+      url: '#',
     },
   ]
-  
+
   return (
     <footer>
       <div className={styles.FootercContainer}>
         <div className={styles.FooterMainContainer}>
-          <Logo secondary/>
+          <Logo secondary />
           <p className={styles.FooterMainContainer_p}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore.
@@ -88,36 +88,42 @@ export const Footer = () => {
           </div>
         </div>
         <div className={styles.FooterLinksContainer}>
-          <LinksSection title="Informações" >
+          <LinksSection title="Informações">
             <ul>
               {informatinoLinksList.map((link) => {
-                return(
+                return (
                   <li className={styles.ListLinksIten}>
-                    <TextLink to={link.url} type="tertiary">{link.title}</TextLink>
-                  </li>
-                )
-              })}
-            </ul>
-          </LinksSection>
-          
-          <LinksSection title="Categorias" >
-            <ul>
-              {categoryList.map((link) => {
-                return(
-                  <li className={styles.ListLinksIten}>
-                    <TextLink to={link.url} type="tertiary">{link.title}</TextLink>
+                    <TextLink to={link.url} type="tertiary">
+                      {link.title}
+                    </TextLink>
                   </li>
                 )
               })}
             </ul>
           </LinksSection>
 
-          <LinksSection title="Contato" >
+          <LinksSection title="Categorias">
+            <ul>
+              {categoryList.map((link) => {
+                return (
+                  <li className={styles.ListLinksIten}>
+                    <TextLink to={link.url} type="tertiary">
+                      {link.title}
+                    </TextLink>
+                  </li>
+                )
+              })}
+            </ul>
+          </LinksSection>
+
+          <LinksSection title="Contato">
             <ul>
               {contactList.map((link) => {
-                return(
+                return (
                   <li className={styles.ListLinksIten}>
-                    <TextLink to={link.url} type="tertiary">{link.title}</TextLink>
+                    <TextLink to={link.url} type="tertiary">
+                      {link.title}
+                    </TextLink>
                   </li>
                 )
               })}
@@ -125,7 +131,7 @@ export const Footer = () => {
           </LinksSection>
         </div>
       </div>
-        <p className={styles.CopyrightMSG}>@ {yaer} Digital College</p>
+      <p className={styles.CopyrightMSG}>@ {yaer} Digital College</p>
     </footer>
-  );
-};
+  )
+}
