@@ -1,101 +1,75 @@
 .BannerContainer {
-    display: flex;
-    background-color: var(--color-white);
-    gap: 40px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 30px;
+  display: flex;
+  background-color: var(--color-white);
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--spacing-large);
 }
 
 .ContainerImage {
-    display: flex;
-    border-radius: 300px;
-    width: 330px;
-    height: 350px;
-    background: linear-gradient(to bottom, #B5B6F2 -50%, #FFFFFF 50%, #FFFFFF 100%);
-    flex-wrap: wrap;
-    flex-direction: column;
+  display: flex;
+  border-radius: 50%;
+  width: 50%;
+  background: var(--color-tertiary-gradient);
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
 }
 
 .Image {
-    display: flex;
-    position: relative;
-    margin-top: 50px;
-    margin-left: -8px;
-    width: 330px;
-    max-width: 600px;
+  display: flex;
+  position: relative;
+  width: 60%;
 }
 
 .Infos {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
 }
 
 .SupTitle {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 22px;
-    letter-spacing: var(--Short-spaced);
-    color: #c92071;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--color-primary);
 }
 
 .Title {
-    color: var(--dark-gray-2, #474747);
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 50px;
-    letter-spacing: var(--Large-spaced);
+  color: var(--color-dark-gray-2);
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: var(--Large-spaced);
 }
 
 .Description {
-    color: var(--dark-gray-2, #474747);
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: var(--Large-spaced);
+  color: var(--color-dark-gray-2);
+  font-family: Inter;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
-    .BannerContainer {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 20px;
-    }
-    .SupTitle {
-            color: #f6aa1c;
-    }
-    .ContainerImage {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-    }
-    .Image {
-        margin-top: 40px;
-        margin-left: -50px;
-    }
-    .Infos {
-        width: 100%;
-        margin-top: -20px;
-    }
-    .SupTitle {
-        font-size: 12px;
-        line-height: 18px;
-    }
+  .BannerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-medium);
+  }
+  .SupTitle {
+    color: var(--color-warning);
+  }
+  .ContainerImage {
+    width: 50%;
+    border-radius: 50%;
+  }
+  .Infos {
+    width: 100%;
+  }
+  .Title {
+    font-size: 1.5rem;
+  }
 
-    .Title {
-        font-size: 24px;
-        line-height: 30px;
-    }
-
-    .Description {
-        font-size: 14px;
-        line-height: 22px;
-    }
+  .Description {
+    font-size: 1rem;
+  }
 }

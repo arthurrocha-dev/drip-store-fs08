@@ -1,0 +1,9 @@
+.HomePage {
+  padding: var(--spacing-smaller) var(--spacing-massive);
+}
+
+@media (max-width: 768px ) {
+    .HomePage {
+      padding: var(--spacing-smaller) var(--spacing-normal);
+    }
+}

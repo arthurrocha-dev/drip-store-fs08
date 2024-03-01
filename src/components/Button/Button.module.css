@@ -1,60 +1,62 @@
-.PrimaryButton, .SecundaryButton, .ShopButton {
-    border: none;
-    border-radius: var(--spacing-smaller);
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color .3s ease;
-    text-align: center;
-    width: 200px;
-    padding: 12px;
+.PrimaryButton,
+.SecundaryButton,
+.ShopButton {
+  border: none;
+  border-radius: var(--spacing-smaller);
+  cursor: pointer;
+  padding: var(--spacing-small) var(--spacing-large);
+  font-weight: bold;
+  transition: background-color 0.5s ease;
 }
 
 .PrimaryButton {
-    background-color: var(--color-primary);
-    color: var(--color-light-gray-3);
+  background-color: var(--color-primary);
+  color: var(--color-light-gray-3);
 }
 
 .PrimaryButton:hover {
-    background-color: var(--color-tertiary);
+  background-color: var(--color-tertiary);
 }
 
 .SecundaryButton {
-    background-color: var(--color-light-gray-3);
-    color: var(--color-primary);
+  background-color: var(--color-light-gray-3);
+  color: var(--color-primary);
 }
 
 .SecundaryButton:hover {
-    background-color: var(--color-secondary);
+  background-color: var(--color-secondary);
 }
 
 .ShopButton {
-    background-color: #FFB31F;
-    color: var(--color-light-gray-3);
+  background-color: #ffb31f;
+  color: var(--color-light-gray-3);
 }
 
 .ShopButton:hover {
-    background-color: #CF8900;
+  background-color: #cf8900;
 }
 
-
-.disabled{    
-    cursor: not-allowed;
+.disabled {
+  cursor: not-allowed;
 }
 
-.PrimaryButton.disabled, .ShopButton.disabled {
-    background: var(--color-light-gray-2);
-    color: var(--color-light-gray-3);
+.PrimaryButton.disabled,
+.ShopButton.disabled {
+  background: var(--color-light-gray-2);
+  color: var(--color-light-gray-3);
 }
 
 .SecundaryButton.disabled {
-    background-color: var(--color-light-gray-3);
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
-    opacity: .5;
+  background-color: var(--color-light-gray-3);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  opacity: 0.5;
 }
 
 @media (max-width: 768px) {
-    .PrimaryButton, .SecundaryButton, .ShopButton {
-        width: 50%;
-    }
+  .PrimaryButton,
+  .SecundaryButton,
+  .ShopButton {
+    width: 100%;
+  }
 }

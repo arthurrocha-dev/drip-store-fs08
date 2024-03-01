@@ -1,0 +1,16 @@
+.ProductsFilters {
+  width: calc(30% - calc(2 * var(--spacing-small)));
+}
+
+.ProductsFiltersTitle {
+  font-weight: bold;
+  padding: var(--spacing-small) 0;
+  border-bottom: 1px solid var(--color-light-gray-2);
+}
+
+.ProductsFiltersContainer {
+  padding: var(--spacing-small);
+  width: 90%;
+  margin: auto;
+  background: var(--color-white);
+}

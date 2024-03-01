@@ -14,6 +14,7 @@
   --color-warning: #F6AA1C;
   --color-primary-gradient: linear-gradient(#C92071, #EDABCA);
   --color-secondary-gradient: linear-gradient(#F5F5F5, #FFFFFF 70%);
+  --color-tertiary-gradient: linear-gradient(#B5B6F2, #FFFFFF 50%);
 
   --spacing-tiny: 4px;
   --spacing-smaller: 8px;

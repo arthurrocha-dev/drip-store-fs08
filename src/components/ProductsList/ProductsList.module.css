@@ -1,0 +1,39 @@
+.ProductsListContainer {
+  display: grid;
+  gap: var(--spacing-large);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: var(--spacing-massive);
+}
+
+.ProductsListHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ProductsListSeeAll {
+  align-items: center;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: flex;
+  gap: var(--spacing-smaller);
+}
+
+.ProductsListTitle {
+  font-weight: bold;
+  margin: var(--spacing-large) 0;
+}
+
+.SkeletonProductList {
+  margin: var(--spacing-normal);
+}
+
+@media (max-width: 768px ){
+  .ProductsList {
+    padding: var(--spacing-normal);
+  }
+  
+  .ProductsListContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}

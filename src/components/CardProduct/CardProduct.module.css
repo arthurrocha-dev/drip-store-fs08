@@ -1,50 +1,49 @@
 .CardProduct {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-smaller);
-    position: relative;
-    z-index: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-smaller);
 }
 
 .CardProductContainerBottom {
-    display: flex;
-    gap: var(--spacing-smaller);
+  display: flex;
+  gap: var(--spacing-smaller);
 }
 
 .CardProductDepartament {
-    font-size: .8rem;
+  font-size: 0.8rem;
 }
 
-.CardProductDiscontValue, .CardProductPrice {
-    font-weight: bold;
+.CardProductDiscontValue,
+.CardProductPrice {
+  font-weight: bold;
 }
 
 .CardProductImg {
-    margin: auto;
-    width: 80%;
+  margin: auto;
+  width: 80%;
 }
 
 .CardProductImgContainer {
-    box-shadow: 5px 5px 10px var(--color-light-gray-2);
-    background-color: var(--color-white);
-    border-radius: var(--spacing-tiny);
-    display: flex;
-    width: 100%;
+  box-shadow: 5px 5px 10px var(--color-light-gray-2);
+  background-color: var(--color-white);
+  border-radius: var(--spacing-tiny);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
 }
 
 .CardProductPriceOff {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .DiscountPercentage {
-    background-color: #E7FF86;
-    border-radius: calc(var(--spacing-small) * 2);
-    font-size: .8rem;
-    padding: var(--spacing-smaller);
-    position: absolute;
-    top: var(--spacing-small);
-    left: var(--spacing-small);
-    width: 20%;
-    text-align: center;
+  background-color: #e7ff86;
+  border-radius: calc(var(--spacing-small) * 2);
+  font-size: 0.8rem;
+  padding: var(--spacing-smaller);
+  margin: var(--spacing-small) 0 0 var(--spacing-small);
+  width: 30%;
+  text-align: center;
 }

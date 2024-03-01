@@ -1,3 +1,3 @@
 export interface NavBarProps {
-    onClick?: () => void
+  onClick?: () => void
 }
