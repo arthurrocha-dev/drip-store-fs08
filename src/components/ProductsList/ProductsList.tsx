@@ -1,14 +1,12 @@
 import { Link } from 'react-router-dom'
 import { CardProduct } from '../CardProduct/CardProduct'
 import { FaArrowRightLong } from 'react-icons/fa6'
-import { useEffect, useState } from 'react'
-import { getProducts } from '../../api/api'
-import { ProductsListResult } from '../../api/api.props'
 import styles from './ProductsList.module.css'
 import { ROUTES } from '../../routes'
 import { ProductsListCardsProps } from './ProductsList.props'
 import Skeleton from 'react-loading-skeleton'
-import { useProductFilterContext } from '../../hooks/useProductFilter'
+
+import { useProductDataContext } from '../../hooks/useProductData'
 
 export const ProductsList: React.FC<ProductsListCardsProps> = ({
   isTrending,
@@ -16,21 +14,9 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
   title,
   hasTitle,
 }) => {
-  const [productsList, setProductsList] = useState<ProductsListResult[]>([])
-
-  const { filter } = useProductFilterContext()
+  const { productsList, isProductLoading } = useProductDataContext()
 
   let list = []
-
-  useEffect(() => {
-    getProducts().then((result) =>
-      setProductsList(
-        result.filter((item) =>
-          item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase())
-        )
-      )
-    )
-  }, [filter])
 
   if (isTrending) {
     const productsListList = productsList.filter((product) => product.trending)
@@ -62,7 +48,18 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
         </div>
       )}
       <div className={styles.ProductsListContainer}>
-        {productsList.length > 0 ? (
+        {isProductLoading ? (
+          <>
+            {[...new Array(4)].map(() => (
+              <Skeleton
+                height={'200px'}
+                count={1}
+                inline
+                className={styles.SkeletonProductList}
+              />
+            ))}
+          </>
+        ) : (
           <>
             {list.map((product) => (
               <CardProduct
@@ -72,17 +69,6 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
                 department={product.department}
                 price={product.price}
                 discountValue={product.discountValue}
-              />
-            ))}
-          </>
-        ) : (
-          <>
-            {[...new Array(4)].map(() => (
-              <Skeleton
-                height={'200px'}
-                count={1}
-                inline
-                className={styles.SkeletonProductList}
               />
             ))}
           </>
