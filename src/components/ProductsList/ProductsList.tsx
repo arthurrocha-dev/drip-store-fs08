@@ -8,6 +8,7 @@ import styles from './ProductsList.module.css'
 import { ROUTES } from '../../routes'
 import { ProductsListCardsProps } from './ProductsList.props'
 import Skeleton from 'react-loading-skeleton'
+import { useProductFilterContext } from '../../hooks/useProductFilter'
 
 export const ProductsList: React.FC<ProductsListCardsProps> = ({
   isTrending,
@@ -17,11 +18,19 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
 }) => {
   const [productsList, setProductsList] = useState<ProductsListResult[]>([])
 
+  const { filter } = useProductFilterContext()
+
   let list = []
 
   useEffect(() => {
-    getProducts().then((result) => setProductsList(result))
-  }, [])
+    getProducts().then((result) =>
+      setProductsList(
+        result.filter((item) =>
+          item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase())
+        )
+      )
+    )
+  }, [filter])
 
   if (isTrending) {
     const productsListList = productsList.filter((product) => product.trending)

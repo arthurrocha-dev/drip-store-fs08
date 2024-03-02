@@ -1,21 +1,25 @@
 {
   "sales": [
     {
+      "id": "1",
       "title": "Melhores ofertas personalizadas",
       "subtitle": "Queima de estoque Nike 🔥",
       "description": "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur."
     },
     {
+      "id": "2",
       "title": "Melhores ofertas 2",
       "subtitle": "Queima de estoque Nike 2 🔥",
       "description": "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur."
     },
     {
+      "id": "3",
       "title": "Melhores ofertas 3",
       "subtitle": "Queima de estoque Nike 3 🔥",
       "description": "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur."
     },
     {
+      "id": "4",
       "title": "Melhores ofertas 4",
       "subtitle": "Queima de estoque Nike 4 🔥",
       "description": "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur."
@@ -23,7 +27,7 @@
   ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -32,7 +36,7 @@
       "trending": false
     },
     {
-      "id": 2,
+      "id": "2",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -41,7 +45,7 @@
       "trending": true
     },
     {
-      "id": 3,
+      "id": "3",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -50,7 +54,7 @@
       "trending": true
     },
     {
-      "id": 4,
+      "id": "4",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -59,7 +63,7 @@
       "trending": true
     },
     {
-      "id": 5,
+      "id": "5",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -68,7 +72,7 @@
       "trending": true
     },
     {
-      "id": 6,
+      "id": "6",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -77,7 +81,7 @@
       "trending": false
     },
     {
-      "id": 7,
+      "id": "7",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -86,7 +90,7 @@
       "trending": false
     },
     {
-      "id": 8,
+      "id": "8",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -95,7 +99,7 @@
       "trending": false
     },
     {
-      "id": 9,
+      "id": "9",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -104,7 +108,7 @@
       "trending": false
     },
     {
-      "id": 10,
+      "id": "10",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -113,7 +117,7 @@
       "trending": true
     },
     {
-      "id": 11,
+      "id": "11",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -122,7 +126,7 @@
       "trending": false
     },
     {
-      "id": 12,
+      "id": "12",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -131,7 +135,7 @@
       "trending": true
     },
     {
-      "id": 13,
+      "id": "13",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -140,7 +144,7 @@
       "trending": false
     },
     {
-      "id": 14,
+      "id": "14",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -149,7 +153,7 @@
       "trending": true
     },
     {
-      "id": 15,
+      "id": "15",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -158,7 +162,7 @@
       "trending": false
     },
     {
-      "id": 16,
+      "id": "16",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -167,7 +171,7 @@
       "trending": false
     },
     {
-      "id": 17,
+      "id": "17",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -176,7 +180,7 @@
       "trending": false
     },
     {
-      "id": 18,
+      "id": "18",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -185,7 +189,7 @@
       "trending": false
     },
     {
-      "id": 19,
+      "id": "19",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -194,7 +198,7 @@
       "trending": false
     },
     {
-      "id": 20,
+      "id": "20",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -203,7 +207,7 @@
       "trending": false
     },
     {
-      "id": 21,
+      "id": "21",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -212,7 +216,7 @@
       "trending": false
     },
     {
-      "id": 22,
+      "id": "22",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -221,7 +225,7 @@
       "trending": false
     },
     {
-      "id": 23,
+      "id": "23",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -230,7 +234,7 @@
       "trending": true
     },
     {
-      "id": 24,
+      "id": "24",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -239,7 +243,7 @@
       "trending": false
     },
     {
-      "id": 25,
+      "id": "25",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -248,7 +252,7 @@
       "trending": true
     },
     {
-      "id": 26,
+      "id": "26",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -257,7 +261,7 @@
       "trending": false
     },
     {
-      "id": 27,
+      "id": "27",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -266,7 +270,7 @@
       "trending": false
     },
     {
-      "id": 28,
+      "id": "28",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -275,7 +279,7 @@
       "trending": false
     },
     {
-      "id": 29,
+      "id": "29",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -284,7 +288,7 @@
       "trending": false
     },
     {
-      "id": 30,
+      "id": "30",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -293,7 +297,7 @@
       "trending": true
     },
     {
-      "id": 31,
+      "id": "31",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -302,7 +306,7 @@
       "trending": false
     },
     {
-      "id": 32,
+      "id": "32",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -311,7 +315,7 @@
       "trending": true
     },
     {
-      "id": 33,
+      "id": "33",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -320,7 +324,7 @@
       "trending": false
     },
     {
-      "id": 34,
+      "id": "34",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -329,7 +333,7 @@
       "trending": true
     },
     {
-      "id": 35,
+      "id": "35",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -338,7 +342,7 @@
       "trending": false
     },
     {
-      "id": 36,
+      "id": "36",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -347,7 +351,7 @@
       "trending": false
     },
     {
-      "id": 37,
+      "id": "37",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -356,7 +360,7 @@
       "trending": false
     },
     {
-      "id": 38,
+      "id": "38",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
@@ -365,13 +369,22 @@
       "trending": false
     },
     {
-      "id": 39,
+      "id": "39",
       "urlImg": "src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
       "department": "Tênis",
       "price": 160.47,
       "discountValue": 0,
       "trending": false
+    },
+    {
+      "id": "40",
+      "urlImg": "src/assets/img/Layer 1aa 2.png",
+      "name": "Raquete",
+      "department": "Beach Tênis",
+      "price": 160.47,
+      "discountValue": 0,
+      "trending": true
     }
   ]
 }

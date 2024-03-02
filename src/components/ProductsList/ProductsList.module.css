@@ -1,7 +1,7 @@
 .ProductsListContainer {
   display: grid;
   gap: var(--spacing-large);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   margin-bottom: var(--spacing-massive);
 }
 
@@ -27,13 +27,12 @@
   margin: var(--spacing-normal);
 }
 
-@media (max-width: 768px ){
+@media (max-width: 768px) {
   .ProductsList {
     padding: var(--spacing-normal);
   }
-  
+
   .ProductsListContainer {
     grid-template-columns: 1fr 1fr;
   }
-  
 }
