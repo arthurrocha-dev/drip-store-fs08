@@ -1,5 +1,5 @@
 .ProductsContainer {
   display: flex;
-  gap: var(--spacing-small);
+  gap: var(--spacing-medium);
   padding: var(--spacing-smaller) var(--spacing-massive);
 }
