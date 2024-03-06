@@ -1,3 +1,6 @@
+.ProductsList {
+  padding: 0 var(--spacing-massive);
+}
 .ProductsListContainer {
   display: grid;
   gap: var(--spacing-large);
