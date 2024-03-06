@@ -25,7 +25,7 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [productsList, setProductsList] = useState<ProductsListResult[]>([])
-  const [isLoadgin, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const { filter } = useProductFilterContext()
   useEffect(() => {
     setIsLoading(true)
@@ -40,7 +40,7 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
   }, [filter])
 
   return (
-    <ProductDataContext.Provider value={{ isProductLoading: isLoadgin, productsList }}>
+    <ProductDataContext.Provider value={{ isProductLoading: isLoading, productsList }}>
       {children}
     </ProductDataContext.Provider>
   )

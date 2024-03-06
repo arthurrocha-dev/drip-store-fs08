@@ -104,7 +104,9 @@ const MobileHeader = () => {
           </div>
         </div>
 
-        {menuState === MobileMenuState.CLOSED && isVisible && <SearchInput onSearch={setFilter} />}
+        {menuState === MobileMenuState.CLOSED && isVisible && (
+          <SearchInput onSearch={setFilter} />
+        )}
       </header>
       {menuState !== MobileMenuState.CLOSED && (
         <>
