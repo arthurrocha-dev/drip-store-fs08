@@ -1,4 +1,5 @@
 import { CheckBoxFilterGroup } from '../CheckboxFilterGropup/CheckboxFilterGroup'
+import { DpInputRadio } from '../InputRadio/InputRadio'
 import styles from './ProductsFilters.module.css'
 export const ProductsFilters = () => {
   return (
@@ -9,6 +10,9 @@ export const ProductsFilters = () => {
         <CheckBoxFilterGroup />
         <CheckBoxFilterGroup />
       </div>
+
+      <DpInputRadio id='rd1' name='teste' label='Novo'/>
+      <DpInputRadio id='rd2' name='teste' label='Usado'/>
     </div>
   )
 }
