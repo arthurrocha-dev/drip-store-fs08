@@ -7,6 +7,7 @@ import { ProductsListCardsProps } from './ProductsList.props'
 import Skeleton from 'react-loading-skeleton'
 
 import { useProductDataContext } from '../../hooks/useProductData'
+import { useShoppingCartContext } from '../../hooks/useShoppingCart'
 
 export const ProductsList: React.FC<ProductsListCardsProps> = ({
   isTrending,
@@ -15,6 +16,8 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
   hasTitle,
 }) => {
   const { productsList, isProductLoading } = useProductDataContext()
+
+  const { addProduct } = useShoppingCartContext();
 
   let list = []
 
@@ -69,6 +72,7 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
                 department={product.department}
                 price={product.price}
                 discountValue={product.discountValue}
+                onClick={() => addProduct(product)}
               />
             ))}
           </>

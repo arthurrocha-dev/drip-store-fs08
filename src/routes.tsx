@@ -8,6 +8,7 @@ export const ROUTES = {
   Products: '/produtos',
   Categorys: '/categorias',
   MyProducts: '/meus-produtos',
+  Cart: '/cart'
 }
 
 export default [
@@ -31,6 +32,7 @@ export default [
         path: ROUTES.MyProducts,
         element: <HomePage />,
       },
+      
     ],
   },
 ] as RouteObject[]

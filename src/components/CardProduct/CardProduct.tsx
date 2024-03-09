@@ -7,9 +7,10 @@ export const CardProduct: React.FC<CardProductProps> = ({
   price,
   discountValue = 0,
   department,
+  onClick,
 }) => {
   return (
-    <div className={styles.CardProduct}>
+    <div className={styles.CardProduct} onClick={onClick}>
       <div className={styles.CardProductImgContainer}>
         {discountValue && price ? (
           <div className={styles.DiscountPercentage}>

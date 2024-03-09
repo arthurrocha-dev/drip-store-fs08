@@ -3,7 +3,8 @@ import { CheckboxFilterProps } from './CheckboxFilter.props'
 
 export const CheckBoxFilter: React.FC<CheckboxFilterProps> = ({
   inputId,
-  textLabel
+  textLabel,
+  
 }) => {
     return (
         <div className={styles.DPcheckboxContainer}>
