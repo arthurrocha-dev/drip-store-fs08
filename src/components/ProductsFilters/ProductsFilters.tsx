@@ -1,35 +1,68 @@
 import { CheckBoxFilter } from '../CheckboxFilter/CheckboxFilter'
 import { CheckBoxFilterGroup } from '../CheckboxFilterGropup/CheckboxFilterGroup'
 import { DpInputRadio } from '../InputRadio/InputRadio'
+import { InputRadioGropu } from '../InputRadioGroup/InputRadioGroup'
 import styles from './ProductsFilters.module.css'
 export const ProductsFilters = () => {
   return (
     <div className={styles.ProductsFilters}>
       <div className={styles.ProductsFiltersContainer}>
         <p className={styles.ProductsFiltersTitle}>Filtrar por</p>
-        <CheckBoxFilterGroup>
-          <CheckBoxFilter inputId="checkbox-filter-marca-1" textLabel="lorem" />
-          <CheckBoxFilter inputId="checkbox-filter-marca-2" textLabel="lorem" />
-          <CheckBoxFilter inputId="checkbox-filter-marca-3" textLabel="lorem" />
-          <CheckBoxFilter inputId="checkbox-filter-marca-4" textLabel="lorem" />
+        <CheckBoxFilterGroup groupName="Marka">
+          <CheckBoxFilter
+            inputId="checkbox-filter-marka-1"
+            textLabel="Adiddas"
+          />
+          <CheckBoxFilter
+            inputId="checkbox-filter-marka-2"
+            textLabel="Calenciaga"
+          />
+          <CheckBoxFilter
+            inputId="checkbox-filter-marka-3"
+            textLabel="K-Swiss"
+          />
+          <CheckBoxFilter inputId="checkbox-filter-marka-4" textLabel="Puma" />
         </CheckBoxFilterGroup>
 
-        <CheckBoxFilterGroup>
-          <CheckBoxFilter inputId="checkbox-filter-marca-5" textLabel="lorem" />
-          <CheckBoxFilter inputId="checkbox-filter-marca-6" textLabel="lorem" />
-          <CheckBoxFilter inputId="checkbox-filter-marca-7" textLabel="lorem" />
-          <CheckBoxFilter inputId="checkbox-filter-marca-8" textLabel="lorem" />
+        <CheckBoxFilterGroup groupName="Categoria">
+          <CheckBoxFilter
+            inputId="checkbox-filter-categoris-1"
+            textLabel="Esporte e lazer"
+          />
+          <CheckBoxFilter
+            inputId="checkbox-filter-categoris-2"
+            textLabel="Casual"
+          />
+          <CheckBoxFilter
+            inputId="checkbox-filter-categoris-3"
+            textLabel="Utilitário"
+          />
+          <CheckBoxFilter
+            inputId="checkbox-filter-categoris-4"
+            textLabel="Corrida"
+          />
         </CheckBoxFilterGroup>
-        <CheckBoxFilterGroup>
-          <CheckBoxFilter inputId="checkbox-filter-marca-9" textLabel="lorem" />
-          <CheckBoxFilter inputId="checkbox-filter-marca-10" textLabel="lorem" />
-          <CheckBoxFilter inputId="checkbox-filter-marca-11" textLabel="lorem" />
-          <CheckBoxFilter inputId="checkbox-filter-marca-12" textLabel="lorem" />
+
+        <CheckBoxFilterGroup groupName="Gênero">
+          <CheckBoxFilter
+            inputId="checkbox-filter-genero-1"
+            textLabel="Maculino"
+          />
+          <CheckBoxFilter
+            inputId="checkbox-filter-genero-2"
+            textLabel="Feminino"
+          />
+          <CheckBoxFilter
+            inputId="checkbox-filter-genero-3"
+            textLabel="Unisex"
+          />
         </CheckBoxFilterGroup>
+
+        <InputRadioGropu groupName="Estado">
+          <DpInputRadio id="estado1" name="estado" label="Novo" />
+          <DpInputRadio id="estado2" name="estado" label="Usado" />
+        </InputRadioGropu>
       </div>
-
-      <DpInputRadio id="rd1" name="teste" label="Novo" />
-      <DpInputRadio id="rd2" name="teste" label="Usado" />
     </div>
   )
 }
