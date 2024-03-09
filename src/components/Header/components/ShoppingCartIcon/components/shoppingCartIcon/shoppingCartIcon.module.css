@@ -1,0 +1,28 @@
+.ShoppingCartIten {
+  height: 25%;
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid var(--color-light-gray-3);
+  color: var(--color-dark-gray-2);
+}
+
+.ShoppingCartIten img {
+  width: 40%;
+  aspect-ratio: 1;
+}
+
+.ShoppingCartItenContainerFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ShoppingCartItenContainerPrice,
+.ShoppingCartItenContainerFooterDiscontValue {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.ShoppingCartItenContainerFooterPrice {
+  text-decoration: line-through;
+  color: var(--color-light-gray);
+}

@@ -5,12 +5,14 @@ interface ShoppingCart {
   productsList: ProductsListResult[]
   totalValue: number
   addProduct: (product: ProductsListResult) => void
+  clearCart: () => void
 }
 
 const ShoppingCartContext = createContext<ShoppingCart>({
   productsList: [],
   totalValue: 0,
   addProduct: () => {},
+  clearCart: () => {},
 })
 
 export const useShoppingCartContext = () => useContext(ShoppingCartContext)
@@ -34,9 +36,15 @@ export const ShoppingCartProvider: FC<ShoppingCartProviderProps> = ({
     }
   }
 
+  const clearCart = () => {
+    if (productsList.length > 0) {
+      setProductsList([])
+    }
+  }
+
   return (
     <ShoppingCartContext.Provider
-      value={{ productsList, totalValue, addProduct }}
+      value={{ productsList, totalValue, addProduct, clearCart }}
     >
       {children}
     </ShoppingCartContext.Provider>
