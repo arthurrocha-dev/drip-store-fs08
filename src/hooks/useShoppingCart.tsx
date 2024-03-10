@@ -1,11 +1,12 @@
 import { FC, ReactNode, createContext, useContext, useState } from 'react'
 import { ProductsListResult } from '../api/api.props'
-
+import Cookies from 'js-cookie'
 interface ShoppingCart {
   productsList: ProductsListResult[]
   totalValue: number
   addProduct: (product: ProductsListResult) => void
   clearCart: () => void
+  setCookiesSoppingCart: (shoppingCartCookie: ProductsListResult[]) => void
 }
 
 const ShoppingCartContext = createContext<ShoppingCart>({
@@ -13,6 +14,7 @@ const ShoppingCartContext = createContext<ShoppingCart>({
   totalValue: 0,
   addProduct: () => {},
   clearCart: () => {},
+  setCookiesSoppingCart: () => {},
 })
 
 export const useShoppingCartContext = () => useContext(ShoppingCartContext)
@@ -39,12 +41,24 @@ export const ShoppingCartProvider: FC<ShoppingCartProviderProps> = ({
   const clearCart = () => {
     if (productsList.length > 0) {
       setProductsList([])
+      Cookies.set('shoppingCart', JSON.stringify([]))
     }
+  }
+
+  const setCookiesSoppingCart = (ShoppingCartCookie: ProductsListResult[]) => {
+    if(ShoppingCartCookie) {
+      ShoppingCartCookie.forEach((element)=> {
+        if(!productsList.map((product)=> product.id).includes(element.id)) {
+          setProductsList([...productsList, element])
+        }
+      })
+    }
+    else return
   }
 
   return (
     <ShoppingCartContext.Provider
-      value={{ productsList, totalValue, addProduct, clearCart }}
+      value={{ productsList, totalValue, addProduct, clearCart, setCookiesSoppingCart }}
     >
       {children}
     </ShoppingCartContext.Provider>

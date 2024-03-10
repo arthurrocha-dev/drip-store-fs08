@@ -1,17 +1,38 @@
 import { FiShoppingCart } from 'react-icons/fi'
 import { ShoppingCarProps } from './ShoppingCartIcon.props'
 import styles from './ShoppingCartIcons.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useShoppingCartContext } from '../../../../hooks/useShoppingCart'
 import { Button } from '../../../Button/Button'
 import { ShoppingCartIten } from './components/shoppingCartIcon/shoppingCartIcon'
 import { FaRegFaceSadCry } from 'react-icons/fa6'
 import { PiMaskSadLight } from 'react-icons/pi'
+import Cookies from 'js-cookie'
 
 export const ShoppingCarIcon: React.FC<ShoppingCarProps> = ({
   quantityOfItems = 0,
 }) => {
-  const { productsList, totalValue, clearCart } = useShoppingCartContext()
+  const { productsList, totalValue, clearCart, setCookiesSoppingCart } =
+    useShoppingCartContext()
+
+  useEffect(() => {
+    const cartFromCookies = Cookies.get('shoppingCart')
+    if (cartFromCookies) {
+      const parsedCart = JSON.parse(cartFromCookies)
+      setCookiesSoppingCart(parsedCart)
+    }
+  }, [productsList])
+
+  useEffect(() => {
+    const cartFromCookies = Cookies.get('shoppingCart')
+    if (cartFromCookies) {
+      const parsedCart = JSON.parse(cartFromCookies)
+      const mergedCart = [...parsedCart, ...productsList]
+      Cookies.set('shoppingCart', JSON.stringify(mergedCart))
+    } else {
+      Cookies.set('shoppingCart', JSON.stringify(productsList))
+    }
+  }, [productsList])
 
   const CartStates = {
     CLOSED: 'CLOSED',
@@ -86,8 +107,7 @@ export const ShoppingCarIcon: React.FC<ShoppingCarProps> = ({
               <div className={styles.shoppingCartPopoverFooter}>
                 <p
                   onClick={() => {
-                    quantityOfItems > 0 ?
-                    setIsOpenModal(true): ''
+                    quantityOfItems > 0 ? setIsOpenModal(true) : ''
                   }}
                 >
                   Esvaziar
@@ -100,7 +120,10 @@ export const ShoppingCarIcon: React.FC<ShoppingCarProps> = ({
       </div>
 
       {isOpenModal && (
-        <div className={styles.modalOverlay} onClick={() => setIsOpenModal(false)}>
+        <div
+          className={styles.modalOverlay}
+          onClick={() => setIsOpenModal(false)}
+        >
           <div className={styles.modalClearCart}>
             <p>
               Entendo... É difícil dizer adeus aos itens do carrinho, mas estou
