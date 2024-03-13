@@ -11,6 +11,5 @@
 .ProductsFiltersContainer {
   padding: var(--spacing-small);
   width: 90%;
-  margin: auto;
   background: var(--color-white);
 }

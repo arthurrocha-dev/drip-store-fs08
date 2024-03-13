@@ -3,3 +3,17 @@
   gap: var(--spacing-small);
   padding: var(--spacing-smaller) var(--spacing-massive);
 }
+
+.ProductsHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-large) var(--spacing-massive);
+}
+
+.ProductsListOrdernation {
+  padding: var(--spacing-small);
+  border: 1px solid var(--color-dark-gray);
+  border-radius: var(--spacing-smaller);
+  gap: var(--spacing-small);
+  display: flex;
+}
