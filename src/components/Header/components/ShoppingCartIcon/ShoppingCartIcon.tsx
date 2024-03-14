@@ -55,6 +55,12 @@ export const ShoppingCarIcon: React.FC<ShoppingCarProps> = ({
     }, 900)
   }
 
+  const handleCartClick = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    e.stopPropagation()
+  }
+
   quantityOfItems = productsList.length
 
   return (
@@ -73,6 +79,7 @@ export const ShoppingCarIcon: React.FC<ShoppingCarProps> = ({
               className={`${styles.shoppingCartPopover} ${
                 cartState === CartStates.CLOSING ? styles.closingCart : ''
               }`}
+              onClick={handleCartClick}
             >
               <p className={styles.setShowPopoverTitle}>Meu Carrinho</p>
               <div className={styles.shoppingCartPopoverListItens}>

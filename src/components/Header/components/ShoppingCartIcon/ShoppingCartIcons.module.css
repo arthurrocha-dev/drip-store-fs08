@@ -166,3 +166,10 @@
     opacity: 0;
   }
 }
+
+@media (max-width: 768px) {
+.shoppingCartPopover {
+  right: 0;
+  margin: auto;
+}  
+}
