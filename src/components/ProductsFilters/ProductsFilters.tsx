@@ -3,10 +3,24 @@ import { CheckBoxFilterGroup } from '../CheckboxFilterGropup/CheckboxFilterGroup
 import { DpInputRadio } from '../InputRadio/InputRadio'
 import { InputRadioGropu } from '../InputRadioGroup/InputRadioGroup'
 import styles from './ProductsFilters.module.css'
-export const ProductsFilters = () => {
+
+export interface ProductsFiltersProps {
+  onClick: () => void
+}
+
+const handleCheckBoxClick = (
+  e: React.MouseEvent<HTMLDivElement, MouseEvent>
+) => {
+  e.stopPropagation()
+}
+
+export const ProductsFilters: React.FC<ProductsFiltersProps> = ({
+  onClick,
+}) => {
   return (
-    <div className={styles.ProductsFilters}>
-      <div className={styles.ProductsFiltersContainer}>
+    <div className={styles.ProductsFilters} onClick={onClick}>
+      {}
+      <div className={styles.ProductsFiltersContainer} onClick={handleCheckBoxClick}>
         <p className={styles.ProductsFiltersTitle}>Filtrar por</p>
         <CheckBoxFilterGroup groupName="Marka">
           <CheckBoxFilter
