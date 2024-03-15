@@ -7,16 +7,18 @@ import {
 } from 'react'
 import { ProductsListResult } from '../api/api.props'
 import { useProductFilterContext } from './useProductFilter'
-import { getProducts } from '../api/api'
+import { getProducts, getProductByID } from '../api/api'
 
 interface ProductDataType {
   isProductLoading: boolean
   productsList: ProductsListResult[]
+  getProduct: (id: string) => void
 }
 
 const ProductDataContext = createContext<ProductDataType>({
   isProductLoading: false,
   productsList: [],
+  getProduct: () => {},
 })
 
 export const useProductDataContext = () => useContext(ProductDataContext)
@@ -29,18 +31,30 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
   const { filter } = useProductFilterContext()
   useEffect(() => {
     setIsLoading(true)
-    getProducts().then((result) =>
-      setProductsList(
-        result.filter((item) =>
-          item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase())
+    getProducts()
+      .then((result) =>
+        setProductsList(
+          result.filter((item) =>
+            item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase())
+          )
         )
       )
-    )
-    .finally(() => setIsLoading(false))
+      .finally(() => setIsLoading(false))
   }, [filter])
 
+  const getProduct = (id: string) => {
+    useEffect(()=>{
+      getProducts()
+        .then((result) => {
+        result.map((e) => e.id.toString() === id)
+      })
+    },[id])
+  }
+
   return (
-    <ProductDataContext.Provider value={{ isProductLoading: isLoading, productsList }}>
+    <ProductDataContext.Provider
+      value={{ isProductLoading: isLoading, productsList, getProduct }}
+    >
       {children}
     </ProductDataContext.Provider>
   )

@@ -9,6 +9,14 @@ export const getProducts = async (): Promise<ProductsListResult[]> => {
     .then(async (response) => await response.data)
 }
 
+export const getProductByID = async (
+  id: string
+): Promise<ProductsListResult[]> => {
+  return await axios
+    .get(FEATURED_PRODUCTS_URL + `/${id}`)
+    .then(async (response) => await response.data)
+}
+
 export const getSales = async (): Promise<SalesResult[]> => {
   return await axios
     .get(SALES_URL)
