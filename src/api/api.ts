@@ -1,17 +1,17 @@
 import axios from 'axios'
 
-import { SalesResult, ProductsListResult } from './api.props'
+import { SalesResult, ProductApiModel } from './api.props'
 import { FEATURED_PRODUCTS_URL, SALES_URL } from './api.urls'
 
-export const getProducts = async (): Promise<ProductsListResult[]> => {
+export const getProducts = async (): Promise<ProductApiModel[]> => {
   return await axios
     .get(FEATURED_PRODUCTS_URL)
     .then(async (response) => await response.data)
 }
 
-export const getProductByID = async (
+export const fetchProductByID = async (
   id: string
-): Promise<ProductsListResult[]> => {
+): Promise<ProductApiModel> => {
   return await axios
     .get(FEATURED_PRODUCTS_URL + `/${id}`)
     .then(async (response) => await response.data)

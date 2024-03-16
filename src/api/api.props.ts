@@ -1,4 +1,4 @@
-export interface ProductsListResult {
+export interface ProductApiModel {
   id: number
   urlImg: string
   name: string

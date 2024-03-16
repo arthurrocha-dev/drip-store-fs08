@@ -1,24 +1,31 @@
-// import { useParams } from 'react-router-dom'
-// import { useProductDataContext } from '../../hooks/useProductData'
+import { useParams } from 'react-router-dom'
+import { useProductDataContext } from '../../hooks/useProductData'
+import { useEffect } from 'react'
 
 export const Product = () => {
+  const { id } = useParams()
+  const {
+    isProductLoading,
+    productDetail,
+    getProductByID,
+    clearProductDetailState,
+  } = useProductDataContext()
 
+  if (!id) {
+    return <div>Produto não encontrado</div>
+  }
 
+  useEffect(() => {
+    return clearProductDetailState
+  }, [clearProductDetailState])
 
-  // const { id } = useParams()
-  // const { getProduct } = useProductDataContext()
+  useEffect(() => {
+    getProductByID(id)
+  }, [id, getProductByID])
 
-  // if (!id) {
-  //   return <div>Produto não encontrado</div>
-  // }
+  if (isProductLoading || !productDetail) {
+    return <div>Carregando produto</div>
+  }
 
-  // const test = getProduct
-
-  // return(
-  //   <div>
-  //     {test}
-  //   </div>
-  // )
-
-
+  return <div>{JSON.stringify(productDetail)}</div>
 }

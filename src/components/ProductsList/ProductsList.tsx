@@ -49,8 +49,9 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
       <div className={styles.ProductsListContainer}>
         {isProductLoading ? (
           <>
-            {[...new Array(4)].map(() => (
+            {[...new Array(4)].map((_, index) => (
               <Skeleton
+                key={index}
                 height={'200px'}
                 count={1}
                 inline
@@ -61,9 +62,12 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
         ) : (
           <>
             {list.map((product) => (
-              <Link className={styles.Link} to={`${ROUTES.Products}/${product.id}`}>
+              <Link
+                className={styles.Link}
+                to={`${ROUTES.Products}/${product.id}`}
+                key={product.id}
+              >
                 <CardProduct
-                  key={product.id}
                   urlImg={product.urlImg}
                   name={product.name}
                   department={product.department}

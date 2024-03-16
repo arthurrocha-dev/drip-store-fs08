@@ -1,12 +1,19 @@
-import { FC, ReactNode, createContext, useContext, useState } from 'react'
-import { ProductsListResult } from '../api/api.props'
+import {
+  FC,
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from 'react'
+import { ProductApiModel } from '../api/api.props'
 import Cookies from 'js-cookie'
+
 interface ShoppingCart {
-  productsList: ProductsListResult[]
+  productsList: ProductApiModel[]
   totalValue: number
-  addProduct: (product: ProductsListResult) => void
+  addProduct: (product: ProductApiModel) => void
   clearCart: () => void
-  setCookiesSoppingCart: (shoppingCartCookie: ProductsListResult[]) => void
 }
 
 const ShoppingCartContext = createContext<ShoppingCart>({
@@ -14,7 +21,6 @@ const ShoppingCartContext = createContext<ShoppingCart>({
   totalValue: 0,
   addProduct: () => {},
   clearCart: () => {},
-  setCookiesSoppingCart: () => {},
 })
 
 export const useShoppingCartContext = () => useContext(ShoppingCartContext)
@@ -26,15 +32,17 @@ type ShoppingCartProviderProps = {
 export const ShoppingCartProvider: FC<ShoppingCartProviderProps> = ({
   children,
 }) => {
-  const [productsList, setProductsList] = useState<ProductsListResult[]>([])
+  const [productsList, setProductsList] = useState<ProductApiModel[]>([])
   const totalValue = productsList.reduce(
     (acc, el) => (acc += el.price - el.discountValue),
     0
   )
 
-  const addProduct = (product: ProductsListResult) => {
+  const addProduct = (product: ProductApiModel) => {
     if (!productsList.map((product) => product.id).includes(product.id)) {
-      setProductsList([...productsList, product])
+      const updatedProductsList = [...productsList, product]
+      Cookies.set('shoppingCart', JSON.stringify(updatedProductsList))
+      setProductsList(updatedProductsList)
     }
   }
 
@@ -45,20 +53,17 @@ export const ShoppingCartProvider: FC<ShoppingCartProviderProps> = ({
     }
   }
 
-  const setCookiesSoppingCart = (ShoppingCartCookie: ProductsListResult[]) => {
-    if(ShoppingCartCookie) {
-      ShoppingCartCookie.forEach((element)=> {
-        if(!productsList.map((product)=> product.id).includes(element.id)) {
-          setProductsList([...productsList, element])
-        }
-      })
+  useEffect(() => {
+    const cartFromCookies = Cookies.get('shoppingCart')
+    if (cartFromCookies) {
+      const parsedCart = JSON.parse(cartFromCookies)
+      setProductsList(parsedCart)
     }
-    else return
-  }
+  }, [])
 
   return (
     <ShoppingCartContext.Provider
-      value={{ productsList, totalValue, addProduct, clearCart, setCookiesSoppingCart }}
+      value={{ productsList, totalValue, addProduct, clearCart }}
     >
       {children}
     </ShoppingCartContext.Provider>

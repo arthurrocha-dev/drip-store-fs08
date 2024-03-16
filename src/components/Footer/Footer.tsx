@@ -92,7 +92,7 @@ export const Footer = () => {
             <ul>
               {informatinoLinksList.map((link) => {
                 return (
-                  <li className={styles.ListLinksIten}>
+                  <li className={styles.ListLinksIten} key={link.title}>
                     <TextLink to={link.url} type="tertiary">
                       {link.title}
                     </TextLink>
@@ -106,7 +106,7 @@ export const Footer = () => {
             <ul>
               {categoryList.map((link) => {
                 return (
-                  <li className={styles.ListLinksIten}>
+                  <li className={styles.ListLinksIten} key={link.title + 1}>
                     <TextLink to={link.url} type="tertiary">
                       {link.title}
                     </TextLink>
@@ -120,7 +120,7 @@ export const Footer = () => {
             <ul>
               {contactList.map((link) => {
                 return (
-                  <li className={styles.ListLinksIten}>
+                  <li className={styles.ListLinksIten} key={link.title + 2}>
                     <TextLink to={link.url} type="tertiary">
                       {link.title}
                     </TextLink>
