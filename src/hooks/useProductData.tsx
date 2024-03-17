@@ -23,6 +23,21 @@ interface ProductDataType {
   getProductByID: (id: string) => void
   productDetail: ProductApiModel | undefined
   clearProductDetailState: () => void
+  addFilter: (filter: ProductsFilter) => void
+}
+
+export interface ProductsFilter {
+  brand?: string[]
+  category?: string[]
+  gender?: string[]
+  state?: string[]
+}
+
+const ProductFiltersDefault = {
+  brand: [],
+  category: [],
+  gender: [],
+  state: [],
 }
 
 const ProductDataContext = createContext<ProductDataType>({
@@ -31,6 +46,7 @@ const ProductDataContext = createContext<ProductDataType>({
   getProductByID: () => {},
   productDetail: undefined,
   clearProductDetailState: () => {},
+  addFilter: () => {},
 })
 
 export const useProductDataContext = () => useContext(ProductDataContext)
@@ -38,12 +54,16 @@ export const useProductDataContext = () => useContext(ProductDataContext)
 export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
+  const [filterList, setFilterList] = useState<ProductsFilter[]>([])
   const [productsList, setProductsList] = useState<ProductApiModel[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const { filter } = useProductFilterContext()
   const [productDetail, setProductDetail] = useState<ProductApiModel>()
 
-  const clearProductDetailState = useCallback(() => setProductDetail(undefined), [setProductDetail])
+  const clearProductDetailState = useCallback(
+    () => setProductDetail(undefined),
+    [setProductDetail]
+  )
 
   const getProductByID = useCallback(
     (id: string) => {
@@ -56,6 +76,12 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
     },
     [setProductDetail]
   )
+
+  const addFilter = (filter: ProductsFilter) => {
+    const newFilterList = [...filterList, filter]
+    setFilterList(newFilterList)
+    console.log(filterList);
+  }
 
   useEffect(() => {
     setIsLoading(true)
@@ -78,6 +104,7 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
         getProductByID,
         productDetail,
         clearProductDetailState,
+        addFilter,
       }}
     >
       {children}
