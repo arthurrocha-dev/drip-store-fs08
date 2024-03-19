@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { Button } from '../../components/Button/Button'
 import styles from './Product.module.css'
 import { FaRegStar, FaStar } from 'react-icons/fa'
-import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
 import { useShoppingCartContext } from '../../hooks/useShoppingCart'
 
@@ -64,7 +64,6 @@ export const Product = () => {
           </Swiper>
           <Swiper
             // onSwiper={setThumbsSwiper}
-            loop={true}
             spaceBetween={10}
             slidesPerView={4}
             freeMode={true}
