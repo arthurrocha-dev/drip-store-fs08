@@ -25,7 +25,7 @@ export const Product = () => {
   }
 
   const [sizeIndexChosen, setIsSizeIndexChosen] = useState(Number)
-  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null)
+  const [thumbsSwiper, setThumbsSwiper] = useState(null)
 
   const definSizeIndexChosen = (i: number) => {
     setIsSizeIndexChosen(i)
@@ -48,6 +48,7 @@ export const Product = () => {
       <div className={styles.ProductSection_Container}>
         <div className={styles.ProductSectionContainer_Slide}>
           <Swiper
+            spaceBetween={10}
             navigation={true}
             thumbs={{ swiper: thumbsSwiper }}
             modules={[FreeMode, Navigation, Thumbs]}
@@ -63,7 +64,10 @@ export const Product = () => {
           </Swiper>
           <Swiper
             // onSwiper={setThumbsSwiper}
+            loop={true}
+            spaceBetween={10}
             slidesPerView={4}
+            freeMode={true}
             watchSlidesProgress={true}
             modules={[FreeMode, Navigation, Thumbs]}
             className={styles.mySwiper2}
