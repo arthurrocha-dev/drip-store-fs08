@@ -1,14 +1,18 @@
 import { useParams } from 'react-router-dom'
 import { useProductDataContext } from '../../hooks/useProductData'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Button } from '../../components/Button/Button'
 import styles from './Product.module.css'
 import { FaRegStar, FaStar } from 'react-icons/fa'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react'
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
+import { useShoppingCartContext } from '../../hooks/useShoppingCart'
 
 export const Product = () => {
+  const { addProduct } = useShoppingCartContext()
+
   const { id } = useParams()
+
   const {
     isProductLoading,
     productDetail,
@@ -18,6 +22,13 @@ export const Product = () => {
 
   if (!id) {
     return <div>Produto não encontrado</div>
+  }
+
+  const [sizeIndexChosen, setIsSizeIndexChosen] = useState(Number)
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null)
+
+  const definSizeIndexChosen = (i: number) => {
+    setIsSizeIndexChosen(i)
   }
 
   useEffect(() => {
@@ -36,19 +47,34 @@ export const Product = () => {
     <section className={styles.ProductSection}>
       <div className={styles.ProductSection_Container}>
         <div className={styles.ProductSectionContainer_Slide}>
-          <Swiper navigation modules={[Navigation]} className={styles.mySwiper}>
-            <SwiperSlide>
-              <img src={productDetail.urlImg} alt="imagem" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={productDetail.urlImg} alt="imagem" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={productDetail.urlImg} alt="imagem" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={productDetail.urlImg} alt="imagem" />
-            </SwiperSlide>
+          <Swiper
+            navigation={true}
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className={styles.mySwiper}
+          >
+            {productDetail.listUrlImg.map((url, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <img src={url} alt="imagem" />
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
+          <Swiper
+            // onSwiper={setThumbsSwiper}
+            slidesPerView={4}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className={styles.mySwiper2}
+          >
+            {productDetail.listUrlImg.map((url, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <img src={url} alt="imagem" />
+                </SwiperSlide>
+              )
+            })}
           </Swiper>
         </div>
       </div>
@@ -96,13 +122,33 @@ export const Product = () => {
           <div className={styles.ProductSize}>
             <p className={styles.ProductSize_Title}>Tamanho</p>
             <div className={styles.ProductSize_List}>
-              {productDetail.listOfSize.map((_, index) => {
-                return<div className={`${styles.ProductSizeList_item} ${styles.active}`}>{productDetail.listOfSize[index]} </div>
+              {productDetail.listOfSize.sort().map((_, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={`${styles.ProductSizeList_item} ${
+                      productDetail.listOfSize[index] === sizeIndexChosen
+                        ? styles.active
+                        : ''
+                    }`}
+                    onClick={() => {
+                      definSizeIndexChosen(productDetail.listOfSize[index])
+                    }}
+                  >
+                    {productDetail.listOfSize[index]}
+                  </div>
+                )
               })}
             </div>
           </div>
         </div>
-        <Button text="COMPRAR" type="shop" />
+        <Button
+          text="COMPRAR"
+          type="shop"
+          onClick={() => {
+            addProduct(productDetail)
+          }}
+        />
       </div>
     </section>
   )

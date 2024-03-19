@@ -1,6 +1,7 @@
 export interface ProductApiModel {
   id: number
   urlImg: string
+  listUrlImg: string[]
   name: string
   department: string
   price: number

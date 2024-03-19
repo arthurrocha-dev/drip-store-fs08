@@ -2,6 +2,8 @@
   display: flex;
   flex: 1;
   padding: var(--spacing-small) var(--spacing-massive);
+  align-items: stretch;
+  gap: var(--spacing-small);
 }
 
 .ProductSection_Container {
@@ -11,6 +13,25 @@
 .mySwiper {
   text-align: center;
 }
+
+.mySwiper2 {
+  display: flex;
+  padding: var(--spacing-small);
+  gap: var(--spacing-small);
+  justify-content: center;
+}
+
+.mySwiper2 img {
+  width: 80%;
+  transition: transform 1s;
+  aspect-ratio: 1;
+}
+
+.mySwiper2 img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .mySwiper img {
   margin: auto;
   aspect-ratio: 1;
@@ -67,7 +88,8 @@
   margin: var(--spacing-small) 0;
 }
 
-.ProductSectionDetailsDecription_Title {
+.ProductSectionDetailsDecription_Title,
+.ProductSize_Title {
   color: var(--color-light-gray);
   margin: var(--spacing-small) 0;
 }
@@ -86,7 +108,7 @@
 }
 
 .ProductSizeList_item {
-  border: 1px solid var(--color-dark-gray);
+  border: 1px solid var(--color-light-gray);
   padding: var(--spacing-smaller);
   border-radius: var(--spacing-tiny);
   cursor: pointer;

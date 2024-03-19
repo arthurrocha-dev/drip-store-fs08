@@ -4,7 +4,7 @@ import styles from './ShoppingCartIcons.module.css'
 import { useState } from 'react'
 import { useShoppingCartContext } from '../../../../hooks/useShoppingCart'
 import { Button } from '../../../Button/Button'
-import { ShoppingCartIten } from './components/shoppingCartIcon/shoppingCartIcon'
+import { ShoppingCartItem } from './components/shoppingCartIcon/shoppingCartItem'
 import { FaRegFaceSadCry } from 'react-icons/fa6'
 import { PiMaskSadLight } from 'react-icons/pi'
 
@@ -62,14 +62,13 @@ export const ShoppingCarIcon: React.FC<ShoppingCarProps> = ({
               <div className={styles.shoppingCartPopoverListItens}>
                 {productsList.length ? (
                   productsList.map((product) => (
-                    <div>
-                      <ShoppingCartIten
-                        urlImg={product.urlImg}
-                        name={product.name}
-                        price={product.price}
-                        discountValue={product.discountValue}
-                      />
-                    </div>
+                    <ShoppingCartItem
+                      key={product.id}
+                      urlImg={product.urlImg}
+                      name={product.name}
+                      price={product.price}
+                      discountValue={product.discountValue}
+                    />
                   ))
                 ) : (
                   <div

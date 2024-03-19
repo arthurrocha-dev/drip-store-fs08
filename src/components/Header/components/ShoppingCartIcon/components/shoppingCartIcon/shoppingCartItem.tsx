@@ -1,8 +1,8 @@
 import React from 'react'
-import styles from './shoppingCartIcon.module.css'
+import styles from './shoppingCartItem.module.css'
 import { CardProductProps } from '../../../../../CardProduct/CardProduct.props'
 
-export const ShoppingCartIten: React.FC<CardProductProps> = ({
+export const ShoppingCartItem: React.FC<CardProductProps> = ({
   urlImg,
   name,
   price,
