@@ -119,3 +119,13 @@
   color: var(--color-light-gray-3);
   border-color: var(--color-light-gray-3);
 }
+
+@media (max-width: 768px ) {
+  .ProductSection {
+    padding: var(--spacing-smaller) var(--spacing-normal);
+    flex-direction: column;
+  }
+  .ProductSection_Container, .ProductSection_Details {
+    width: 100%;
+  }
+}
