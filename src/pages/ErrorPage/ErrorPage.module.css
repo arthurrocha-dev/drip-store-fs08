@@ -1,0 +1,30 @@
+.ErrorContainer {
+  width: 100%;
+  height: 100lvh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.Ghost {
+  height: 200px;
+  width: 200px;
+  color: var(--color-dark-gray-2);
+  margin-bottom: 30px;
+  animation: GhostMove 3s infinite;
+}
+
+@keyframes GhostMove {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

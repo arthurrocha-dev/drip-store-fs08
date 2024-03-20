@@ -1,16 +1,18 @@
-import { CheckBoxFilter } from '../CheckboxFilter/CheckboxFilter'
 import styles from './CheckboxFilterGroup.module.css'
-export const CheckBoxFilterGroup = () => {
-  // to do - Implementar chamada para a api com os grupos de filtros
+
+type CheckBoxFilterGroupProps = {
+  children: React.ReactNode
+  groupName: string
+}
+
+export const CheckBoxFilterGroup: React.FC<CheckBoxFilterGroupProps> = ({
+  children,
+  groupName,
+}) => {
   return (
     <div className={styles.CheckBoxFilterGroup}>
-      <p className={styles.CheckBoxFilterGroupTitle}>lorem ipsum</p>
-      <div className={styles.CheckBoxFilterGroupContainer}>
-        <CheckBoxFilter inputId={1} textLabel="lorem" />
-        <CheckBoxFilter inputId={2} textLabel="lorem" />
-        <CheckBoxFilter inputId={3} textLabel="lorem" />
-        <CheckBoxFilter inputId={4} textLabel="lorem" />
-      </div>
+      <p className={styles.CheckBoxFilterGroupTitle}>{groupName}</p>
+      <div className={styles.CheckBoxFilterGroupContainer}>{children}</div>
     </div>
   )
 }

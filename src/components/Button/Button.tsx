@@ -2,7 +2,12 @@
 import { ButtonProps } from './Button.props'
 import styles from './Button.module.css'
 
-export const Button: React.FC<ButtonProps> = ({ text, type, disabled }) => {
+export const Button: React.FC<ButtonProps> = ({
+  text,
+  type,
+  disabled,
+  onClick,
+}) => {
   return (
     <button
       className={`${
@@ -13,7 +18,9 @@ export const Button: React.FC<ButtonProps> = ({ text, type, disabled }) => {
           : styles.PrimaryButton
       }
      
-            ${disabled ? styles.disabled : ''}`}
+      ${disabled ? styles.disabled : ''}`}
+
+      onClick={onClick}
     >
       {text}
     </button>

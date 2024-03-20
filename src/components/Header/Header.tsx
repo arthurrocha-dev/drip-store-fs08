@@ -3,12 +3,13 @@ import { Logo } from '../Logo/Logo'
 import { NavBar } from './components/NavBar/NavBar'
 import { Button } from '../Button/Button'
 import { SandwichMenu } from './components/SandwichMenu/SandwichMenu'
-import { SearchInput } from '../SearchInput/SearchInput.1'
+import { SearchInput } from '../SearchInput/SearchInput'
 import { ShoppingCarIcon } from './components/ShoppingCartIcon/ShoppingCartIcon'
 import { IoSearchOutline } from 'react-icons/io5'
 import { TextLink } from '../TextLink/TextLink'
 import styles from './Header.module.css'
 import { ROUTES } from '../../routes'
+import { useProductFilterContext } from '../../hooks/useProductFilter'
 
 const MOBILE_BREAKPOINT = 768
 
@@ -37,11 +38,13 @@ export const Header = () => {
 }
 
 const DesktopHeader = () => {
+  const { setFilter } = useProductFilterContext()
+
   return (
     <header className={styles.Header}>
       <div className={styles.HeaderContainerTop}>
         <Logo />
-        <SearchInput />
+        <SearchInput onSearch={setFilter} />
         <TextLink to={ROUTES.Home} type="secundary">
           Cadastre-se
         </TextLink>
@@ -54,6 +57,8 @@ const DesktopHeader = () => {
 }
 
 const MobileHeader = () => {
+  const { setFilter } = useProductFilterContext()
+
   const MobileMenuState = {
     CLOSED: 'CLOSED',
     CLOSING: 'CLOSING',
@@ -99,7 +104,9 @@ const MobileHeader = () => {
           </div>
         </div>
 
-        {menuState === MobileMenuState.CLOSED && isVisible && <SearchInput />}
+        {menuState === MobileMenuState.CLOSED && isVisible && (
+          <SearchInput onSearch={setFilter} />
+        )}
       </header>
       {menuState !== MobileMenuState.CLOSED && (
         <>

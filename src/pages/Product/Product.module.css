@@ -1,0 +1,131 @@
+.ProductSection {
+  display: flex;
+  flex: 1;
+  padding: var(--spacing-small) var(--spacing-massive);
+  align-items: stretch;
+  gap: var(--spacing-small);
+}
+
+.ProductSection_Container {
+  width: 50%;
+}
+
+.mySwiper {
+  text-align: center;
+}
+
+.mySwiper2 {
+  display: flex;
+  padding: var(--spacing-small);
+  gap: var(--spacing-small);
+  justify-content: center;
+}
+
+.mySwiper2 img {
+  width: 80%;
+  transition: transform 1s;
+  aspect-ratio: 1;
+}
+
+.mySwiper2 img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.mySwiper img {
+  margin: auto;
+  aspect-ratio: 1;
+  width: 50%;
+  max-width: 350px;
+}
+
+.ProductSection_Details {
+  width: 50%;
+}
+
+.ProductSection_Details h2 {
+  margin: var(--spacing-small) 0;
+}
+
+.ProductSection_Assessment {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.ProductSectionAssessment_stars {
+  color: var(--color-warning);
+}
+
+.ProductSection_Assessment span {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-tiny);
+  padding: var(--spacing-tiny) var(--spacing-smaller);
+  background-color: var(--color-warning);
+  color: var(--color-light-gray-3);
+  border-radius: var(--spacing-tiny);
+}
+
+.ProductSectionDetails_price {
+  display: flex;
+  gap: var(--spacing-small);
+  margin: var(--spacing-small) 0;
+  align-items: center;
+}
+
+.ProductSectionDetailsPrice_Default {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.ProductSectionDetailsPrice_Custom {
+  color: var(--color-light-gray);
+  text-decoration: line-through;
+}
+
+.ProductSectionDetails_Decription {
+  margin: var(--spacing-small) 0;
+}
+
+.ProductSectionDetailsDecription_Title,
+.ProductSize_Title {
+  color: var(--color-light-gray);
+  margin: var(--spacing-small) 0;
+}
+
+.ProductSize {
+  margin: var(--spacing-small) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-smaller) 0;
+}
+
+.ProductSize_List {
+  display: flex;
+  gap: var(--spacing-small);
+  flex-wrap: wrap;
+}
+
+.ProductSizeList_item {
+  border: 1px solid var(--color-light-gray);
+  padding: var(--spacing-smaller);
+  border-radius: var(--spacing-tiny);
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--color-primary);
+  color: var(--color-light-gray-3);
+  border-color: var(--color-light-gray-3);
+}
+
+@media (max-width: 768px ) {
+  .ProductSection {
+    padding: var(--spacing-smaller) var(--spacing-normal);
+    flex-direction: column;
+  }
+  .ProductSection_Container, .ProductSection_Details {
+    width: 100%;
+  }
+}

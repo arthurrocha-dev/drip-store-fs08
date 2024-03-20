@@ -1,5 +1,5 @@
 .ProductsFilters {
-  width: calc(30% - calc(2 * var(--spacing-small)));
+  width: 100%;
 }
 
 .ProductsFiltersTitle {
@@ -11,6 +11,22 @@
 .ProductsFiltersContainer {
   padding: var(--spacing-small);
   width: 90%;
-  margin: auto;
   background: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .ProductsFilters {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100lvh;
+    background-color: #1F1F1F70;
+    z-index: 1000;
+    top: 0;
+  }
+
+  .ProductsFiltersContainer {
+    height: 100lvh;
+    width: 80%;
+  }
 }

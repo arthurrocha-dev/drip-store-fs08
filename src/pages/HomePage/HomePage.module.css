@@ -1,5 +1,5 @@
 .HomePage {
-  padding: var(--spacing-smaller) var(--spacing-massive);
+  padding: var(--spacing-smaller) 0;
 }
 
 @media (max-width: 768px ) {

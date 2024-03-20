@@ -18,8 +18,8 @@ export const Slide: React.FC<SlideProps> = ({ sales }) => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {sales.map((sale) => (
-          <SwiperSlide>
+        {sales.map((sale, index) => (
+          <SwiperSlide key={index}>
             <section className={styles.firstContent}>
               <div className={styles.hero}>
                 <h5>{sale.title}</h5>

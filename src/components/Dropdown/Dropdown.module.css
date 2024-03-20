@@ -1,0 +1,7 @@
+.Dropdown {
+  background-color: transparent;
+  padding: 0 var(--spacing-massive) 0 0;
+  border: none;
+  font-size: 1rem;
+  flex: 1;
+}

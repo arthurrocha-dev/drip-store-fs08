@@ -9,4 +9,5 @@ export interface CardProductProps {
   gender?: string
   estate?: string
   highlighted?: boolean
+  onClick?: () => void
 }

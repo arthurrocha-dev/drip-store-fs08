@@ -1,4 +1,5 @@
 .CardProduct {
+  position: relative;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -40,6 +41,7 @@
 
 .DiscountPercentage {
   background-color: #e7ff86;
+  position: absolute;
   border-radius: calc(var(--spacing-small) * 2);
   font-size: 0.8rem;
   padding: var(--spacing-smaller);

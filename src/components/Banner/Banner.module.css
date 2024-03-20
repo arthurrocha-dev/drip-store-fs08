@@ -19,7 +19,7 @@
 .Image {
   display: flex;
   position: relative;
-  width: 60%;
+  width: 100%;
 }
 
 .Infos {
