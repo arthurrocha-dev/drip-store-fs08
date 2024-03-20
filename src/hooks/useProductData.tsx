@@ -23,11 +23,13 @@ interface ProductDataType {
   getProductByID: (id: string) => void
   productDetail: ProductApiModel | undefined
   clearProductDetailState: () => void
-  addFilter: (filter: ProductsFilter) => void
+  addFilter: (filter: string, value: string, isChecked: boolean) => void
+  removeFilter: (filter: string, value: string) => void
+  sortingList: () => void
 }
 
 export interface ProductsFilter {
-  brand?: string[]
+  brand: string[]
   category?: string[]
   gender?: string[]
   state?: string[]
@@ -47,6 +49,8 @@ const ProductDataContext = createContext<ProductDataType>({
   productDetail: undefined,
   clearProductDetailState: () => {},
   addFilter: () => {},
+  removeFilter: () => {},
+  sortingList: () => {},
 })
 
 export const useProductDataContext = () => useContext(ProductDataContext)
@@ -54,7 +58,9 @@ export const useProductDataContext = () => useContext(ProductDataContext)
 export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [filterList, setFilterList] = useState<ProductsFilter[]>([])
+  const [filterList, setFilterList] = useState<ProductsFilter>(
+    ProductFiltersDefault
+  )
   const [productsList, setProductsList] = useState<ProductApiModel[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const { filter } = useProductFilterContext()
@@ -77,24 +83,70 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
     [setProductDetail]
   )
 
-  const addFilter = (filter: ProductsFilter) => {
-    const newFilterList = [...filterList, filter]
-    setFilterList(newFilterList)
-    console.log(filterList);
+  const addFilter = useCallback(
+    (filter: string, value: string, isChecked: boolean) => {
+      setFilterList((prevFilterList) => {
+        const newFilterList: ProductsFilter = { ...prevFilterList }
+
+        if (
+          isChecked &&
+          filter === 'brand' &&
+          !newFilterList.brand.includes(value.toLowerCase())
+        ) {
+          newFilterList.brand.push(value.toLowerCase())
+        }
+
+        return newFilterList
+      })
+    },
+    []
+  )
+
+  const removeFilter = (filter: string, value: string) => {
+    setFilterList((prevFilterList) => {
+      const newFilterList: ProductsFilter = { ...prevFilterList }
+
+      if (filter === 'brand') {
+        newFilterList.brand = newFilterList.brand.filter(
+          (item) => item.toLowerCase() !== value.toLowerCase()
+        )
+      }
+
+      return newFilterList
+    })
+  }
+
+  const sortingList = () => {
+    productsList.sort
   }
 
   useEffect(() => {
     setIsLoading(true)
     getProducts()
       .then((result) =>
-        setProductsList(
-          result.filter((item) =>
+        setProductsList(() => {
+          let filteredProductList: ProductApiModel[] = []
+
+          if (filterList.brand.length > 0) {
+            filterList.brand.forEach((filter) => {
+              filteredProductList = [
+                ...filteredProductList,
+                ...result.filter((item) => item.brand === filter.toLowerCase()),
+              ]
+            })
+          } else {
+            filteredProductList = result
+          }
+
+          filteredProductList = filteredProductList.filter((item) =>
             item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase())
           )
-        )
+
+          return filteredProductList
+        })
       )
       .finally(() => setIsLoading(false))
-  }, [filter])
+  }, [filter, filterList])
 
   return (
     <ProductDataContext.Provider
@@ -105,6 +157,8 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
         productDetail,
         clearProductDetailState,
         addFilter,
+        removeFilter,
+        sortingList,
       }}
     >
       {children}

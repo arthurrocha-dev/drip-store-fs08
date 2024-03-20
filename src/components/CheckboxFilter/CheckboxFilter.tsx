@@ -12,7 +12,7 @@ export const CheckBoxFilter: React.FC<CheckboxFilterProps> = ({
         className={styles.DPinput}
         id={`${inputId}`}
         type="checkbox"
-        onChange={onChange}
+        onChange={(e) => onChange(e.target.checked)}
       />
       <label htmlFor={`${inputId}`}>{textLabel}</label>
     </div>
