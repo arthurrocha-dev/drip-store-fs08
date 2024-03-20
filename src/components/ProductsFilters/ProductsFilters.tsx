@@ -1,7 +1,4 @@
-import {
-  useProductDataContext,
-  ProductsFilter,
-} from '../../hooks/useProductData'
+import { useProductDataContext } from '../../hooks/useProductData'
 import { CheckBoxFilter } from '../CheckboxFilter/CheckboxFilter'
 import { CheckBoxFilterGroup } from '../CheckboxFilterGropup/CheckboxFilterGroup'
 import { DpInputRadio } from '../InputRadio/InputRadio'
@@ -18,13 +15,12 @@ const handleCheckBoxClick = (
   e.stopPropagation()
 }
 
+
+//TODO - Implementar demais filtros chackbox e impmentar filtro de inputradio.
 export const ProductsFilters: React.FC<ProductsFiltersProps> = ({
   onClick,
 }) => {
-  const { addFilter } = useProductDataContext()
-  const handleCheckboxChange = (filter: ProductsFilter) => {
-    addFilter(filter)
-  }
+  const { addFilter, removeFilter } = useProductDataContext()
 
   return (
     <div className={styles.ProductsFilters} onClick={onClick}>
@@ -38,26 +34,50 @@ export const ProductsFilters: React.FC<ProductsFiltersProps> = ({
           <CheckBoxFilter
             inputId="checkbox-filter-marka-1"
             textLabel="Adiddas"
-            onChange={() => handleCheckboxChange({ brand: ['Adiddas'] })}
+            onChange={(isChecked: boolean) => {
+              if (isChecked) {
+                addFilter('brand', 'adidas', isChecked)
+              } else {
+                removeFilter('brand', 'adidas')
+              }
+            }}
           />
           <CheckBoxFilter
             inputId="checkbox-filter-marka-2"
             textLabel="Calenciaga"
-            onChange={() => handleCheckboxChange({ brand: ['Calenciaga'] })}
+            onChange={(isChecked: boolean) => {
+              if (isChecked) {
+                addFilter('brand', 'calenciaga', isChecked)
+              } else {
+                removeFilter('brand', 'calenciaga')
+              }
+            }}
           />
           <CheckBoxFilter
             inputId="checkbox-filter-marka-3"
             textLabel="K-Swiss"
-            onChange={() => handleCheckboxChange({ brand: ['K-Swiss'] })}
+            onChange={(isChecked: boolean) => {
+              if (isChecked) {
+                addFilter('brand', 'k-swiss', isChecked)
+              } else {
+                removeFilter('brand', 'k-swiss')
+              }
+            }}
           />
           <CheckBoxFilter
             inputId="checkbox-filter-marka-4"
             textLabel="Puma"
-            onChange={() => handleCheckboxChange({ brand: ['Puma'] })}
+            onChange={(isChecked: boolean) => {
+              if (isChecked) {
+                addFilter('brand', 'Puma', isChecked)
+              } else {
+                removeFilter('brand', 'Puma')
+              }
+            }}
           />
         </CheckBoxFilterGroup>
 
-        <CheckBoxFilterGroup groupName="Categoria">
+        {/* <CheckBoxFilterGroup groupName="Categoria">
           <CheckBoxFilter
             inputId="checkbox-filter-categoris-1"
             textLabel="Esporte e lazer"
@@ -95,8 +115,8 @@ export const ProductsFilters: React.FC<ProductsFiltersProps> = ({
             inputId="checkbox-filter-genero-3"
             textLabel="Unisex"
             onChange={() => handleCheckboxChange({ gender: ['Unisex'] })}
-          />
-        </CheckBoxFilterGroup>
+          /> 
+        </CheckBoxFilterGroup> */}
 
         <InputRadioGropu groupName="Estado">
           <DpInputRadio id="estado1" name="estado" label="Novo" />
