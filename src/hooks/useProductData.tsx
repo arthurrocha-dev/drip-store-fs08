@@ -23,8 +23,12 @@ interface ProductDataType {
   getProductByID: (id: string) => void
   productDetail: ProductApiModel | undefined
   clearProductDetailState: () => void
-  addFilter: (filter: string, value: string, isChecked: boolean) => void
-  removeFilter: (filter: string, value: string) => void
+  addFilter: (
+    filter: keyof ProductsFilter,
+    value: string,
+    isChecked: boolean
+  ) => void
+  removeFilter: (filter: keyof ProductsFilter, value: string) => void
   sortingList: () => void
 }
 
@@ -84,16 +88,17 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
   )
 
   const addFilter = useCallback(
-    (filter: string, value: string, isChecked: boolean) => {
+    (filter: keyof ProductsFilter, value: string, isChecked: boolean) => {
       setFilterList((prevFilterList) => {
         const newFilterList: ProductsFilter = { ...prevFilterList }
 
-        if (
-          isChecked &&
-          filter === 'brand' &&
-          !newFilterList.brand.includes(value.toLowerCase())
-        ) {
-          newFilterList.brand.push(value.toLowerCase())
+        if (isChecked && filter in newFilterList) {
+          const filterArray = newFilterList[filter]
+          if (filterArray) {
+            filterArray.push(value.toLowerCase())
+          } else {
+            newFilterList[filter] = [value.toLowerCase()]
+          }
         }
 
         return newFilterList
@@ -102,14 +107,17 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
     []
   )
 
-  const removeFilter = (filter: string, value: string) => {
+  const removeFilter = (filter: keyof ProductsFilter, value: string) => {
     setFilterList((prevFilterList) => {
       const newFilterList: ProductsFilter = { ...prevFilterList }
 
-      if (filter === 'brand') {
-        newFilterList.brand = newFilterList.brand.filter(
-          (item) => item.toLowerCase() !== value.toLowerCase()
-        )
+      if (filter in newFilterList) {
+        const filterArray = newFilterList[filter]
+        if (filterArray) {
+          newFilterList[filter] = filterArray.filter(
+            (item) => item.toLowerCase() !== value.toLowerCase()
+          )
+        }
       }
 
       return newFilterList
@@ -123,28 +131,27 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
   useEffect(() => {
     setIsLoading(true)
     getProducts()
-      .then((result) =>
-        setProductsList(() => {
-          let filteredProductList: ProductApiModel[] = []
-
-          if (filterList.brand.length > 0) {
-            filterList.brand.forEach((filter) => {
-              filteredProductList = [
-                ...filteredProductList,
-                ...result.filter((item) => item.brand === filter.toLowerCase()),
-              ]
-            })
-          } else {
-            filteredProductList = result
+      .then((result) => {
+        let filteredProductList: ProductApiModel[] = result
+        ;(Object.keys(filterList) as (keyof ProductsFilter)[]).forEach(
+          (key) => {
+            const filter = filterList[key]
+            if (Array.isArray(filter) && filter.length > 0) {
+              filteredProductList = filteredProductList.filter((item) => {
+                return filter.some(
+                  (value) => item[key].toLowerCase() === value.toLowerCase()
+                )
+              })
+            }
           }
-
+        )
+        if (filter.trim() !== '') {
           filteredProductList = filteredProductList.filter((item) =>
-            item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase())
+            item.name.toLowerCase().includes(filter.toLocaleLowerCase())
           )
-
-          return filteredProductList
-        })
-      )
+        }
+        setProductsList(filteredProductList)
+      })
       .finally(() => setIsLoading(false))
   }, [filter, filterList])
 

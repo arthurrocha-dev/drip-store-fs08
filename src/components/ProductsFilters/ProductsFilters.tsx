@@ -15,8 +15,7 @@ const handleCheckBoxClick = (
   e.stopPropagation()
 }
 
-
-//TODO - Implementar demais filtros chackbox e impmentar filtro de inputradio.
+//TODO - Implementar filtro de input radio.
 export const ProductsFilters: React.FC<ProductsFiltersProps> = ({
   onClick,
 }) => {
@@ -77,46 +76,88 @@ export const ProductsFilters: React.FC<ProductsFiltersProps> = ({
           />
         </CheckBoxFilterGroup>
 
-        {/* <CheckBoxFilterGroup groupName="Categoria">
+        <CheckBoxFilterGroup groupName="Categoria">
           <CheckBoxFilter
             inputId="checkbox-filter-categoris-1"
             textLabel="Esporte e lazer"
-            onChange={() => handleCheckboxChange({ category: ['Esporte e lazer'] })}
+            onChange={(isChecked) => {
+              if (isChecked) {
+                addFilter('category', 'esporte e lazer', isChecked)
+              } else {
+                removeFilter('category', 'esporte e lazer')
+              }
+            }}
           />
           <CheckBoxFilter
             inputId="checkbox-filter-categoris-2"
             textLabel="Casual"
-            onChange={() => handleCheckboxChange({ category: ['Casual'] })}
+            onChange={(isChecked: boolean) => {
+              if (isChecked) {
+                addFilter('category', 'casual', isChecked)
+              } else {
+                removeFilter('category', 'casual')
+              }
+            }}
           />
           <CheckBoxFilter
             inputId="checkbox-filter-categoris-3"
             textLabel="Utilitário"
-            onChange={() => handleCheckboxChange({ category: ['Utilitário'] })}
+            onChange={(isChecked) => {
+              if (isChecked) {
+                addFilter('category', 'utilitario', isChecked)
+              } else {
+                removeFilter('category', 'utilitario')
+              }
+            }}
           />
           <CheckBoxFilter
             inputId="checkbox-filter-categoris-4"
             textLabel="Corrida"
-            onChange={() => handleCheckboxChange({ category: ['Corrida'] })}
+            onChange={(isChecked) => {
+              if (isChecked) {
+                addFilter('category', 'corrida', isChecked)
+              } else {
+                removeFilter('category', 'corrida')
+              }
+            }}
           />
         </CheckBoxFilterGroup>
-
+  
         <CheckBoxFilterGroup groupName="Gênero">
           <CheckBoxFilter
             inputId="checkbox-filter-genero-1"
             textLabel="Maculino"
-            onChange={() => handleCheckboxChange({ gender: ['Masculino'] })}
+            onChange={(isChecked) => {
+              if (isChecked) {
+                addFilter('gender', 'masculino', isChecked)
+              } else {
+                removeFilter('gender', 'masculino')
+              }
+            }}
           />
           <CheckBoxFilter
             inputId="checkbox-filter-genero-2"
             textLabel="Feminino"
-            onChange={() => handleCheckboxChange({ gender: ['Feminino'] })}
+            onChange={(isChecked) => {
+              if (isChecked) {
+                addFilter('gender', 'feminino', isChecked)
+              } else {
+                removeFilter('gender', 'feminino')
+              }
+            }}
           />
           <CheckBoxFilter
             inputId="checkbox-filter-genero-3"
             textLabel="Unisex"
-            onChange={() => handleCheckboxChange({ gender: ['Unisex'] })}
+            onChange={(isChecked) => {
+              if (isChecked) {
+                addFilter('gender', 'unisex', isChecked)
+              } else {
+                removeFilter('gender', 'unisex')
+              }
+            }}
           /> 
-        </CheckBoxFilterGroup> */}
+        </CheckBoxFilterGroup> 
 
         <InputRadioGropu groupName="Estado">
           <DpInputRadio id="estado1" name="estado" label="Novo" />
