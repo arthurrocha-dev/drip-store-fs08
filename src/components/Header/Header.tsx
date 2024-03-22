@@ -11,6 +11,10 @@ import styles from './Header.module.css'
 import { ROUTES } from '../../routes'
 import { useProductFilterContext } from '../../hooks/useProductFilter'
 
+interface LoginClick {
+  onClick?: () => void
+}
+
 const MOBILE_BREAKPOINT = 768
 
 export const Header = () => {
@@ -37,7 +41,7 @@ export const Header = () => {
   return isMobile ? <MobileHeader /> : <DesktopHeader />
 }
 
-const DesktopHeader = () => {
+const DesktopHeader: React.FC<LoginClick> = () => {
   const { setFilter } = useProductFilterContext()
 
   return (
@@ -48,7 +52,17 @@ const DesktopHeader = () => {
         <TextLink to={ROUTES.Home} type="secundary">
           Cadastre-se
         </TextLink>
-        <Button text="Entrar" />
+
+        <TextLink
+          to={ROUTES.LoginPage}
+          onClick={() => {
+            onclick
+            window.scroll(0, 0)
+          }}
+        >
+{/* //TODO: Corrigir erro de tipagem de onClick, está funcionando o código mesmo com o erro de tipagem. */}
+        <Button text="Entrar" onClick={onclick} />
+        </TextLink>
         <ShoppingCarIcon />
       </div>
       <NavBar />
