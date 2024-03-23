@@ -1,15 +1,20 @@
 import { Dropdown, ProductsFilters, ProductsList } from '../../components'
 import { LuFilter } from 'react-icons/lu'
 import styles from './Products.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useProductDataContext } from '../../hooks/useProductData'
 
 export const Products = () => {
-
   const [isOnened, setIsOpened] = useState(false)
+  const { clearFilters } = useProductDataContext()
 
   const toggleFilterMobile = () => {
     setIsOpened(!isOnened)
   }
+
+  useEffect(() => {
+    return clearFilters
+  }, [clearFilters])
 
   return (
     <>
@@ -25,18 +30,17 @@ export const Products = () => {
               <option value="relevante">Relevância</option>
             </Dropdown>
           </div>
-          <LuFilter className={styles.ProductsHeaderFilterIcon} onClick={toggleFilterMobile}/>
-          {isOnened && (
-            <ProductsFilters onClick={toggleFilterMobile}/>
-          )
-          }
+          <LuFilter
+            className={styles.ProductsHeaderFilterIcon}
+            onClick={toggleFilterMobile}
+          />
+          {isOnened && <ProductsFilters onClick={toggleFilterMobile} />}
         </div>
-
       </div>
 
       <div className={styles.ProductsContainer}>
         <div className={styles.ProductsListFilters}>
-          <ProductsFilters onClick={()=>{}}/>
+          <ProductsFilters onClick={() => {}} />
         </div>
         <ProductsList />
       </div>

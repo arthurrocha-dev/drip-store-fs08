@@ -10,11 +10,19 @@ import { TextLink } from '../TextLink/TextLink'
 import styles from './Header.module.css'
 import { ROUTES } from '../../routes'
 import { useProductFilterContext } from '../../hooks/useProductFilter'
+import { useNavigate } from 'react-router-dom'
 
 const MOBILE_BREAKPOINT = 768
 
 export const Header = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false)
+  const { setFilter } = useProductFilterContext()
+  const navigate = useNavigate()
+
+  const handleSearch = (search: string) => {
+    navigate(ROUTES.Products)
+    setFilter(search)
+  }
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT)
@@ -34,17 +42,23 @@ export const Header = () => {
     }
   }, [])
 
-  return isMobile ? <MobileHeader /> : <DesktopHeader />
+  return isMobile ? (
+    <MobileHeader onSearch={handleSearch} />
+  ) : (
+    <DesktopHeader onSearch={handleSearch} />
+  )
 }
 
-const DesktopHeader = () => {
-  const { setFilter } = useProductFilterContext()
-
+const DesktopHeader = ({
+  onSearch,
+}: {
+  onSearch: (search: string) => void
+}) => {
   return (
     <header className={styles.Header}>
       <div className={styles.HeaderContainerTop}>
         <Logo />
-        <SearchInput onSearch={setFilter} />
+        <SearchInput onSearch={onSearch} />
         <TextLink to={ROUTES.Home} type="secundary">
           Cadastre-se
         </TextLink>
@@ -56,9 +70,7 @@ const DesktopHeader = () => {
   )
 }
 
-const MobileHeader = () => {
-  const { setFilter } = useProductFilterContext()
-
+const MobileHeader = ({ onSearch }: { onSearch: (search: string) => void }) => {
   const MobileMenuState = {
     CLOSED: 'CLOSED',
     CLOSING: 'CLOSING',
@@ -105,7 +117,7 @@ const MobileHeader = () => {
         </div>
 
         {menuState === MobileMenuState.CLOSED && isVisible && (
-          <SearchInput onSearch={setFilter} />
+          <SearchInput onSearch={onSearch} />
         )}
       </header>
       {menuState !== MobileMenuState.CLOSED && (

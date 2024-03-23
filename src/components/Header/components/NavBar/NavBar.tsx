@@ -26,7 +26,7 @@ export const NavBar: React.FC<NavBarProps> = ({ onClick }) => {
         >
           Produtos
         </TextLink>
-        <TextLink
+        {/* <TextLink
           to={ROUTES.Categorys}
           onClick={() => {
             onClick
@@ -34,8 +34,8 @@ export const NavBar: React.FC<NavBarProps> = ({ onClick }) => {
           }}
         >
           Categorias
-        </TextLink>
-        <TextLink
+        </TextLink> */}
+        {/* <TextLink
           to={ROUTES.MyProducts}
           onClick={() => {
             onClick
@@ -43,7 +43,7 @@ export const NavBar: React.FC<NavBarProps> = ({ onClick }) => {
           }}
         >
           Meus Produtos
-        </TextLink>
+        </TextLink> */}
       </div>
     </>
   )

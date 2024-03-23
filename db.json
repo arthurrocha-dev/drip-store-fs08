@@ -30,6 +30,9 @@
       "id": "1",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "casual",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -41,7 +44,13 @@
       "price": 425.76,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -49,6 +58,9 @@
       "id": "2",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "feminino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -60,7 +72,13 @@
       "price": 1867.45,
       "assessment": 4,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -68,6 +86,9 @@
       "id": "3",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "feminino",
+      "category": "corrida",
+      "brand": "calenciaga",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -79,7 +100,13 @@
       "price": 1289.94,
       "assessment": 3,
       "discountValue": 642.47,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -87,6 +114,9 @@
       "id": "4",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "puma",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -98,7 +128,13 @@
       "price": 542.35,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -106,6 +142,9 @@
       "id": "5",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -117,7 +156,13 @@
       "price": 917.12,
       "assessment": 2.4,
       "discountValue": 274.14,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -125,6 +170,9 @@
       "id": "6",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -136,7 +184,13 @@
       "price": 812.79,
       "assessment": 5,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -144,6 +198,9 @@
       "id": "7",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -155,7 +212,13 @@
       "price": 786.89,
       "assessment": 4.6,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -163,6 +226,9 @@
       "id": "8",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -174,7 +240,13 @@
       "price": 1210.61,
       "assessment": 2.4,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -182,6 +254,9 @@
       "id": "9",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -193,7 +268,13 @@
       "price": 1501.86,
       "assessment": 1.2,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -201,6 +282,9 @@
       "id": "10",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -212,7 +296,13 @@
       "price": 1838.11,
       "assessment": 2.4,
       "discountValue": 920.82,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -220,6 +310,9 @@
       "id": "11",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -231,7 +324,13 @@
       "price": 372.03,
       "assessment": 4.5,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -239,6 +338,9 @@
       "id": "12",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -250,7 +352,13 @@
       "price": 1137.28,
       "assessment": 4.8,
       "discountValue": 568.64,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -258,6 +366,9 @@
       "id": "13",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -269,7 +380,13 @@
       "price": 1244.19,
       "assessment": 5,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -277,6 +394,9 @@
       "id": "14",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -288,7 +408,13 @@
       "price": 1562.93,
       "assessment": 0,
       "discountValue": 781.47,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -296,6 +422,9 @@
       "id": "15",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -307,7 +436,13 @@
       "price": 583.32,
       "assessment": 2.3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -315,6 +450,9 @@
       "id": "16",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -326,7 +464,13 @@
       "price": 896.42,
       "assessment": 4.6,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -334,6 +478,9 @@
       "id": "17",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -345,7 +492,13 @@
       "price": 1565.56,
       "assessment": 4,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -353,6 +506,9 @@
       "id": "18",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -364,7 +520,13 @@
       "price": 1975.22,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -372,6 +534,9 @@
       "id": "19",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -383,7 +548,13 @@
       "price": 160.47,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -391,6 +562,9 @@
       "id": "20",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -402,7 +576,13 @@
       "price": 933.13,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -410,6 +590,9 @@
       "id": "21",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -421,7 +604,13 @@
       "price": 425.76,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -429,6 +618,9 @@
       "id": "22",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -440,7 +632,13 @@
       "price": 1867.45,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -448,6 +646,9 @@
       "id": "23",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -459,7 +660,13 @@
       "price": 1289.94,
       "assessment": 3,
       "discountValue": 642.47,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -467,6 +674,9 @@
       "id": "24",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -478,7 +688,13 @@
       "price": 542.35,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -486,6 +702,9 @@
       "id": "25",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -497,7 +716,13 @@
       "price": 917.12,
       "assessment": 3,
       "discountValue": 274.14,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -505,6 +730,9 @@
       "id": "26",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -516,7 +744,13 @@
       "price": 812.79,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -524,6 +758,9 @@
       "id": "27",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -535,7 +772,13 @@
       "price": 786.89,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -543,6 +786,9 @@
       "id": "28",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -554,7 +800,13 @@
       "price": 1210.61,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -562,6 +814,9 @@
       "id": "29",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -573,7 +828,13 @@
       "price": 1501.86,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -581,6 +842,9 @@
       "id": "30",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -592,7 +856,13 @@
       "price": 1838.11,
       "assessment": 3,
       "discountValue": 920.82,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -600,6 +870,9 @@
       "id": "31",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -611,7 +884,13 @@
       "price": 372.03,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -619,6 +898,9 @@
       "id": "32",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -630,7 +912,13 @@
       "price": 1137.28,
       "assessment": 3,
       "discountValue": 568.64,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -638,6 +926,9 @@
       "id": "33",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -649,7 +940,13 @@
       "price": 1244.19,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -657,6 +954,9 @@
       "id": "34",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -668,7 +968,13 @@
       "price": 1562.93,
       "assessment": 3,
       "discountValue": 781.47,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -676,6 +982,9 @@
       "id": "35",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -687,7 +996,13 @@
       "price": 583.32,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -695,6 +1010,9 @@
       "id": "36",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -706,7 +1024,13 @@
       "price": 896.42,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -714,6 +1038,9 @@
       "id": "37",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -725,7 +1052,13 @@
       "price": 1565.56,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -733,6 +1066,9 @@
       "id": "38",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -744,7 +1080,13 @@
       "price": 1975.22,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -752,6 +1094,9 @@
       "id": "39",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "K-Swiss V8 - Masculino",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -763,7 +1108,13 @@
       "price": 160.47,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": false,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     },
@@ -771,6 +1122,9 @@
       "id": "40",
       "urlImg": "/src/assets/img/Layer 1aa 2.png",
       "name": "Raquete",
+      "gender": "masculino",
+      "category": "corrida",
+      "brand": "adiddas",
       "listUrlImg": [
         "/src/assets/img/Layer 1aa 2.png",
         "/src/assets/img/Layer 1aa 2.png",
@@ -782,7 +1136,13 @@
       "price": 160.47,
       "assessment": 3,
       "discountValue": 0,
-      "listOfSize": [32, 34, 23, 42, 44],
+      "listOfSize": [
+        32,
+        34,
+        23,
+        42,
+        44
+      ],
       "trending": true,
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste aspernatur consectetur recusandae at. Dolore, nobis doloribus quos magnam deserunt, perferendis quo odio ab nihil quas quis tenetur! Vel, perspiciatis deleniti."
     }
