@@ -25,7 +25,7 @@ export const Product = () => {
   }
 
   const [sizeIndexChosen, setIsSizeIndexChosen] = useState(Number)
-  const [thumbsSwiper, setThumbsSwiper] = useState(null)
+  const [thumbsSwiper] = useState(null)
 
   const definSizeIndexChosen = (i: number) => {
     setIsSizeIndexChosen(i)
