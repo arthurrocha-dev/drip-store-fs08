@@ -10,36 +10,26 @@ import { ProductApiModel } from '../api/api.props'
 import { useProductFilterContext } from './useProductFilter'
 import { getProducts, fetchProductByID } from '../api/api'
 
-// interface ProductDetail {
-//   product: ProductApiModel
-//   comments: Comment[]
-//   rate: number
-//   relatedProducts: ProductApiModel[]
-// }
-
 interface ProductDataType {
   isProductLoading: boolean
   productsList: ProductApiModel[]
   getProductByID: (id: string) => void
   productDetail: ProductApiModel | undefined
   clearProductDetailState: () => void
-  addFilter: (
-    filter: keyof ProductsFilter,
-    value: string,
-    isChecked: boolean
-  ) => void
+  addFilter: (filter: keyof ProductsFilter, value: string) => void
   removeFilter: (filter: keyof ProductsFilter, value: string) => void
   sortingList: () => void
+  clearFilters: () => void
 }
 
 export interface ProductsFilter {
   brand: string[]
-  category?: string[]
-  gender?: string[]
-  state?: string[]
+  category: string[]
+  gender: string[]
+  state: string[]
 }
 
-const ProductFiltersDefault = {
+const initialProductFilterState = {
   brand: [],
   category: [],
   gender: [],
@@ -55,6 +45,7 @@ const ProductDataContext = createContext<ProductDataType>({
   addFilter: () => {},
   removeFilter: () => {},
   sortingList: () => {},
+  clearFilters: () => {},
 })
 
 export const useProductDataContext = () => useContext(ProductDataContext)
@@ -63,12 +54,34 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [filterList, setFilterList] = useState<ProductsFilter>(
-    ProductFiltersDefault
+    initialProductFilterState
   )
-  const [productsList, setProductsList] = useState<ProductApiModel[]>([])
+  const [_productsList, setProductsList] = useState<ProductApiModel[]>([])
   const [isLoading, setIsLoading] = useState(false)
-  const { filter } = useProductFilterContext()
+  const { filter: searchText } = useProductFilterContext()
   const [productDetail, setProductDetail] = useState<ProductApiModel>()
+
+  const productsList = _productsList.filter((product) => {
+    if (
+      searchText &&
+      !product.name.toLocaleLowerCase().includes(searchText.toLocaleLowerCase())
+    ) {
+      return false
+    }
+
+    for (let key in filterList) {
+      if (
+        // @ts-ignore
+        filterList[key].length > 0 &&
+        // @ts-ignore
+        !filterList[key].includes(product[key])
+      ) {
+        return false
+      }
+    }
+
+    return true
+  })
 
   const clearProductDetailState = useCallback(
     () => setProductDetail(undefined),
@@ -87,42 +100,20 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
     [setProductDetail]
   )
 
-  const addFilter = useCallback(
-    (filter: keyof ProductsFilter, value: string, isChecked: boolean) => {
-      setFilterList((prevFilterList) => {
-        const newFilterList: ProductsFilter = { ...prevFilterList }
-
-        if (isChecked && filter in newFilterList) {
-          const filterArray = newFilterList[filter]
-          if (filterArray) {
-            filterArray.push(value.toLowerCase())
-          } else {
-            newFilterList[filter] = [value.toLowerCase()]
-          }
-        }
-
-        return newFilterList
-      })
-    },
-    []
-  )
+  const addFilter = (filter: keyof ProductsFilter, value: string) => {
+    filterList[filter].push(value)
+    setFilterList({ ...filterList })
+  }
 
   const removeFilter = (filter: keyof ProductsFilter, value: string) => {
-    setFilterList((prevFilterList) => {
-      const newFilterList: ProductsFilter = { ...prevFilterList }
-
-      if (filter in newFilterList) {
-        const filterArray = newFilterList[filter]
-        if (filterArray) {
-          newFilterList[filter] = filterArray.filter(
-            (item) => item.toLowerCase() !== value.toLowerCase()
-          )
-        }
-      }
-
-      return newFilterList
-    })
+    filterList[filter].splice(filterList[filter].indexOf(value), 1)
+    setFilterList({ ...filterList })
   }
+
+  const clearFilters = useCallback(() => {
+    const initial = { brand: [], category: [], gender: [], state: [] }
+    setFilterList(initial)
+  }, [])
 
   const sortingList = () => {
     productsList.sort
@@ -131,29 +122,9 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
   useEffect(() => {
     setIsLoading(true)
     getProducts()
-      .then((result) => {
-        let filteredProductList: ProductApiModel[] = result
-        ;(Object.keys(filterList) as (keyof ProductsFilter)[]).forEach(
-          (key) => {
-            const filter = filterList[key]
-            if (Array.isArray(filter) && filter.length > 0) {
-              filteredProductList = filteredProductList.filter((item) => {
-                return filter.some(
-                  (value) => item[key].toLowerCase() === value.toLowerCase()
-                )
-              })
-            }
-          }
-        )
-        if (filter.trim() !== '') {
-          filteredProductList = filteredProductList.filter((item) =>
-            item.name.toLowerCase().includes(filter.toLocaleLowerCase())
-          )
-        }
-        setProductsList(filteredProductList)
-      })
+      .then(setProductsList)
       .finally(() => setIsLoading(false))
-  }, [filter, filterList])
+  }, [])
 
   return (
     <ProductDataContext.Provider
@@ -166,6 +137,7 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
         addFilter,
         removeFilter,
         sortingList,
+        clearFilters,
       }}
     >
       {children}
