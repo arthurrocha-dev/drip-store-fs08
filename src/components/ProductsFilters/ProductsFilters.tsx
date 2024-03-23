@@ -98,7 +98,7 @@ export const ProductsFilters: React.FC<ProductsFiltersProps> = ({
             }
           />
         </CheckBoxFilterGroup>
-
+  
         <CheckBoxFilterGroup groupName="Gênero">
           <CheckBoxFilter
             inputId="checkbox-filter-genero-1"

@@ -1,32 +1,32 @@
 import { CollectionIcon } from '../CollectonIcon/CollectionIcon'
 import styles from './CollectionsIconList.module.css'
 
+
 export const CollectionIconsList = () => {
   const iconstList = [
     {
       title: 'Camisetas',
-      iconUrl:
-        '/src/components/FeaturedCollections/components/ColletionsIconsList/img/Shirt.png',
+      iconUrl:'/img/Shirt.png',
     },
     {
       title: 'Calças',
       iconUrl:
-        '/src/components/FeaturedCollections/components/ColletionsIconsList/img/Pants.png',
+      '/img/Pants.png',
     },
     {
       title: 'Bonés',
       iconUrl:
-        '/src/components/FeaturedCollections/components/ColletionsIconsList/img/cap.png',
+        '/img/Cap.png',
     },
     {
       title: 'Headphone',
       iconUrl:
-        '/src/components/FeaturedCollections/components/ColletionsIconsList/img/Headphone.png',
+        '/img/Headphone.png',
     },
     {
       title: 'Tênis',
       iconUrl:
-        '/src/components/FeaturedCollections/components/ColletionsIconsList/img/Shoe.png',
+      '/img/Shoe.png',
     },
   ]
 
