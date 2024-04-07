@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.LoginPageContainer {
+  font-family: 'Inter', sans-serif;
+  background-color: cornflowerblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContainerLoginForm {
+  margin-left: var(--spacing-massive);
+  border-radius: 7px;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+  gap: 5px;
+  background-color: #f1f1f1;
+  justify-content: center;
+  margin: 50px 0 20px 20px;
+  align-items: center;
+}
+
+.LoginPageForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-large);
+  height: 510px;
+  width: 30vw;
+}
+
+.LoginPageForm h1 {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.3em;
+}
+
+.LoginPageForm p {
+  display: inline-block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.LoginPageForm input {
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  border-radius: 4px;
+  transition: all linear 160ms;
+  outline: none;
+}
+
+.LoginPageForm input:focus {
+  border: 1px solid #f72585;
+}
+
+.LoginPageForm label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.LoginPageForm a {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #555;
+  transition: all linear 160ms;
+}
+
+.LoginPageForm a:hover {
+  color: #f72585;
+}
+
+.imgtenis{
+  width: 50%;
+  height: 50%;
+  rotate: -5.343deg;
+}
+
+@media (max-width: 600px) {
+  .LoginPageContainer {
+    flex-direction: column;
+  }
+  .LoginPageForm {
+    width: 70vw;
+  }
+}

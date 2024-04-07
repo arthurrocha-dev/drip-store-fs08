@@ -62,7 +62,7 @@ const DesktopHeader = ({
         <TextLink to={ROUTES.Home} type="secundary">
           Cadastre-se
         </TextLink>
-        <Button text="Entrar" />
+        <Button text="Entrar" to={ROUTES.LoginPage}/>
         <ShoppingCarIcon />
       </div>
       <NavBar />

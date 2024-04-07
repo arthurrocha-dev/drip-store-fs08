@@ -3,4 +3,5 @@ export interface ButtonProps {
   disabled?: boolean
   type?: 'secondary' | 'shop'
   onClick?: () => void
+  to?: string
 }

@@ -1,13 +1,21 @@
-/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import { ButtonProps } from './Button.props'
 import styles from './Button.module.css'
+import { useNavigate } from 'react-router-dom'
 
 export const Button: React.FC<ButtonProps> = ({
   text,
   type,
   disabled,
   onClick,
+  to
 }) => {
+
+const navigate = useNavigate()
+  const handleButton  = () => {
+    if(to) {
+      navigate(to)
+    }
+  }
   return (
     <button
       className={`${
@@ -20,7 +28,10 @@ export const Button: React.FC<ButtonProps> = ({
      
       ${disabled ? styles.disabled : ''}`}
 
-      onClick={onClick}
+      onClick={() => {
+        onClick
+        handleButton()
+      }}
     >
       {text}
     </button>
