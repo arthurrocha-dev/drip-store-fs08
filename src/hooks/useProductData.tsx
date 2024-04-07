@@ -10,30 +10,26 @@ import { ProductApiModel } from '../api/api.props'
 import { useProductFilterContext } from './useProductFilter'
 import { getProducts, fetchProductByID } from '../api/api'
 
-// interface ProductDetail {
-//   product: ProductApiModel
-//   comments: Comment[]
-//   rate: number
-//   relatedProducts: ProductApiModel[]
-// }
-
 interface ProductDataType {
   isProductLoading: boolean
   productsList: ProductApiModel[]
   getProductByID: (id: string) => void
   productDetail: ProductApiModel | undefined
   clearProductDetailState: () => void
-  addFilter: (filter: ProductsFilter) => void
+  addFilter: (filter: keyof ProductsFilter, value: string) => void
+  removeFilter: (filter: keyof ProductsFilter, value: string) => void
+  sortingList: () => void
+  clearFilters: () => void
 }
 
 export interface ProductsFilter {
-  brand?: string[]
-  category?: string[]
-  gender?: string[]
-  state?: string[]
+  brand: string[]
+  category: string[]
+  gender: string[]
+  state: string[]
 }
 
-const ProductFiltersDefault = {
+const initialProductFilterState = {
   brand: [],
   category: [],
   gender: [],
@@ -47,6 +43,9 @@ const ProductDataContext = createContext<ProductDataType>({
   productDetail: undefined,
   clearProductDetailState: () => {},
   addFilter: () => {},
+  removeFilter: () => {},
+  sortingList: () => {},
+  clearFilters: () => {},
 })
 
 export const useProductDataContext = () => useContext(ProductDataContext)
@@ -54,11 +53,35 @@ export const useProductDataContext = () => useContext(ProductDataContext)
 export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [filterList, setFilterList] = useState<ProductsFilter[]>([])
-  const [productsList, setProductsList] = useState<ProductApiModel[]>([])
+  const [filterList, setFilterList] = useState<ProductsFilter>(
+    initialProductFilterState
+  )
+  const [_productsList, setProductsList] = useState<ProductApiModel[]>([])
   const [isLoading, setIsLoading] = useState(false)
-  const { filter } = useProductFilterContext()
+  const { filter: searchText } = useProductFilterContext()
   const [productDetail, setProductDetail] = useState<ProductApiModel>()
+
+  const productsList = _productsList.filter((product) => {
+    if (
+      searchText &&
+      !product.name.toLocaleLowerCase().includes(searchText.toLocaleLowerCase())
+    ) {
+      return false
+    }
+
+    for (let key in filterList) {
+      if (
+        // @ts-ignore
+        filterList[key].length > 0 &&
+        // @ts-ignore
+        !filterList[key].includes(product[key])
+      ) {
+        return false
+      }
+    }
+
+    return true
+  })
 
   const clearProductDetailState = useCallback(
     () => setProductDetail(undefined),
@@ -77,24 +100,31 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
     [setProductDetail]
   )
 
-  const addFilter = (filter: ProductsFilter) => {
-    const newFilterList = [...filterList, filter]
-    setFilterList(newFilterList)
-    console.log(filterList);
+  const addFilter = (filter: keyof ProductsFilter, value: string) => {
+    filterList[filter].push(value)
+    setFilterList({ ...filterList })
+  }
+
+  const removeFilter = (filter: keyof ProductsFilter, value: string) => {
+    filterList[filter].splice(filterList[filter].indexOf(value), 1)
+    setFilterList({ ...filterList })
+  }
+
+  const clearFilters = useCallback(() => {
+    const initial = { brand: [], category: [], gender: [], state: [] }
+    setFilterList(initial)
+  }, [])
+
+  const sortingList = () => {
+    productsList.sort
   }
 
   useEffect(() => {
     setIsLoading(true)
     getProducts()
-      .then((result) =>
-        setProductsList(
-          result.filter((item) =>
-            item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase())
-          )
-        )
-      )
+      .then(setProductsList)
       .finally(() => setIsLoading(false))
-  }, [filter])
+  }, [])
 
   return (
     <ProductDataContext.Provider
@@ -105,6 +135,9 @@ export const ProductDataProvider: React.FC<{ children: ReactNode }> = ({
         productDetail,
         clearProductDetailState,
         addFilter,
+        removeFilter,
+        sortingList,
+        clearFilters,
       }}
     >
       {children}

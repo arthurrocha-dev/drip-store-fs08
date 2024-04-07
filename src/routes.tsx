@@ -4,7 +4,7 @@ import { RouteObject } from 'react-router-dom'
 import { Products } from './pages/Products/Products'
 import { ErrorPage } from './pages/ErrorPage/ErrorPage'
 import { Product } from './pages/Product/Product'
-import { LoginPage } from './pages/Login/LoginPage'
+import { LoginPage } from './pages/LoginPage/LoginPage'
 
 export const ROUTES = {
   Home: '/',

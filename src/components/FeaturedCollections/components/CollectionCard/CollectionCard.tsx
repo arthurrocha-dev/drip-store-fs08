@@ -1,10 +1,9 @@
 import styles from './CollectionCard.module.css'
 import { CollectionCardProps } from "./CollectionCard.props";
 import { Button } from '../../../Button/Button'
-import png from './img/tShirtCollection.png'
 
 
-export const CollectionCard:React.FC<CollectionCardProps> = ({discount = 30 ,title, urlImg = png}) => {
+export const CollectionCard:React.FC<CollectionCardProps> = ({discount = 30 ,title, urlImg}) => {
   return (
     <>
       <div className={styles.CollectionCard}>

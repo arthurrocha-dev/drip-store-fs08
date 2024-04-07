@@ -1,6 +1,6 @@
 import {
-  useProductDataContext,
   ProductsFilter,
+  useProductDataContext,
 } from '../../hooks/useProductData'
 import { CheckBoxFilter } from '../CheckboxFilter/CheckboxFilter'
 import { CheckBoxFilterGroup } from '../CheckboxFilterGropup/CheckboxFilterGroup'
@@ -12,23 +12,26 @@ export interface ProductsFiltersProps {
   onClick: () => void
 }
 
-const handleCheckBoxClick = (
-  e: React.MouseEvent<HTMLDivElement, MouseEvent>
-) => {
-  e.stopPropagation()
-}
-
+//TODO - Implementar filtro de input radio.
 export const ProductsFilters: React.FC<ProductsFiltersProps> = ({
   onClick,
 }) => {
-  const { addFilter } = useProductDataContext()
-  const handleCheckboxChange = (filter: ProductsFilter) => {
-    addFilter(filter)
+  const { addFilter, removeFilter } = useProductDataContext()
+
+  const toggleFilter = (
+    filter: keyof ProductsFilter,
+    value: string,
+    isAdd: boolean
+  ) => (isAdd ? addFilter(filter, value) : removeFilter(filter, value))
+
+  const handleCheckBoxClick = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    e.stopPropagation()
   }
 
   return (
     <div className={styles.ProductsFilters} onClick={onClick}>
-      {}
       <div
         className={styles.ProductsFiltersContainer}
         onClick={handleCheckBoxClick}
@@ -38,22 +41,30 @@ export const ProductsFilters: React.FC<ProductsFiltersProps> = ({
           <CheckBoxFilter
             inputId="checkbox-filter-marka-1"
             textLabel="Adiddas"
-            onChange={() => handleCheckboxChange({ brand: ['Adiddas'] })}
+            onChange={(isChecked: boolean) =>
+              toggleFilter('brand', 'adiddas', isChecked)
+            }
           />
           <CheckBoxFilter
             inputId="checkbox-filter-marka-2"
             textLabel="Calenciaga"
-            onChange={() => handleCheckboxChange({ brand: ['Calenciaga'] })}
+            onChange={(isChecked: boolean) =>
+              toggleFilter('brand', 'calenciaga', isChecked)
+            }
           />
           <CheckBoxFilter
             inputId="checkbox-filter-marka-3"
             textLabel="K-Swiss"
-            onChange={() => handleCheckboxChange({ brand: ['K-Swiss'] })}
+            onChange={(isChecked: boolean) =>
+              toggleFilter('brand', 'k-swiss', isChecked)
+            }
           />
           <CheckBoxFilter
             inputId="checkbox-filter-marka-4"
             textLabel="Puma"
-            onChange={() => handleCheckboxChange({ brand: ['Puma'] })}
+            onChange={(isChecked: boolean) =>
+              toggleFilter('brand', 'puma', isChecked)
+            }
           />
         </CheckBoxFilterGroup>
 
@@ -61,40 +72,54 @@ export const ProductsFilters: React.FC<ProductsFiltersProps> = ({
           <CheckBoxFilter
             inputId="checkbox-filter-categoris-1"
             textLabel="Esporte e lazer"
-            onChange={() => handleCheckboxChange({ category: ['Esporte e lazer'] })}
+            onChange={(isChecked) =>
+              toggleFilter('category', 'esporte e lazer', isChecked)
+            }
           />
           <CheckBoxFilter
             inputId="checkbox-filter-categoris-2"
             textLabel="Casual"
-            onChange={() => handleCheckboxChange({ category: ['Casual'] })}
+            onChange={(isChecked: boolean) =>
+              toggleFilter('category', 'casual', isChecked)
+            }
           />
           <CheckBoxFilter
             inputId="checkbox-filter-categoris-3"
             textLabel="Utilitário"
-            onChange={() => handleCheckboxChange({ category: ['Utilitário'] })}
+            onChange={(isChecked) =>
+              toggleFilter('category', 'utilitario', isChecked)
+            }
           />
           <CheckBoxFilter
             inputId="checkbox-filter-categoris-4"
             textLabel="Corrida"
-            onChange={() => handleCheckboxChange({ category: ['Corrida'] })}
+            onChange={(isChecked) =>
+              toggleFilter('category', 'corrida', isChecked)
+            }
           />
         </CheckBoxFilterGroup>
-
+  
         <CheckBoxFilterGroup groupName="Gênero">
           <CheckBoxFilter
             inputId="checkbox-filter-genero-1"
             textLabel="Maculino"
-            onChange={() => handleCheckboxChange({ gender: ['Masculino'] })}
+            onChange={(isChecked) =>
+              toggleFilter('gender', 'masculino', isChecked)
+            }
           />
           <CheckBoxFilter
             inputId="checkbox-filter-genero-2"
             textLabel="Feminino"
-            onChange={() => handleCheckboxChange({ gender: ['Feminino'] })}
+            onChange={(isChecked) =>
+              toggleFilter('gender', 'feminino', isChecked)
+            }
           />
           <CheckBoxFilter
             inputId="checkbox-filter-genero-3"
             textLabel="Unisex"
-            onChange={() => handleCheckboxChange({ gender: ['Unisex'] })}
+            onChange={(isChecked) =>
+              toggleFilter('gender', 'unisex', isChecked)
+            }
           />
         </CheckBoxFilterGroup>
 
