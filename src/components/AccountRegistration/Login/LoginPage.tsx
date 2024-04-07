@@ -11,18 +11,18 @@ export const LoginPage: React.FC<LoginPageProps> = () => {
         <div className={style.LoginPageForm}>
           <h1>Acesse sua conta</h1>
           <p>Novo cliente? Estão registre-se aqui. </p>
-          <label htmlFor="email">E-mail:</label>
+          <label htmlFor="email">Login *</label>
           <input
             type="email"
             placeholder="Digite seu e-mail"
             autoFocus={true}
           />
-          <label htmlFor="password">Senha:</label>
+          <label htmlFor="password">Senha *</label>
           <input type="password" placeholder="Digite sua senha" />
           <p>
             <a href="/">Esqueci minha senha -</a>
           </p>
-          <Button text="Entrar" />
+          <Button text="Acessar Conta" />
         </div>
       </div>
       <div className={style.imgtenis}>

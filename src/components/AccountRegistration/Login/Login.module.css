@@ -5,6 +5,7 @@
   background-color: cornflowerblue;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .ContainerLoginForm {
@@ -13,7 +14,9 @@
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
   gap: 5px;
   background-color: #f1f1f1;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 50px 0 20px 20px;
+  align-items: center;
 }
 
 .LoginPageForm {
@@ -21,8 +24,8 @@
   flex-direction: column;
   justify-content: center;
   padding: var(--spacing-large);
-  width: 523px;
   height: 510px;
+  width: 30vw;
 }
 
 .LoginPageForm h1 {
@@ -71,15 +74,25 @@
   color: #f72585;
 }
 
+.imgtenis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .imgtenis img {
   width: 50%;
   height: 50%;
   transform: rotate(-5.343deg);
   user-select: none;
+  align-items: center;
 }
 
 @media (max-width: 600px) {
-  .ContainerLoginForm {
-    flex-direction: column-reverse;
+  .LoginPageContainer {
+    flex-direction: column;
+  }
+  .LoginPageForm {
+    width: 70vw;
   }
 }
