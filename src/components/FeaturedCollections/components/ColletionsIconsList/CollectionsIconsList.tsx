@@ -16,7 +16,7 @@ export const CollectionIconsList = () => {
     {
       title: 'Bonés',
       iconUrl:
-        '/src/components/FeaturedCollections/components/ColletionsIconsList/img/cap.png',
+        '/src/components/FeaturedCollections/components/ColletionsIconsList/img/Cap.png',
     },
     {
       title: 'Headphone',

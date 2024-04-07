@@ -74,18 +74,10 @@
   color: #f72585;
 }
 
-.imgtenis {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imgtenis img {
+.imgtenis{
   width: 50%;
   height: 50%;
-  transform: rotate(-5.343deg);
-  user-select: none;
-  align-items: center;
+  rotate: -5.343deg;
 }
 
 @media (max-width: 600px) {

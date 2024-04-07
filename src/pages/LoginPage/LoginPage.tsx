@@ -1,7 +1,7 @@
 import React from 'react'
 import { LoginPageProps } from './LoginPage.props'
 import style from './Login.module.css'
-import { Button } from '../../Button/Button'
+import { Button } from '../../components/Button/Button'
 import Tenis from '../Login/assets/doubleshoeslogin.png'
 
 export const LoginPage: React.FC<LoginPageProps> = () => {
@@ -25,9 +25,7 @@ export const LoginPage: React.FC<LoginPageProps> = () => {
           <Button text="Acessar Conta" />
         </div>
       </div>
-      <div className={style.imgtenis}>
-        <img src={Tenis} alt="" />
-      </div>
+        <img className={style.imgtenis} src={Tenis} alt="" />
     </div>
   )
 }
