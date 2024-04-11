@@ -59,7 +59,7 @@ const DesktopHeader = ({
       <div className={styles.HeaderContainerTop}>
         <Logo />
         <SearchInput onSearch={onSearch} />
-        <TextLink to={ROUTES.Home} type="secundary">
+        <TextLink to={ROUTES.AccountRegistration} type="secundary">
           Cadastre-se
         </TextLink>
         <Button text="Entrar" to={ROUTES.LoginPage}/>

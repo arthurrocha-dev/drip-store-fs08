@@ -5,6 +5,7 @@ import { Products } from './pages/Products/Products'
 import { ErrorPage } from './pages/ErrorPage/ErrorPage'
 import { Product } from './pages/Product/Product'
 import { LoginPage } from './pages/LoginPage/LoginPage'
+import { AccountRegistration } from './pages/AccountRegistration/Register'
 
 export const ROUTES = {
   Home: '/',
@@ -12,7 +13,8 @@ export const ROUTES = {
   Categorys: '/categorias',
   MyProducts: '/meus-produtos',
   Cart: '/cart',
-  LoginPage: '/loginpage'
+  LoginPage: '/loginpage',
+  AccountRegistration: '/register'
 }
 
 export default [
@@ -44,6 +46,10 @@ export default [
       {
         path: ROUTES.LoginPage,
         element: <LoginPage />,
+      },
+      {
+        path: ROUTES.AccountRegistration,
+        element: <AccountRegistration />,
       },
       
     ],
