@@ -3,6 +3,7 @@ import { LoginPageProps } from './LoginPage.props'
 import style from './Login.module.css'
 import { Button } from '../../components/Button/Button'
 import Tenis from './assets/doubleshoeslogin.png'
+import { ROUTES } from '../../routes'
 
 export const LoginPage: React.FC<LoginPageProps> = () => {
   return (
@@ -22,7 +23,7 @@ export const LoginPage: React.FC<LoginPageProps> = () => {
           <p>
             <a href="/">Esqueci minha senha -</a>
           </p>
-          <Button text="Acessar Conta" />
+          <Button text="Acessar Conta" to={ROUTES.Home} />
         </div>
       </div>
         <img className={style.imgtenis} src={Tenis} alt="" />

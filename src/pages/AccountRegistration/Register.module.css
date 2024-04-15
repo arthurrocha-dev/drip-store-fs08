@@ -2,26 +2,29 @@
 
 .LoginPageContainer {
   font-family: 'Inter', sans-serif;
-  background-color: cornflowerblue;
+  background-color: var(--color-light-gray-3);
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 
-h1 {
-    color: var(--color-dark-gray-2);
+.Line {
+  border: 1px solid var(--color-light-gray-2);
+  margin: 8px 0px 32px 0px;
 }
 
-.ContainerLoginForm {
-  margin-left: var(--spacing-massive);
-  border-radius: 7px;
-  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-  gap: 5px;
-  background-color: #f1f1f1;
-  justify-content: center;
-  margin: 50px 0 20px 20px;
-  align-items: center;
+.LoginTitle {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.LoginTitle h1 {
+  display: block;
+  color: var(--color-dark-gray);
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .LoginPageForm {
@@ -29,7 +32,10 @@ h1 {
   flex-direction: column;
   justify-content: center;
   padding: var(--spacing-large);
-  width: 30vw;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0px 0px 20px 12px rgb(177 177 177 / 20%);
 }
 
 .LoginPageForm h1 {
@@ -49,12 +55,13 @@ h1 {
 .LoginPageForm input {
   padding: 15px;
   font-size: 14px;
-  border: 1px solid #ccc;
   margin-bottom: 20px;
   margin-top: 5px;
   border-radius: 4px;
   transition: all linear 160ms;
   outline: none;
+  color: var(--color-light-gray);
+  background-color: var(--color-light-gray-3);
 }
 
 .LoginPageForm input:focus {
@@ -64,6 +71,7 @@ h1 {
 .LoginPageForm label {
   font-size: 14px;
   font-weight: 600;
+  color: var(--color-dark-gray-2);
 }
 
 .LoginPageForm a {
@@ -75,20 +83,51 @@ h1 {
 }
 
 .LoginPageForm a:hover {
-  color: #f72585;
+  color: var(--color-primary);
 }
 
-.imgtenis{
-  width: 50%;
-  height: 50%;
-  rotate: -5.343deg;
+.LoginPageFormItem {
+  display: grid;
+}
+
+.LoginPageFormButton {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px 30px 0px;
+  max-width: 700px;
+  justify-content: center;
+}
+
+.NewsLetter input {
+  width: 18px;
+  height: 18px;
+}
+
+.NewsLetter input:checked {
+  width: 18px;
+  height: 18px;
+}
+
+.NewsLetter {
+  color: #f72585;
+  margin: 10px;
+  font-size: var(--spacing-normal);
 }
 
 @media (max-width: 600px) {
   .LoginPageContainer {
     flex-direction: column;
   }
+  .LoginTitle h1 {
+    text-align: center;
+  }
   .LoginPageForm {
-    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-large);
+    background-color: #ffffff;
+    border-radius: 24px 24px 0px 0px;
+    box-shadow: 0px 0px 20px 12px rgb(177 177 177 / 20%);
   }
 }
