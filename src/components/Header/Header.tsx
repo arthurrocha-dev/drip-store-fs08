@@ -59,7 +59,7 @@ const DesktopHeader = ({
       <div className={styles.HeaderContainerTop}>
         <Logo />
         <SearchInput onSearch={onSearch} />
-        <TextLink to={ROUTES.Home} type="secundary">
+        <TextLink to={ROUTES.AccountRegistration} type="secundary">
           Cadastre-se
         </TextLink>
         <Button text="Entrar" to={ROUTES.LoginPage}/>
@@ -131,9 +131,9 @@ const MobileHeader = ({ onSearch }: { onSearch: (search: string) => void }) => {
           >
             <NavBar onClick={toggleMenuState} />
             <div className={styles.MobileNavBarFooter}>
-              <Button text="Entrar" />
+              <Button text="Entrar" to={ROUTES.LoginPage} />
               <TextLink
-                to={ROUTES.Home}
+                to={ROUTES.AccountRegistration}
                 type="secundary"
                 onClick={toggleMenuState}
               >
