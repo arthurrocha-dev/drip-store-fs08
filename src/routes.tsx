@@ -6,6 +6,7 @@ import { ErrorPage } from './pages/ErrorPage/ErrorPage'
 import { Product } from './pages/Product/Product'
 import { LoginPage } from './pages/LoginPage/LoginPage'
 import { AccountRegistration } from './pages/AccountRegistration/Register'
+import { PurchaseConfirmation } from './pages/PurchaseConfirmation/PurchaseConfirmation'
 
 export const ROUTES = {
   Home: '/',
@@ -14,7 +15,8 @@ export const ROUTES = {
   MyProducts: '/meus-produtos',
   Cart: '/cart',
   LoginPage: '/loginpage',
-  AccountRegistration: '/register'
+  AccountRegistration: '/register',
+  PurchaseConfirmation: '/confirmacao-de-compra'
 }
 
 export default [
@@ -50,6 +52,10 @@ export default [
       {
         path: ROUTES.AccountRegistration,
         element: <AccountRegistration />,
+      },
+      {
+        path: ROUTES.PurchaseConfirmation,
+        element: <PurchaseConfirmation />,
       },
       
     ],

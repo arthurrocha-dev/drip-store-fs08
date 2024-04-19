@@ -24,9 +24,11 @@ export const LoginPage: React.FC<LoginPageProps> = () => {
             <a href="/">Esqueci minha senha -</a>
           </p>
           <Button text="Acessar Conta" to={ROUTES.Home} />
+        <p>aaaaaa</p>
         </div>
       </div>
         <img className={style.imgtenis} src={Tenis} alt="" />
     </div>
   )
 }
+
