@@ -6,13 +6,12 @@ export const Button: React.FC<ButtonProps> = ({
   text,
   type,
   disabled,
-  onClick,
-  to
+  onClick = () => {},
+  to,
 }) => {
-
-const navigate = useNavigate()
-  const handleButton  = () => {
-    if(to) {
+  const navigate = useNavigate()
+  const handleButton = () => {
+    if (to) {
       navigate(to)
     }
   }
@@ -27,9 +26,8 @@ const navigate = useNavigate()
       }
      
       ${disabled ? styles.disabled : ''}`}
-
       onClick={() => {
-        onClick
+        onClick()
         handleButton()
       }}
     >
