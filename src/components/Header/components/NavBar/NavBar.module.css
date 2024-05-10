@@ -1,7 +1,7 @@
 .NavBar {
   display: flex;
   gap: var(--spacing-medium);
-  margin: var(--spacing-medium) 0;
+  margin: var(--spacing-normal) 0;
   max-width: 100%;
   overflow-x: scroll;
 }
