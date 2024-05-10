@@ -1,5 +1,5 @@
 .Header {
-  padding: var(--spacing-large) var(--spacing-massive) 0;
+  padding: var(--spacing-small) var(--spacing-massive) 0;
   background-color: var(--color-white);
   position: fixed;
   z-index: 1000;
@@ -59,7 +59,7 @@
     padding: var(--spacing-large) var(--spacing-normal);
     width: calc(100% - calc(2 * var(--spacing-normal)));
   }
-  
+
   .HeaderTop {
     align-items: center;
     display: flex;
@@ -75,7 +75,7 @@
     cursor: not-allowed;
     z-index: 1000;
   }
-  
+
   .MobileNavBarContainer {
     display: flex;
     flex-direction: column;
