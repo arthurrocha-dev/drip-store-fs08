@@ -13,7 +13,7 @@ export const ROUTES = {
   Categorys: '/categorias',
   MyProducts: '/meus-produtos',
   Cart: '/cart',
-  LoginPage: '/loginpage',
+  Login: '/login',
   AccountRegistration: '/register'
 }
 
@@ -44,7 +44,7 @@ export default [
         element: <HomePage />,
       },
       {
-        path: ROUTES.LoginPage,
+        path: ROUTES.Login,
         element: <LoginPage />,
       },
       {
