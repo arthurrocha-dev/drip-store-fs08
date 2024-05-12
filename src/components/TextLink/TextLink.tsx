@@ -1,6 +1,6 @@
-import { TextLinkProps } from './TextLink.props'
-import { Link } from 'react-router-dom'
-import styles from './TextLink.module.css'
+import { TextLinkProps } from "./TextLink.props";
+import { Link } from "react-router-dom";
+import styles from "./TextLink.module.css";
 
 export const TextLink: React.FC<TextLinkProps> = ({
   children,
@@ -10,14 +10,14 @@ export const TextLink: React.FC<TextLinkProps> = ({
   <Link
     className={`
             ${
-              type === 'secundary'
+              type === "secundary"
                 ? styles.TextLinkSecondary
-                : type === 'tertiary'
-                ? styles.TextLinkTertiary
-                : styles.TextLink
+                : type === "tertiary"
+                  ? styles.TextLinkTertiary
+                  : styles.TextLink
             }`}
     {...props}
   >
     {children}
   </Link>
-)
+);

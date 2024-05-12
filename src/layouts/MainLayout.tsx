@@ -1,6 +1,6 @@
-import { Outlet } from 'react-router-dom'
-import { Footer, Header } from '../components'
-import styles from './MainLayout.module.css'
+import { Outlet } from "react-router-dom";
+import { Footer, Header } from "../components";
+import styles from "./MainLayout.module.css";
 export const MainLayout = () => {
   return (
     <>
@@ -10,5 +10,5 @@ export const MainLayout = () => {
       </main>
       <Footer />
     </>
-  )
-}
+  );
+};

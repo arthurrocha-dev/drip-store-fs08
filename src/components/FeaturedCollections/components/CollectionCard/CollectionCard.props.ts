@@ -1,5 +1,5 @@
 export interface CollectionCardProps {
-    title: string;
-    urlImg?: string;
-    discount?: number;
+  title: string;
+  urlImg?: string;
+  discount?: number;
 }

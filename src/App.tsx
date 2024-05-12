@@ -1,13 +1,13 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import routes from './routes'
-import 'react-loading-skeleton/dist/skeleton.css'
-import { SkeletonTheme } from 'react-loading-skeleton'
-import { ProductFilterProvider } from './hooks/useProductFilter'
-import { ProductDataProvider } from './hooks/useProductData'
-import { ShoppingCartProvider } from './hooks/useShoppingCart'
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import routes from "./routes";
+import "react-loading-skeleton/dist/skeleton.css";
+import { SkeletonTheme } from "react-loading-skeleton";
+import { ProductFilterProvider } from "./hooks/useProductFilter";
+import { ProductDataProvider } from "./hooks/useProductData";
+import { ShoppingCartProvider } from "./hooks/useShoppingCart";
 
 function App() {
-  const router = createBrowserRouter(routes)
+  const router = createBrowserRouter(routes);
 
   return (
     <ShoppingCartProvider>
@@ -22,7 +22,7 @@ function App() {
         </ProductDataProvider>
       </ProductFilterProvider>
     </ShoppingCartProvider>
-  )
+  );
 }
 
-export default App
+export default App;

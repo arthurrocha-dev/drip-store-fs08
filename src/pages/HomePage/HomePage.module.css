@@ -2,8 +2,8 @@
   padding: var(--spacing-smaller) 0;
 }
 
-@media (max-width: 768px ) {
-    .HomePage {
-      padding: var(--spacing-smaller) var(--spacing-normal);
-    }
+@media (max-width: 768px) {
+  .HomePage {
+    padding: var(--spacing-smaller) var(--spacing-normal);
+  }
 }

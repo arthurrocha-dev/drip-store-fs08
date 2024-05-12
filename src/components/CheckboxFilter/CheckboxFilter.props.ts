@@ -1,5 +1,5 @@
 export interface CheckboxFilterProps {
-    textLabel: string;
-    inputId: string;
-    onChange: (value: boolean) => void
+  textLabel: string;
+  inputId: string;
+  onChange: (value: boolean) => void;
 }

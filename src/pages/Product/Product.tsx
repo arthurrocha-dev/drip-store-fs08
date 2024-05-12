@@ -1,46 +1,46 @@
-import { useParams } from 'react-router-dom'
-import { useProductDataContext } from '../../hooks/useProductData'
-import { useEffect, useState } from 'react'
-import { Button } from '../../components/Button/Button'
-import styles from './Product.module.css'
-import { FaRegStar, FaStar } from 'react-icons/fa'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
-import { useShoppingCartContext } from '../../hooks/useShoppingCart'
+import { useParams } from "react-router-dom";
+import { useProductDataContext } from "../../hooks/useProductData";
+import { useEffect, useState } from "react";
+import { Button } from "../../components/Button/Button";
+import styles from "./Product.module.css";
+import { FaRegStar, FaStar } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { useShoppingCartContext } from "../../hooks/useShoppingCart";
 
 export const Product = () => {
-  const { addProduct } = useShoppingCartContext()
+  const { addProduct } = useShoppingCartContext();
 
-  const { id } = useParams()
+  const { id } = useParams();
 
   const {
     isProductLoading,
     productDetail,
     getProductByID,
     clearProductDetailState,
-  } = useProductDataContext()
+  } = useProductDataContext();
 
   if (!id) {
-    return <div>Produto não encontrado</div>
+    return <div>Produto não encontrado</div>;
   }
 
-  const [sizeIndexChosen, setIsSizeIndexChosen] = useState(Number)
-  const [thumbsSwiper] = useState(null)
+  const [sizeIndexChosen, setIsSizeIndexChosen] = useState(Number);
+  const [thumbsSwiper] = useState(null);
 
   const definSizeIndexChosen = (i: number) => {
-    setIsSizeIndexChosen(i)
-  }
+    setIsSizeIndexChosen(i);
+  };
 
   useEffect(() => {
-    return clearProductDetailState
-  }, [clearProductDetailState])
+    return clearProductDetailState;
+  }, [clearProductDetailState]);
 
   useEffect(() => {
-    getProductByID(id)
-  }, [id, getProductByID])
+    getProductByID(id);
+  }, [id, getProductByID]);
 
   if (isProductLoading || !productDetail) {
-    return <div>Carregando produto</div>
+    return <div>Carregando produto</div>;
   }
 
   return (
@@ -59,7 +59,7 @@ export const Product = () => {
                 <SwiperSlide key={index}>
                   <img src={url} alt="imagem" />
                 </SwiperSlide>
-              )
+              );
             })}
           </Swiper>
           <Swiper
@@ -76,7 +76,7 @@ export const Product = () => {
                 <SwiperSlide key={index}>
                   <img src={url} alt="imagem" />
                 </SwiperSlide>
-              )
+              );
             })}
           </Swiper>
         </div>
@@ -87,9 +87,9 @@ export const Product = () => {
           <div className={styles.ProductSectionAssessment_stars}>
             {[...new Array(Math.round(5))].map((_, index) => {
               if (index <= productDetail.assessment - 1) {
-                return <FaStar key={index} />
+                return <FaStar key={index} />;
               } else {
-                return <FaRegStar key={index} />
+                return <FaRegStar key={index} />;
               }
             })}
           </div>
@@ -132,15 +132,15 @@ export const Product = () => {
                     className={`${styles.ProductSizeList_item} ${
                       productDetail.listOfSize[index] === sizeIndexChosen
                         ? styles.active
-                        : ''
+                        : ""
                     }`}
                     onClick={() => {
-                      definSizeIndexChosen(productDetail.listOfSize[index])
+                      definSizeIndexChosen(productDetail.listOfSize[index]);
                     }}
                   >
                     {productDetail.listOfSize[index]}
                   </div>
-                )
+                );
               })}
             </div>
           </div>
@@ -149,10 +149,10 @@ export const Product = () => {
           text="COMPRAR"
           type="shop"
           onClick={() => {
-            addProduct(productDetail)
+            addProduct(productDetail);
           }}
         />
       </div>
     </section>
-  )
-}
+  );
+};

@@ -1,9 +1,9 @@
-import styles from './CheckboxFilterGroup.module.css'
+import styles from "./CheckboxFilterGroup.module.css";
 
 type CheckBoxFilterGroupProps = {
-  children: React.ReactNode
-  groupName: string
-}
+  children: React.ReactNode;
+  groupName: string;
+};
 
 export const CheckBoxFilterGroup: React.FC<CheckBoxFilterGroupProps> = ({
   children,
@@ -14,5 +14,5 @@ export const CheckBoxFilterGroup: React.FC<CheckBoxFilterGroupProps> = ({
       <p className={styles.CheckBoxFilterGroupTitle}>{groupName}</p>
       <div className={styles.CheckBoxFilterGroupContainer}>{children}</div>
     </div>
-  )
-}
+  );
+};

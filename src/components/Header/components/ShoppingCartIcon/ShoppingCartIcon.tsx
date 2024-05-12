@@ -1,44 +1,44 @@
-import { FiShoppingCart } from 'react-icons/fi'
-import { ShoppingCarProps } from './ShoppingCartIcon.props'
-import styles from './ShoppingCartIcons.module.css'
-import { useState } from 'react'
-import { useShoppingCartContext } from '../../../../hooks/useShoppingCart'
-import { Button } from '../../../Button/Button'
-import { ShoppingCartItem } from './components/shoppingCartIcon/shoppingCartItem'
-import { FaRegFaceSadCry } from 'react-icons/fa6'
-import { PiMaskSadLight } from 'react-icons/pi'
+import { FiShoppingCart } from "react-icons/fi";
+import { ShoppingCarProps } from "./ShoppingCartIcon.props";
+import styles from "./ShoppingCartIcons.module.css";
+import { useState } from "react";
+import { useShoppingCartContext } from "../../../../hooks/useShoppingCart";
+import { Button } from "../../../Button/Button";
+import { ShoppingCartItem } from "./components/shoppingCartIcon/shoppingCartItem";
+import { FaRegFaceSadCry } from "react-icons/fa6";
+import { PiMaskSadLight } from "react-icons/pi";
 
 export const ShoppingCarIcon: React.FC<ShoppingCarProps> = ({
   quantityOfItems = 0,
 }) => {
-  const { productsList, totalValue, clearCart } = useShoppingCartContext()
+  const { productsList, totalValue, clearCart } = useShoppingCartContext();
 
   const CartStates = {
-    CLOSED: 'CLOSED',
-    CLOSING: 'CLOSING',
-    OPENED: 'OPENED',
-    OPENING: 'OPENING',
-  }
+    CLOSED: "CLOSED",
+    CLOSING: "CLOSING",
+    OPENED: "OPENED",
+    OPENING: "OPENING",
+  };
 
-  const [isOpenModal, setIsOpenModal] = useState(false)
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
-  const [cartState, setcartState] = useState(CartStates.CLOSED)
+  const [cartState, setcartState] = useState(CartStates.CLOSED);
   const toggleCartState = () => {
     setcartState((state) =>
-      state === CartStates.CLOSED ? CartStates.OPENING : CartStates.CLOSING
-    )
+      state === CartStates.CLOSED ? CartStates.OPENING : CartStates.CLOSING,
+    );
     setTimeout(() => {
       setcartState((state) =>
-        state === CartStates.OPENING ? CartStates.OPENED : CartStates.CLOSED
-      )
-    }, 900)
-  }
+        state === CartStates.OPENING ? CartStates.OPENED : CartStates.CLOSED,
+      );
+    }, 900);
+  };
 
   const handleCartClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    e.stopPropagation()
-  }
+    e.stopPropagation();
+  };
 
-  quantityOfItems = productsList.length
+  quantityOfItems = productsList.length;
 
   return (
     <>
@@ -54,7 +54,7 @@ export const ShoppingCarIcon: React.FC<ShoppingCarProps> = ({
             />
             <div
               className={`${styles.shoppingCartPopover} ${
-                cartState === CartStates.CLOSING ? styles.closingCart : ''
+                cartState === CartStates.CLOSING ? styles.closingCart : ""
               }`}
               onClick={handleCartClick}
             >
@@ -90,7 +90,7 @@ export const ShoppingCarIcon: React.FC<ShoppingCarProps> = ({
               <div className={styles.shoppingCartPopoverFooter}>
                 <p
                   onClick={() => {
-                    quantityOfItems > 0 ? setIsOpenModal(true) : ''
+                    quantityOfItems > 0 ? setIsOpenModal(true) : "";
                   }}
                 >
                   Esvaziar
@@ -119,13 +119,13 @@ export const ShoppingCarIcon: React.FC<ShoppingCarProps> = ({
             <Button
               text="Sim"
               onClick={() => {
-                clearCart()
-                setIsOpenModal(false)
+                clearCart();
+                setIsOpenModal(false);
               }}
             />
           </div>
         </div>
       )}
     </>
-  )
-}
+  );
+};

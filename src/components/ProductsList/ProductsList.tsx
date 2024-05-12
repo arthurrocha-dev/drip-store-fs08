@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom'
-import { CardProduct } from '../CardProduct/CardProduct'
-import { FaArrowRightLong } from 'react-icons/fa6'
-import styles from './ProductsList.module.css'
-import { ROUTES } from '../../routes'
-import { ProductsListCardsProps } from './ProductsList.props'
-import Skeleton from 'react-loading-skeleton'
-import { useProductDataContext } from '../../hooks/useProductData'
+import { Link } from "react-router-dom";
+import { CardProduct } from "../CardProduct/CardProduct";
+import { FaArrowRightLong } from "react-icons/fa6";
+import styles from "./ProductsList.module.css";
+import { ROUTES } from "../../routes";
+import { ProductsListCardsProps } from "./ProductsList.props";
+import Skeleton from "react-loading-skeleton";
+import { useProductDataContext } from "../../hooks/useProductData";
 
 export const ProductsList: React.FC<ProductsListCardsProps> = ({
   isTrending,
@@ -13,27 +13,27 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
   title,
   hasTitle,
 }) => {
-  const { productsList, isProductLoading } = useProductDataContext()
+  const { productsList, isProductLoading } = useProductDataContext();
 
-  let list = []
+  let list = [];
 
   if (isTrending) {
-    const productsListList = productsList.filter((product) => product.trending)
+    const productsListList = productsList.filter((product) => product.trending);
     if (itemsPerPage > 0) {
-      const currentPage = 1
-      const startIndex = (currentPage - 1) * itemsPerPage
-      const endIndex = startIndex + itemsPerPage
-      list = productsListList.slice(startIndex, endIndex)
+      const currentPage = 1;
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      list = productsListList.slice(startIndex, endIndex);
     } else {
-      list = productsListList
+      list = productsListList;
     }
   } else {
-    const currentPage = 1
-    const startIndex = (currentPage - 1) * itemsPerPage
-    const endIndex = startIndex + itemsPerPage
-    const paginatedProductsList = productsList.slice(startIndex, endIndex)
+    const currentPage = 1;
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedProductsList = productsList.slice(startIndex, endIndex);
 
-    list = paginatedProductsList
+    list = paginatedProductsList;
   }
 
   return (
@@ -42,7 +42,7 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
         <div className={styles.ProductsListHeader}>
           <h2 className={styles.ProductsListTitle}>{title}</h2>
           <Link className={styles.ProductsListSeeAll} to={ROUTES.Products}>
-            Ver todos <FaArrowRightLong />{' '}
+            Ver todos <FaArrowRightLong />{" "}
           </Link>
         </div>
       )}
@@ -52,7 +52,7 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
             {[...new Array(4)].map((_, index) => (
               <Skeleton
                 key={index}
-                height={'200px'}
+                height={"200px"}
                 count={1}
                 inline
                 className={styles.SkeletonProductList}
@@ -80,5 +80,5 @@ export const ProductsList: React.FC<ProductsListCardsProps> = ({
         )}
       </div>
     </div>
-  )
-}
+  );
+};

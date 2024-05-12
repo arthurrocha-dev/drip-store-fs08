@@ -1,76 +1,76 @@
 /* eslint-disable react/jsx-key */
-import { FaFacebookF, FaInstagram } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
-import { Logo } from '../Logo/Logo'
-import { LinksSection } from './components/LinksSection/LinksSection'
-import { TextLink } from '../TextLink/TextLink'
-import styles from './Footer.module.css'
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { Logo } from "../Logo/Logo";
+import { LinksSection } from "./components/LinksSection/LinksSection";
+import { TextLink } from "../TextLink/TextLink";
+import styles from "./Footer.module.css";
 
 export const Footer = () => {
-  const date = new Date()
-  const yaer = date.getFullYear()
+  const date = new Date();
+  const yaer = date.getFullYear();
 
   const informatinoLinksList = [
     {
-      title: 'Sobre Drip Store',
-      url: '#',
+      title: "Sobre Drip Store",
+      url: "#",
     },
     {
-      title: 'Segurança',
-      url: '#',
+      title: "Segurança",
+      url: "#",
     },
     {
-      title: 'Wishlist',
-      url: '#',
+      title: "Wishlist",
+      url: "#",
     },
     {
-      title: 'Blog',
-      url: '#',
+      title: "Blog",
+      url: "#",
     },
     {
-      title: 'Trabalhe conosco',
-      url: '#',
+      title: "Trabalhe conosco",
+      url: "#",
     },
     {
-      title: 'Meus Pedidos',
-      url: '#',
+      title: "Meus Pedidos",
+      url: "#",
     },
-  ]
+  ];
 
   const categoryList = [
     {
-      title: 'Camisa',
-      url: '#',
+      title: "Camisa",
+      url: "#",
     },
     {
-      title: 'Calça',
-      url: '#',
+      title: "Calça",
+      url: "#",
     },
     {
-      title: 'Boné',
-      url: '#',
+      title: "Boné",
+      url: "#",
     },
     {
-      title: 'Headphones',
-      url: '#',
+      title: "Headphones",
+      url: "#",
     },
     {
-      title: 'Tênis',
-      url: '#',
+      title: "Tênis",
+      url: "#",
     },
-  ]
+  ];
 
   const contactList = [
     {
       title:
-        'Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161',
-      url: '#',
+        "Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161",
+      url: "#",
     },
     {
-      title: '(85) 3051-3411',
-      url: '#',
+      title: "(85) 3051-3411",
+      url: "#",
     },
-  ]
+  ];
 
   return (
     <footer>
@@ -97,7 +97,7 @@ export const Footer = () => {
                       {link.title}
                     </TextLink>
                   </li>
-                )
+                );
               })}
             </ul>
           </LinksSection>
@@ -111,7 +111,7 @@ export const Footer = () => {
                       {link.title}
                     </TextLink>
                   </li>
-                )
+                );
               })}
             </ul>
           </LinksSection>
@@ -125,7 +125,7 @@ export const Footer = () => {
                       {link.title}
                     </TextLink>
                   </li>
-                )
+                );
               })}
             </ul>
           </LinksSection>
@@ -133,5 +133,5 @@ export const Footer = () => {
       </div>
       <p className={styles.CopyrightMSG}>@ {yaer} Digital College</p>
     </footer>
-  )
-}
+  );
+};

@@ -29,5 +29,5 @@
 }
 
 .DPinput:checked::after {
-  content: url('/src/components/CheckboxFilter/assets/check-solid.svg');
+  content: url("/src/components/CheckboxFilter/assets/check-solid.svg");
 }

@@ -1,34 +1,29 @@
-import { CollectionIcon } from '../CollectonIcon/CollectionIcon'
-import styles from './CollectionsIconList.module.css'
-
+import { CollectionIcon } from "../CollectonIcon/CollectionIcon";
+import styles from "./CollectionsIconList.module.css";
 
 export const CollectionIconsList = () => {
   const iconstList = [
     {
-      title: 'Camisetas',
-      iconUrl:'/img/Shirt.png',
+      title: "Camisetas",
+      iconUrl: "/img/Shirt.png",
     },
     {
-      title: 'Calças',
-      iconUrl:
-      '/img/Pants.png',
+      title: "Calças",
+      iconUrl: "/img/Pants.png",
     },
     {
-      title: 'Bonés',
-      iconUrl:
-        '/img/Cap.png',
+      title: "Bonés",
+      iconUrl: "/img/Cap.png",
     },
     {
-      title: 'Headphone',
-      iconUrl:
-        '/img/Headphone.png',
+      title: "Headphone",
+      iconUrl: "/img/Headphone.png",
     },
     {
-      title: 'Tênis',
-      iconUrl:
-      '/img/Shoe.png',
+      title: "Tênis",
+      iconUrl: "/img/Shoe.png",
     },
-  ]
+  ];
 
   return (
     <div className={styles.ContainerCollectionIconsList}>
@@ -40,5 +35,5 @@ export const CollectionIconsList = () => {
         />
       ))}
     </div>
-  )
-}
+  );
+};

@@ -1,5 +1,5 @@
-import styles from './CheckboxFilter.module.css'
-import { CheckboxFilterProps } from './CheckboxFilter.props'
+import styles from "./CheckboxFilter.module.css";
+import { CheckboxFilterProps } from "./CheckboxFilter.props";
 
 export const CheckBoxFilter: React.FC<CheckboxFilterProps> = ({
   inputId,
@@ -16,5 +16,5 @@ export const CheckBoxFilter: React.FC<CheckboxFilterProps> = ({
       />
       <label htmlFor={`${inputId}`}>{textLabel}</label>
     </div>
-  )
-}
+  );
+};
