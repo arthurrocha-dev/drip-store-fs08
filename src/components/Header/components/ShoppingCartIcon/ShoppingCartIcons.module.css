@@ -117,7 +117,7 @@
   justify-content: center;
   align-items: center;
   background-color: #00000089;
-  width:100%;
+  width: 100%;
   left: 0;
   top: 0;
   height: 100vh;
@@ -168,8 +168,8 @@
 }
 
 @media (max-width: 768px) {
-.shoppingCartPopover {
-  right: 0;
-  margin: auto;
-}  
+  .shoppingCartPopover {
+    right: 0;
+    margin: auto;
+  }
 }

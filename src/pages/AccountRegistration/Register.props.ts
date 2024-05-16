@@ -1,3 +1,3 @@
 export interface AccountRegistrationProps {
-    title?: string;
+  title?: string;
 }

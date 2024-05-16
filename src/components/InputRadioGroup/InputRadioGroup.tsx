@@ -1,9 +1,9 @@
-import React from 'react'
-import styles from './InputRadioGroup.module.css'
+import React from "react";
+import styles from "./InputRadioGroup.module.css";
 
 interface InputRadioGropuProps {
-  children: React.ReactNode
-  groupName: string
+  children: React.ReactNode;
+  groupName: string;
 }
 
 export const InputRadioGropu: React.FC<InputRadioGropuProps> = ({
@@ -15,5 +15,5 @@ export const InputRadioGropu: React.FC<InputRadioGropuProps> = ({
       <p className={styles.InputRadioGroupTitle}>{groupName}</p>
       {children}
     </div>
-  )
-}
+  );
+};

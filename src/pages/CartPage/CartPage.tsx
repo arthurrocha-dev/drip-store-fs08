@@ -3,5 +3,5 @@ export const CartPage = () => {
     <div>
       <div>Hello CartPage</div>
     </div>
-  )
-}
+  );
+};

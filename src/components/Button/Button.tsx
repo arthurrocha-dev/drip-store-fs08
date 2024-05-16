@@ -1,6 +1,6 @@
-import { ButtonProps } from './Button.props'
-import styles from './Button.module.css'
-import { useNavigate } from 'react-router-dom'
+import { ButtonProps } from "./Button.props";
+import styles from "./Button.module.css";
+import { useNavigate } from "react-router-dom";
 
 export const Button: React.FC<ButtonProps> = ({
   text,
@@ -9,29 +9,29 @@ export const Button: React.FC<ButtonProps> = ({
   onClick = () => {},
   to,
 }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleButton = () => {
     if (to) {
-      navigate(to)
+      navigate(to);
     }
-  }
+  };
   return (
     <button
       className={`${
-        type === 'secondary'
+        type === "secondary"
           ? styles.SecundaryButton
-          : type === 'shop'
-          ? styles.ShopButton
-          : styles.PrimaryButton
+          : type === "shop"
+            ? styles.ShopButton
+            : styles.PrimaryButton
       }
      
-      ${disabled ? styles.disabled : ''}`}
+      ${disabled ? styles.disabled : ""}`}
       onClick={() => {
-        onClick()
-        handleButton()
+        onClick();
+        handleButton();
       }}
     >
       {text}
     </button>
-  )
-}
+  );
+};

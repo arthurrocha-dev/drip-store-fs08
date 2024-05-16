@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-.LoginPageContainer {
-  font-family: 'Inter', sans-serif;
+.SingUpPageContainer {
   background-color: var(--color-light-gray-3);
   display: flex;
   flex-direction: column;
@@ -12,22 +9,21 @@
   margin: 8px 0px 32px 0px;
 }
 
-.LoginTitle {
-  width: 100%;
-  max-width: 700px;
-  display: block;
+.SingUpPageContaine_Form {
+  flex: 1;
+  max-width: 70%;
   margin: auto;
-  padding: 20px 0;
+  padding: var(--spacing-medium) 0;
 }
 
-.LoginTitle h1 {
+h1 {
   display: block;
   color: var(--color-dark-gray);
   font-size: 32px;
   margin-bottom: 20px;
 }
 
-.LoginPageForm {
+.SingUpPageContaine_Form__section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,59 +34,7 @@
   box-shadow: 0px 0px 20px 12px rgb(177 177 177 / 20%);
 }
 
-.LoginPageForm h1 {
-  padding: 0;
-  margin: 0;
-  font-weight: 500;
-  font-size: 2.3em;
-}
-
-.LoginPageForm p {
-  display: inline-block;
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 25px;
-}
-
-.LoginPageForm input {
-  padding: 15px;
-  font-size: 14px;
-  margin-bottom: 20px;
-  margin-top: 5px;
-  border-radius: 4px;
-  transition: all linear 160ms;
-  outline: none;
-  color: var(--color-light-gray);
-  background-color: var(--color-light-gray-3);
-}
-
-.LoginPageForm input:focus {
-  border: 1px solid #f72585;
-}
-
-.LoginPageForm label {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--color-dark-gray-2);
-}
-
-.LoginPageForm a {
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 13px;
-  color: #555;
-  transition: all linear 160ms;
-}
-
-.LoginPageForm a:hover {
-  color: var(--color-primary);
-}
-
-.LoginPageFormItem {
-  display: grid;
-}
-
-.LoginPageFormButton {
+.SingUpPageFormButton {
   display: flex;
   flex-direction: column;
   padding: 30px 0px 30px 0px;
@@ -115,13 +59,13 @@
 }
 
 @media (max-width: 600px) {
-  .LoginPageContainer {
+  .SingUpPageContainer {
     flex-direction: column;
   }
-  .LoginTitle h1 {
+  .SingUpTitle h1 {
     text-align: center;
   }
-  .LoginPageForm {
+  .SingUpPageForm {
     display: flex;
     flex-direction: column;
     justify-content: center;

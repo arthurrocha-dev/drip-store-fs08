@@ -1,0 +1,18 @@
+.InputBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.InputBox_Input {
+  padding: var(--spacing-normal);
+  font-size: 1rem;
+  margin: var(--spacing-small) 0 var(--spacing-medium) 0;
+  transition: all linear 0.16s;
+  border-radius: var(--spacing-smaller);
+  background-color: var(--color-light-gray-3);
+  outline: none;
+}
+
+.InputBox_Input:focus {
+  border: 1px solid #f72585;
+}

@@ -1,25 +1,25 @@
-import { MainLayout } from './layouts/MainLayout'
-import { HomePage } from './pages/HomePage/HomePage'
-import { RouteObject } from 'react-router-dom'
-import { Products } from './pages/Products/Products'
-import { ErrorPage } from './pages/ErrorPage/ErrorPage'
-import { Product } from './pages/Product/Product'
-import { LoginPage } from './pages/LoginPage/LoginPage'
-import { AccountRegistration } from './pages/AccountRegistration/Register'
+import { MainLayout } from "./layouts/MainLayout";
+import { HomePage } from "./pages/HomePage/HomePage";
+import { RouteObject } from "react-router-dom";
+import { Products } from "./pages/Products/Products";
+import { ErrorPage } from "./pages/ErrorPage/ErrorPage";
+import { Product } from "./pages/Product/Product";
+import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { AccountRegistration } from "./pages/AccountRegistration/Register";
 
 export const ROUTES = {
-  Home: '/',
-  Products: '/produtos',
-  Categorys: '/categorias',
-  MyProducts: '/meus-produtos',
-  Cart: '/cart',
-  LoginPage: '/loginpage',
-  AccountRegistration: '/register'
-}
+  Home: "/",
+  Products: "/produtos",
+  Categorys: "/categorias",
+  MyProducts: "/meus-produtos",
+  Cart: "/cart",
+  Login: "/login",
+  AccountRegistration: "/register",
+};
 
 export default [
   {
-    path: '/',
+    path: "/",
     element: <MainLayout />,
     errorElement: <ErrorPage />,
     children: [
@@ -44,14 +44,13 @@ export default [
         element: <HomePage />,
       },
       {
-        path: ROUTES.LoginPage,
+        path: ROUTES.Login,
         element: <LoginPage />,
       },
       {
         path: ROUTES.AccountRegistration,
         element: <AccountRegistration />,
       },
-      
     ],
   },
-] as RouteObject[]
+] as RouteObject[];

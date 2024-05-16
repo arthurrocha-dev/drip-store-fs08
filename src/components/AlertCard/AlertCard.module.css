@@ -1,0 +1,22 @@
+.AlertCard {
+  position: absolute;
+  bottom: var(--spacing-smaller);
+  padding: var(--spacing-small);
+  width: 90%;
+  border-radius: var(--spacing-small);
+  background-color: #ee426767;
+  animation: showCard 4s forwards;
+}
+
+.AlertCardTitle .error {
+  color: var(--color-error);
+}
+
+@keyframes showCard {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

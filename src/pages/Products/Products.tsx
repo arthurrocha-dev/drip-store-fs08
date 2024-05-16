@@ -1,20 +1,20 @@
-import { Dropdown, ProductsFilters, ProductsList } from '../../components'
-import { LuFilter } from 'react-icons/lu'
-import styles from './Products.module.css'
-import { useEffect, useState } from 'react'
-import { useProductDataContext } from '../../hooks/useProductData'
+import { Dropdown, ProductsFilters, ProductsList } from "../../components";
+import { LuFilter } from "react-icons/lu";
+import styles from "./Products.module.css";
+import { useEffect, useState } from "react";
+import { useProductDataContext } from "../../hooks/useProductData";
 
 export const Products = () => {
-  const [isOnened, setIsOpened] = useState(false)
-  const { clearFilters } = useProductDataContext()
+  const [isOnened, setIsOpened] = useState(false);
+  const { clearFilters } = useProductDataContext();
 
   const toggleFilterMobile = () => {
-    setIsOpened(!isOnened)
-  }
+    setIsOpened(!isOnened);
+  };
 
   useEffect(() => {
-    return clearFilters
-  }, [clearFilters])
+    return clearFilters;
+  }, [clearFilters]);
 
   return (
     <>
@@ -45,5 +45,5 @@ export const Products = () => {
         <ProductsList />
       </div>
     </>
-  )
-}
+  );
+};

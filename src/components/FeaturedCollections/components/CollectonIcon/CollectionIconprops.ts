@@ -1,4 +1,4 @@
 export interface CollectionIconProps {
-    iconUrl: string;
-    title: string;
+  iconUrl: string;
+  title: string;
 }

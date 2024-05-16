@@ -1,3 +1,3 @@
 export interface LoginPageProps {
-    title?: string;
+  title?: string;
 }

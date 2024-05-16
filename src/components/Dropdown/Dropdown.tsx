@@ -1,5 +1,5 @@
-import styles from './Dropdown.module.css'
-import { DropdownProsp } from './Dropdown.props'
+import styles from "./Dropdown.module.css";
+import { DropdownProsp } from "./Dropdown.props";
 
 export const Dropdown: React.FC<DropdownProsp> = ({
   dropdownId,
@@ -10,5 +10,5 @@ export const Dropdown: React.FC<DropdownProsp> = ({
     <select className={styles.Dropdown} name={name} id={dropdownId}>
       {children}
     </select>
-  )
-}
+  );
+};
