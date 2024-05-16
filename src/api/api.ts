@@ -31,3 +31,7 @@ export const singin = async (username: string, password: string) => {
     })
     .then(async (response) => await response.data);
 };
+
+export const getAddressData = async (cep: string) => {
+  return await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+};
