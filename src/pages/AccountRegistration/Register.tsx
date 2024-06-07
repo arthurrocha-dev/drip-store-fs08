@@ -77,7 +77,7 @@ export const AccountRegistration: React.FC<AccountRegistrationProps> = () => {
             id="address-square"
             label="Endereço *"
             placeholder="Digite o logradouro do endereço de entrega..."
-            value={address.logradouro || ""}
+            value={address.logradouro}
             required={true}
             type="text"
           />
@@ -85,7 +85,7 @@ export const AccountRegistration: React.FC<AccountRegistrationProps> = () => {
             id="address-neighborhood"
             label="Bairro *"
             placeholder="Digite o Bairro do endereço de entrega..."
-            value={address.bairro || ""}
+            value={address.bairro}
             required={true}
             type="text"
           />
@@ -93,7 +93,7 @@ export const AccountRegistration: React.FC<AccountRegistrationProps> = () => {
             id="address-city"
             label="Cidade *"
             placeholder="Digite sua Cidade do endereço de entrega..."
-            value={address.localidade || ""}
+            value={address.localidade}
             required={true}
             type="text"
           />

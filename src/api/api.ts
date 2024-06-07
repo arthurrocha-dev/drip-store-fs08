@@ -1,7 +1,19 @@
-import axios from "axios";
+import axiosLib from "axios";
 
 import { SalesResult, ProductApiModel } from "./api.props";
-import { FEATURED_PRODUCTS_URL, SALES_URL, LOGIN_URL } from "./api.urls";
+import { FEATURED_PRODUCTS_URL, LOGIN_URL, SALES_URL } from "./api.urls";
+
+const axios = axiosLib.create({});
+
+export const setAuthToken = (token: string) => {
+  if (token) {
+    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    localStorage.setItem("jwtToken", token);
+  } else {
+    delete axios.defaults.headers.common["Authorization"];
+    localStorage.removeItem("jwtToken");
+  }
+};
 
 export const getProducts = async (): Promise<ProductApiModel[]> => {
   return await axios
@@ -23,13 +35,18 @@ export const getSales = async (): Promise<SalesResult[]> => {
     .then(async (response) => await response.data);
 };
 
-export const singin = async (username: string, password: string) => {
+export const login = async (
+  username: string,
+  password: string,
+): Promise<any> => {
+  console.log("LOGIN_URL", LOGIN_URL);
   return await axios
-    .post(LOGIN_URL, {
-      username: username,
-      password: password,
-    })
-    .then(async (response) => await response.data);
+    .post(LOGIN_URL, { username, password })
+    .then(async (response) => {
+      const { token } = response.data;
+      setAuthToken(token);
+      return response.data;
+    });
 };
 
 export const getAddressData = async (cep: string) => {

@@ -7,6 +7,8 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { useShoppingCartContext } from "../../hooks/useShoppingCart";
+import { ProductApiModel } from "../../api/api.props";
+import { toast } from "react-toastify";
 
 export const Product = () => {
   const { addProduct } = useShoppingCartContext();
@@ -29,6 +31,11 @@ export const Product = () => {
 
   const definSizeIndexChosen = (i: number) => {
     setIsSizeIndexChosen(i);
+  };
+
+  const onBuyPress = (product: ProductApiModel) => {
+    addProduct(product);
+    toast("Wow so easy!");
   };
 
   useEffect(() => {
@@ -149,7 +156,7 @@ export const Product = () => {
           text="COMPRAR"
           type="shop"
           onClick={() => {
-            addProduct(productDetail);
+            onBuyPress(productDetail);
           }}
         />
       </div>

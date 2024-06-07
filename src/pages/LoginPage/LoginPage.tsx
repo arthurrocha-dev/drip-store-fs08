@@ -1,33 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LoginPageProps } from "./LoginPage.props";
 import style from "./Login.module.css";
+import { Button } from "../../components/Button/Button";
 import Tenis from "./assets/doubleshoeslogin.png";
-import { ROUTES } from "../../routes";
-import { singin } from "../../api/api";
+import { login } from "../../api/api";
+import { useAuthentication } from "../../hooks/useAuthentication";
 import { useNavigate } from "react-router-dom";
-import { AlertCard, Button } from "../../components";
+import { ROUTES } from "../../routes";
+import { AlertCard } from "../../components";
 
 export const LoginPage: React.FC<LoginPageProps> = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+
+  const { isAuthenticated, setIsAuthenticated } = useAuthentication();
+
   const navigate = useNavigate();
+
+  const [isVisible, setIsVisible] = useState(false);
 
   const singIN = () => {
     setIsLoading(true);
-    singin(username, password)
+    login(username, password)
       .then(() => {
+        setIsAuthenticated(true);
         navigate(ROUTES.Home);
-        setIsLoading(false);
       })
       .catch((error) => {
         setIsVisible(true);
         setTimeout(() => {
           setIsVisible(false);
         }, 5000);
-        setIsLoading(false);
         console.error("Login failed:", error);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
@@ -38,6 +46,10 @@ export const LoginPage: React.FC<LoginPageProps> = () => {
   const handlePasswordChange = (e: any) => {
     setPassword(e.target.value);
   };
+
+  useEffect(() => {
+    isAuthenticated && navigate(ROUTES.Home);
+  }, [isAuthenticated]);
 
   return (
     <div className={style.LoginPageContainer}>
